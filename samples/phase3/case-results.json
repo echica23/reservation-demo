@@ -1,0 +1,338 @@
+[
+  {
+    "id": "SPEC-INVENTORY-UNAVAILABLE",
+    "method": "rejectsUnavailableInventory",
+    "detail": "SPEC-INVENTORY-UNAVAILABLE | spec=S02 | customer=C1 | date=2026-10-03 | quantity=1 | unitPrice=100 | available=false | expected=IllegalStateException; no customer/calendar",
+    "outcome": "PASS",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-PREMIUM-OFF-Q1",
+    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[1]",
+    "detail": "SPEC-PREMIUM-OFF-Q1 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=PREMIUM | peak=false | quantity=1 | unitPrice=100 | expectedRate=0.10 | actualRate=0.10 | expectedTotal=90 | actualTotal=90 | expectedScale=0 | actualScale=0",
+    "outcome": "PASS",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-PREMIUM-OFF-Q4",
+    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[2]",
+    "detail": "SPEC-PREMIUM-OFF-Q4 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=PREMIUM | peak=false | quantity=4 | unitPrice=100 | expectedRate=0.10 | actualRate=0.10 | expectedTotal=360 | actualTotal=360 | expectedScale=0 | actualScale=0",
+    "outcome": "PASS",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-PREMIUM-OFF-Q5",
+    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[3]",
+    "detail": "SPEC-PREMIUM-OFF-Q5 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=PREMIUM | peak=false | quantity=5 | unitPrice=100 | expectedRate=0.10 | actualRate=0.10 | expectedTotal=450 | actualTotal=450 | expectedScale=0 | actualScale=0",
+    "outcome": "PASS",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-PREMIUM-OFF-Q10",
+    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[4]",
+    "detail": "SPEC-PREMIUM-OFF-Q10 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=PREMIUM | peak=false | quantity=10 | unitPrice=100 | expectedRate=0.10 | actualRate=0.10 | expectedTotal=900 | actualTotal=900 | expectedScale=0 | actualScale=0",
+    "outcome": "PASS",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-PREMIUM-PEAK-Q1",
+    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[5]",
+    "detail": "SPEC-PREMIUM-PEAK-Q1 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=PREMIUM | peak=true | quantity=1 | unitPrice=100 | expectedRate=0.05 | actualRate=0.10 | expectedTotal=95 | actualTotal=90 | expectedScale=0 | actualScale=0",
+    "outcome": "FAIL",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-PREMIUM-PEAK-Q4",
+    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[6]",
+    "detail": "SPEC-PREMIUM-PEAK-Q4 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=PREMIUM | peak=true | quantity=4 | unitPrice=100 | expectedRate=0.05 | actualRate=0.10 | expectedTotal=380 | actualTotal=360 | expectedScale=0 | actualScale=0",
+    "outcome": "FAIL",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-PREMIUM-PEAK-Q5",
+    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[7]",
+    "detail": "SPEC-PREMIUM-PEAK-Q5 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=PREMIUM | peak=true | quantity=5 | unitPrice=100 | expectedRate=0.05 | actualRate=0.10 | expectedTotal=475 | actualTotal=450 | expectedScale=0 | actualScale=0",
+    "outcome": "FAIL",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-PREMIUM-PEAK-Q10",
+    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[8]",
+    "detail": "SPEC-PREMIUM-PEAK-Q10 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=PREMIUM | peak=true | quantity=10 | unitPrice=100 | expectedRate=0.05 | actualRate=0.10 | expectedTotal=950 | actualTotal=900 | expectedScale=0 | actualScale=0",
+    "outcome": "FAIL",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-STANDARD-OFF-Q1",
+    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[9]",
+    "detail": "SPEC-STANDARD-OFF-Q1 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=STANDARD | peak=false | quantity=1 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=100 | actualTotal=100 | expectedScale=0 | actualScale=0",
+    "outcome": "PASS",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-STANDARD-OFF-Q4",
+    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[10]",
+    "detail": "SPEC-STANDARD-OFF-Q4 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=STANDARD | peak=false | quantity=4 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=400 | actualTotal=400 | expectedScale=0 | actualScale=0",
+    "outcome": "PASS",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-STANDARD-OFF-Q5",
+    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[11]",
+    "detail": "SPEC-STANDARD-OFF-Q5 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=STANDARD | peak=false | quantity=5 | unitPrice=100 | expectedRate=0.05 | actualRate=0.00 | expectedTotal=475 | actualTotal=500 | expectedScale=0 | actualScale=0",
+    "outcome": "FAIL",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-STANDARD-OFF-Q10",
+    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[12]",
+    "detail": "SPEC-STANDARD-OFF-Q10 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=STANDARD | peak=false | quantity=10 | unitPrice=100 | expectedRate=0.05 | actualRate=0.05 | expectedTotal=950 | actualTotal=950 | expectedScale=0 | actualScale=0",
+    "outcome": "PASS",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-STANDARD-PEAK-Q1",
+    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[13]",
+    "detail": "SPEC-STANDARD-PEAK-Q1 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=STANDARD | peak=true | quantity=1 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=100 | actualTotal=100 | expectedScale=0 | actualScale=0",
+    "outcome": "PASS",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-STANDARD-PEAK-Q4",
+    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[14]",
+    "detail": "SPEC-STANDARD-PEAK-Q4 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=STANDARD | peak=true | quantity=4 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=400 | actualTotal=400 | expectedScale=0 | actualScale=0",
+    "outcome": "PASS",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-STANDARD-PEAK-Q5",
+    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[15]",
+    "detail": "SPEC-STANDARD-PEAK-Q5 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=STANDARD | peak=true | quantity=5 | unitPrice=100 | expectedRate=0.05 | actualRate=0.00 | expectedTotal=475 | actualTotal=500 | expectedScale=0 | actualScale=0",
+    "outcome": "FAIL",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-STANDARD-PEAK-Q10",
+    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[16]",
+    "detail": "SPEC-STANDARD-PEAK-Q10 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=STANDARD | peak=true | quantity=10 | unitPrice=100 | expectedRate=0.05 | actualRate=0.05 | expectedTotal=950 | actualTotal=950 | expectedScale=0 | actualScale=0",
+    "outcome": "PASS",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-NONE-OFF-Q1",
+    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[17]",
+    "detail": "SPEC-NONE-OFF-Q1 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=NONE | peak=false | quantity=1 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=100 | actualTotal=100 | expectedScale=0 | actualScale=0",
+    "outcome": "PASS",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-NONE-OFF-Q4",
+    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[18]",
+    "detail": "SPEC-NONE-OFF-Q4 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=NONE | peak=false | quantity=4 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=400 | actualTotal=400 | expectedScale=0 | actualScale=0",
+    "outcome": "PASS",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-NONE-OFF-Q5",
+    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[19]",
+    "detail": "SPEC-NONE-OFF-Q5 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=NONE | peak=false | quantity=5 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=500 | actualTotal=500 | expectedScale=0 | actualScale=0",
+    "outcome": "PASS",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-NONE-OFF-Q10",
+    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[20]",
+    "detail": "SPEC-NONE-OFF-Q10 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=NONE | peak=false | quantity=10 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=1000 | actualTotal=1000 | expectedScale=0 | actualScale=0",
+    "outcome": "PASS",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-NONE-PEAK-Q1",
+    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[21]",
+    "detail": "SPEC-NONE-PEAK-Q1 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=NONE | peak=true | quantity=1 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=100 | actualTotal=100 | expectedScale=0 | actualScale=0",
+    "outcome": "PASS",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-NONE-PEAK-Q4",
+    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[22]",
+    "detail": "SPEC-NONE-PEAK-Q4 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=NONE | peak=true | quantity=4 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=400 | actualTotal=400 | expectedScale=0 | actualScale=0",
+    "outcome": "PASS",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-NONE-PEAK-Q5",
+    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[23]",
+    "detail": "SPEC-NONE-PEAK-Q5 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=NONE | peak=true | quantity=5 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=500 | actualTotal=500 | expectedScale=0 | actualScale=0",
+    "outcome": "PASS",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-NONE-PEAK-Q10",
+    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[24]",
+    "detail": "SPEC-NONE-PEAK-Q10 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=NONE | peak=true | quantity=10 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=1000 | actualTotal=1000 | expectedScale=0 | actualScale=0",
+    "outcome": "PASS",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-STANDARD-OFF-Q6",
+    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[25]",
+    "detail": "SPEC-STANDARD-OFF-Q6 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=STANDARD | peak=false | quantity=6 | unitPrice=100 | expectedRate=0.05 | actualRate=0.05 | expectedTotal=570 | actualTotal=570 | expectedScale=0 | actualScale=0",
+    "outcome": "PASS",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-STANDARD-PEAK-Q6",
+    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[26]",
+    "detail": "SPEC-STANDARD-PEAK-Q6 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=STANDARD | peak=true | quantity=6 | unitPrice=100 | expectedRate=0.05 | actualRate=0.05 | expectedTotal=570 | actualTotal=570 | expectedScale=0 | actualScale=0",
+    "outcome": "PASS",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-ROUND-BELOW-HALF",
+    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[27]",
+    "detail": "SPEC-ROUND-BELOW-HALF | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=NONE | peak=false | quantity=1 | unitPrice=100.49 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=100 | actualTotal=100 | expectedScale=0 | actualScale=0",
+    "outcome": "PASS",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-ROUND-AT-HALF",
+    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[28]",
+    "detail": "SPEC-ROUND-AT-HALF | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=NONE | peak=false | quantity=1 | unitPrice=100.50 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=101 | actualTotal=101 | expectedScale=0 | actualScale=0",
+    "outcome": "PASS",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-ROUND-ABOVE-HALF",
+    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[29]",
+    "detail": "SPEC-ROUND-ABOVE-HALF | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=NONE | peak=false | quantity=1 | unitPrice=100.51 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=101 | actualTotal=101 | expectedScale=0 | actualScale=0",
+    "outcome": "PASS",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-ROUND-PREMIUM-HALF",
+    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[30]",
+    "detail": "SPEC-ROUND-PREMIUM-HALF | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=PREMIUM | peak=false | quantity=1 | unitPrice=105 | expectedRate=0.10 | actualRate=0.10 | expectedTotal=95 | actualTotal=95 | expectedScale=0 | actualScale=0",
+    "outcome": "PASS",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-ROUND-STANDARD-HALF",
+    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[31]",
+    "detail": "SPEC-ROUND-STANDARD-HALF | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=STANDARD | peak=false | quantity=6 | unitPrice=105 | expectedRate=0.05 | actualRate=0.05 | expectedTotal=599 | actualTotal=599 | expectedScale=0 | actualScale=0",
+    "outcome": "PASS",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-ROUND-AFTER-QUANTITY",
+    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[32]",
+    "detail": "SPEC-ROUND-AFTER-QUANTITY | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=NONE | peak=false | quantity=3 | unitPrice=0.49 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=1 | actualTotal=1 | expectedScale=0 | actualScale=0",
+    "outcome": "PASS",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-ROUND-AFTER-DISCOUNT",
+    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[33]",
+    "detail": "SPEC-ROUND-AFTER-DISCOUNT | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=PREMIUM | peak=false | quantity=3 | unitPrice=0.55 | expectedRate=0.10 | actualRate=0.10 | expectedTotal=1 | actualTotal=1 | expectedScale=0 | actualScale=0",
+    "outcome": "PASS",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-PRICE-SMALL-POSITIVE",
+    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[34]",
+    "detail": "SPEC-PRICE-SMALL-POSITIVE | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=NONE | peak=false | quantity=1 | unitPrice=0.01 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=0 | actualTotal=0 | expectedScale=0 | actualScale=0",
+    "outcome": "PASS",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-INPUT-REQUEST-NULL",
+    "method": "rejectsInvalidInputWithoutDependencies(String, ReservationRequest)[1]",
+    "detail": "SPEC-INPUT-REQUEST-NULL | spec=S01 | input=null | expected=IllegalArgumentException; no dependencies",
+    "outcome": "PASS",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-INPUT-CUSTOMER-NULL",
+    "method": "rejectsInvalidInputWithoutDependencies(String, ReservationRequest)[2]",
+    "detail": "SPEC-INPUT-CUSTOMER-NULL | spec=S01 | input=ReservationRequest[customerId=null, date=2026-10-03, quantity=1, unitPrice=100] | expected=IllegalArgumentException; no dependencies",
+    "outcome": "PASS",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-INPUT-CUSTOMER-EMPTY",
+    "method": "rejectsInvalidInputWithoutDependencies(String, ReservationRequest)[3]",
+    "detail": "SPEC-INPUT-CUSTOMER-EMPTY | spec=S01 | input=ReservationRequest[customerId=, date=2026-10-03, quantity=1, unitPrice=100] | expected=IllegalArgumentException; no dependencies",
+    "outcome": "PASS",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-INPUT-CUSTOMER-BLANK",
+    "method": "rejectsInvalidInputWithoutDependencies(String, ReservationRequest)[4]",
+    "detail": "SPEC-INPUT-CUSTOMER-BLANK | spec=S01 | input=ReservationRequest[customerId= \t\n, date=2026-10-03, quantity=1, unitPrice=100] | expected=IllegalArgumentException; no dependencies",
+    "outcome": "PASS",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-INPUT-DATE-NULL",
+    "method": "rejectsInvalidInputWithoutDependencies(String, ReservationRequest)[5]",
+    "detail": "SPEC-INPUT-DATE-NULL | spec=S01 | input=ReservationRequest[customerId=C1, date=null, quantity=1, unitPrice=100] | expected=IllegalArgumentException; no dependencies",
+    "outcome": "PASS",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-INPUT-QUANTITY-NEGATIVE",
+    "method": "rejectsInvalidInputWithoutDependencies(String, ReservationRequest)[6]",
+    "detail": "SPEC-INPUT-QUANTITY-NEGATIVE | spec=S01 | input=ReservationRequest[customerId=C1, date=2026-10-03, quantity=-1, unitPrice=100] | expected=IllegalArgumentException; no dependencies",
+    "outcome": "PASS",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-INPUT-QUANTITY-ZERO",
+    "method": "rejectsInvalidInputWithoutDependencies(String, ReservationRequest)[7]",
+    "detail": "SPEC-INPUT-QUANTITY-ZERO | spec=S01 | input=ReservationRequest[customerId=C1, date=2026-10-03, quantity=0, unitPrice=100] | expected=IllegalArgumentException; no dependencies",
+    "outcome": "PASS",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-INPUT-QUANTITY-ELEVEN",
+    "method": "rejectsInvalidInputWithoutDependencies(String, ReservationRequest)[8]",
+    "detail": "SPEC-INPUT-QUANTITY-ELEVEN | spec=S01 | input=ReservationRequest[customerId=C1, date=2026-10-03, quantity=11, unitPrice=100] | expected=IllegalArgumentException; no dependencies",
+    "outcome": "PASS",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-INPUT-PRICE-NULL",
+    "method": "rejectsInvalidInputWithoutDependencies(String, ReservationRequest)[9]",
+    "detail": "SPEC-INPUT-PRICE-NULL | spec=S01 | input=ReservationRequest[customerId=C1, date=2026-10-03, quantity=1, unitPrice=null] | expected=IllegalArgumentException; no dependencies",
+    "outcome": "PASS",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-INPUT-PRICE-ZERO",
+    "method": "rejectsInvalidInputWithoutDependencies(String, ReservationRequest)[10]",
+    "detail": "SPEC-INPUT-PRICE-ZERO | spec=S01 | input=ReservationRequest[customerId=C1, date=2026-10-03, quantity=1, unitPrice=0.00] | expected=IllegalArgumentException; no dependencies",
+    "outcome": "PASS",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-INPUT-PRICE-NEGATIVE",
+    "method": "rejectsInvalidInputWithoutDependencies(String, ReservationRequest)[11]",
+    "detail": "SPEC-INPUT-PRICE-NEGATIVE | spec=S01 | input=ReservationRequest[customerId=C1, date=2026-10-03, quantity=1, unitPrice=-0.01] | expected=IllegalArgumentException; no dependencies",
+    "outcome": "PASS",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-DATE-PAST",
+    "method": "acceptsPastAndFuture(String, LocalDate)[1]",
+    "detail": "SPEC-DATE-PAST | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2000-01-01 | member=NONE | peak=false | quantity=1 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=100 | actualTotal=100 | expectedScale=0 | actualScale=0",
+    "outcome": "PASS",
+    "phase2Same": true
+  },
+  {
+    "id": "SPEC-DATE-FUTURE",
+    "method": "acceptsPastAndFuture(String, LocalDate)[2]",
+    "detail": "SPEC-DATE-FUTURE | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2100-01-01 | member=NONE | peak=false | quantity=1 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=100 | actualTotal=100 | expectedScale=0 | actualScale=0",
+    "outcome": "PASS",
+    "phase2Same": true
+  }
+]

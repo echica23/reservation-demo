@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ja"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ReservationService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">reservation-demo</a> &gt; <a href="index.source.html" class="el_package">com.example.reservation</a> &gt; <span class="el_source">ReservationService.java</span></div><h1>ReservationService.java</h1><pre class="source lang-java linenums">package com.example.reservation;
+
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
+/** 予約の入力確認、割引率の決定、合計金額の計算をまとめるサービス。 */
+public class ReservationService {
+    // 会員情報、繁忙期、在庫の取得は依存先へ委ねる。
+    private final CustomerService customerService;
+    private final CalendarService calendarService;
+    private final InventoryService inventoryService;
+
+    public ReservationService(CustomerService customerService,
+                              CalendarService calendarService,
+<span class="fc" id="L15">                              InventoryService inventoryService) {</span>
+<span class="fc" id="L16">        this.customerService = customerService;</span>
+<span class="fc" id="L17">        this.calendarService = calendarService;</span>
+<span class="fc" id="L18">        this.inventoryService = inventoryService;</span>
+<span class="fc" id="L19">    }</span>
+
+    /** 予約条件を確認し、割引率と支払金額を返す。 */
+    public ReservationResult reserve(ReservationRequest request) {
+        // 外部依存先を呼ぶ前に入力を確認する。
+<span class="fc" id="L24">        validate(request);</span>
+        // 在庫がない場合は、料金計算へ進まず終了する。
+<span class="fc bfc" id="L26" title="All 2 branches covered.">        if (!inventoryService.isAvailable(request.date(), request.quantity())) {</span>
+<span class="fc" id="L27">            throw new IllegalStateException(&quot;No inventory available&quot;);</span>
+        }
+        // 料金の判定に使う会員情報とカレンダー情報を取得する。
+<span class="fc" id="L30">        MemberType member = customerService.getMemberType(request.customerId());</span>
+<span class="fc" id="L31">        boolean peakSeason = calendarService.isPeakSeason(request.date());</span>
+<span class="fc" id="L32">        BigDecimal rate = determineDiscount(member, peakSeason, request.quantity());</span>
+        // 数量と割引率を反映し、最後に1円単位へ丸める。
+<span class="fc" id="L34">        BigDecimal total = request.unitPrice()</span>
+<span class="fc" id="L35">                .multiply(BigDecimal.valueOf(request.quantity()))</span>
+<span class="fc" id="L36">                .multiply(BigDecimal.ONE.subtract(rate))</span>
+<span class="fc" id="L37">                .setScale(0, RoundingMode.HALF_UP);</span>
+<span class="fc" id="L38">        return new ReservationResult(rate, total);</span>
+    }
+
+    /** 必須項目と入力値の範囲を確認する。 */
+    private void validate(ReservationRequest request) {
+<span class="fc bfc" id="L43" title="All 2 branches covered.">        if (request == null) {</span>
+<span class="fc" id="L44">            throw new IllegalArgumentException(&quot;Request is required&quot;);</span>
+        }
+<span class="fc bfc" id="L46" title="All 4 branches covered.">        if (request.customerId() == null || request.customerId().isBlank()) {</span>
+<span class="fc" id="L47">            throw new IllegalArgumentException(&quot;Customer ID is required&quot;);</span>
+        }
+<span class="fc bfc" id="L49" title="All 2 branches covered.">        if (request.date() == null) {</span>
+<span class="fc" id="L50">            throw new IllegalArgumentException(&quot;Date is required&quot;);</span>
+        }
+<span class="fc bfc" id="L52" title="All 4 branches covered.">        if (request.quantity() &lt; 1 || request.quantity() &gt; 10) {</span>
+<span class="fc" id="L53">            throw new IllegalArgumentException(&quot;Quantity must be between 1 and 10&quot;);</span>
+        }
+<span class="fc bfc" id="L55" title="All 4 branches covered.">        if (request.unitPrice() == null || request.unitPrice().signum() &lt;= 0) {</span>
+<span class="fc" id="L56">            throw new IllegalArgumentException(&quot;Unit price must be positive&quot;);</span>
+        }
+<span class="fc" id="L58">    }</span>
+
+    /** 会員種別などの予約条件から、適用する割引率を決める。 */
+    private BigDecimal determineDiscount(MemberType member, boolean peakSeason, int quantity) {
+<span class="fc bfc" id="L62" title="All 2 branches covered.">        if (member == MemberType.PREMIUM) {</span>
+<span class="fc" id="L63">            return new BigDecimal(&quot;0.10&quot;);</span>
+        }
+<span class="fc bfc" id="L65" title="All 4 branches covered.">        if (member == MemberType.STANDARD &amp;&amp; quantity &gt; 5) {</span>
+<span class="fc" id="L66">            return new BigDecimal(&quot;0.05&quot;);</span>
+        }
+<span class="fc" id="L68">        return new BigDecimal(&quot;0.00&quot;);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

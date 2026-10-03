@@ -1,0 +1,362 @@
+[
+  {
+    "path": "src\\main\\java\\com\\example\\reservation\\CalendarService.java",
+    "before": "908418CDD54A5A6FA5015CFCC4237907401A5CA5E8F2D4BE382303A3F4E90F65",
+    "after": "908418CDD54A5A6FA5015CFCC4237907401A5CA5E8F2D4BE382303A3F4E90F65",
+    "unchanged": true
+  },
+  {
+    "path": "src\\main\\java\\com\\example\\reservation\\CustomerService.java",
+    "before": "5DA65555CA9A2E054059B9C1113282AB6EAF2D30F91843344F2090C6B8F15EDF",
+    "after": "5DA65555CA9A2E054059B9C1113282AB6EAF2D30F91843344F2090C6B8F15EDF",
+    "unchanged": true
+  },
+  {
+    "path": "src\\main\\java\\com\\example\\reservation\\InventoryService.java",
+    "before": "61BF034453AEEA096B175E1E90FFBB9CD7E9064B17207FB1AF8DAFF24C769656",
+    "after": "61BF034453AEEA096B175E1E90FFBB9CD7E9064B17207FB1AF8DAFF24C769656",
+    "unchanged": true
+  },
+  {
+    "path": "src\\main\\java\\com\\example\\reservation\\MemberType.java",
+    "before": "CCE3530FE64B9916BBC840A236B5EAE5EF895CFE986B5202C5E52053250ABD1A",
+    "after": "CCE3530FE64B9916BBC840A236B5EAE5EF895CFE986B5202C5E52053250ABD1A",
+    "unchanged": true
+  },
+  {
+    "path": "src\\main\\java\\com\\example\\reservation\\ReservationRequest.java",
+    "before": "2C9B3A3DAE38AAE2668606B744D17B30B7D07D73CE5F976065B7F241E9B777FD",
+    "after": "2C9B3A3DAE38AAE2668606B744D17B30B7D07D73CE5F976065B7F241E9B777FD",
+    "unchanged": true
+  },
+  {
+    "path": "src\\main\\java\\com\\example\\reservation\\ReservationResult.java",
+    "before": "89DB1CC81BB59F80AF679F69592B3979F3251DADA66B893C4B1A7E80E6E3ABB6",
+    "after": "89DB1CC81BB59F80AF679F69592B3979F3251DADA66B893C4B1A7E80E6E3ABB6",
+    "unchanged": true
+  },
+  {
+    "path": "src\\main\\java\\com\\example\\reservation\\ReservationService.java",
+    "before": "3417695CA49D2FB8DA652022F38AE7AEB914202CECE78D99E82E920CC3EC0362",
+    "after": "3417695CA49D2FB8DA652022F38AE7AEB914202CECE78D99E82E920CC3EC0362",
+    "unchanged": true
+  },
+  {
+    "path": "pom.xml",
+    "before": "782B7DE74DB09336CE4D09F24CB12F3EB86B8F74E2EE88959B00C416BDC5CEE2",
+    "after": "782B7DE74DB09336CE4D09F24CB12F3EB86B8F74E2EE88959B00C416BDC5CEE2",
+    "unchanged": true
+  },
+  {
+    "path": ".gitignore",
+    "before": "7F7C8AC9DF305EB44041C7B6F0EFE5C847834786E74A58928D8C2CD284D7480D",
+    "after": "7F7C8AC9DF305EB44041C7B6F0EFE5C847834786E74A58928D8C2CD284D7480D",
+    "unchanged": true
+  },
+  {
+    "path": "docs\\reservation-spec.md",
+    "before": "9E4995059B0A504A410FDAE04FC55B2EB483FA569AF729DBA6B529F1D9CBE2D9",
+    "after": "9E4995059B0A504A410FDAE04FC55B2EB483FA569AF729DBA6B529F1D9CBE2D9",
+    "unchanged": true
+  },
+  {
+    "path": "demo-ut\\coverage\\java\\com\\example\\reservation\\ReservationServiceTest.java",
+    "before": "1117FD44BA8AE003017B26E725DCFEF4A3F2537AD296125A7277568776C421E2",
+    "after": "1117FD44BA8AE003017B26E725DCFEF4A3F2537AD296125A7277568776C421E2",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\before-hashes.json",
+    "before": "46AB004CB9A95DDF5B3FA7CAE7CE48583366C004AF5C210BBCD98FB0E17CDDC8",
+    "after": "46AB004CB9A95DDF5B3FA7CAE7CE48583366C004AF5C210BBCD98FB0E17CDDC8",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\case-results.json",
+    "before": "5B630DE0B7589AB09C09ED1E07BC1EC557F914493A092F343DEA9B7190661797",
+    "after": "5B630DE0B7589AB09C09ED1E07BC1EC557F914493A092F343DEA9B7190661797",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\change-check.json",
+    "before": "DB2D69A828E4FD6BDF1AF5E52C0DC3B76303F7313DADF999CB8067A519060E44",
+    "after": "DB2D69A828E4FD6BDF1AF5E52C0DC3B76303F7313DADF999CB8067A519060E44",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\command-check.json",
+    "before": "554FF33064205BE4BECB249B968689E192A806B3ED310C802CDB017A572241D3",
+    "after": "554FF33064205BE4BECB249B968689E192A806B3ED310C802CDB017A572241D3",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\coverage-exit-code.txt",
+    "before": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354",
+    "after": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\coverage.log",
+    "before": "ECB0DE365BE7A0BF03B15256D389EB58E8FA705026BDB0889991D83FB47CDC44",
+    "after": "ECB0DE365BE7A0BF03B15256D389EB58E8FA705026BDB0889991D83FB47CDC44",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\distribution-check.json",
+    "before": "D34BFA394098CDAF3901C299EEB08756DEAB988448C3C891703796F7F077FDF7",
+    "after": "D34BFA394098CDAF3901C299EEB08756DEAB988448C3C891703796F7F077FDF7",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\jacoco.exec",
+    "before": "516073B7A6DCE56A41F66BFEBD46E6C7C96257A00548EC874FC088FFB5991167",
+    "after": "516073B7A6DCE56A41F66BFEBD46E6C7C96257A00548EC874FC088FFB5991167",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\prior-run.txt",
+    "before": "B3E8D519CF15FEC9A586AE93426C138E993F2FA46A9C8C442357EAE26775BEC9",
+    "after": "B3E8D519CF15FEC9A586AE93426C138E993F2FA46A9C8C442357EAE26775BEC9",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\report.md",
+    "before": "11F511C4693A8B1FD24C4E0C995F7DB47FBA9680E6B65EE6BBE3843E8BB70B8A",
+    "after": "11F511C4693A8B1FD24C4E0C995F7DB47FBA9680E6B65EE6BBE3843E8BB70B8A",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\test-exit-code.txt",
+    "before": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354",
+    "after": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\test.log",
+    "before": "684EBBDADAABC04B081B98E70913E28BCE06575144B4FA5EE71D0968EDCE636C",
+    "after": "684EBBDADAABC04B081B98E70913E28BCE06575144B4FA5EE71D0968EDCE636C",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\token-usage.json",
+    "before": "9B9F2CBCC9C761CE9593954E88AD3D702B797F170A84ED337F9568E1CAF1F8B0",
+    "after": "9B9F2CBCC9C761CE9593954E88AD3D702B797F170A84ED337F9568E1CAF1F8B0",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\site\\jacoco\\index.html",
+    "before": "67FC66347A3A0EF9F5815214C946749773E17DD5B040408EA9A9B4DEFDA62685",
+    "after": "67FC66347A3A0EF9F5815214C946749773E17DD5B040408EA9A9B4DEFDA62685",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\site\\jacoco\\jacoco-sessions.html",
+    "before": "5A48AFBA611B1B53957CC7A5DB8212029D4F5CA811332E83877789195E0C2FB1",
+    "after": "5A48AFBA611B1B53957CC7A5DB8212029D4F5CA811332E83877789195E0C2FB1",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\site\\jacoco\\jacoco.csv",
+    "before": "58D78753445D4CDB9415A348030C674A4A959BF478B674A3C0009031568AFED9",
+    "after": "58D78753445D4CDB9415A348030C674A4A959BF478B674A3C0009031568AFED9",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\site\\jacoco\\jacoco.xml",
+    "before": "8505C64EDE2CD1A7FE8BC64B3304DD3BA7912CC806731E8F1BBF586921CC71E5",
+    "after": "8505C64EDE2CD1A7FE8BC64B3304DD3BA7912CC806731E8F1BBF586921CC71E5",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\site\\jacoco\\com.example.reservation\\index.html",
+    "before": "96E849313309E9CE7DC6DA09F6CB347249D94F74364C684AD0BF76A2A16B4575",
+    "after": "96E849313309E9CE7DC6DA09F6CB347249D94F74364C684AD0BF76A2A16B4575",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\site\\jacoco\\com.example.reservation\\index.source.html",
+    "before": "EBA8E12448B017F153A53FB66D7EE820BA7F91F2E5B2458E460B5C3A3AAA84F9",
+    "after": "EBA8E12448B017F153A53FB66D7EE820BA7F91F2E5B2458E460B5C3A3AAA84F9",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\site\\jacoco\\com.example.reservation\\MemberType.html",
+    "before": "ADFE6DF9C028FF135BA6C87F3324F5EE57D46DAB0A1545264750E6E2BD8E4909",
+    "after": "ADFE6DF9C028FF135BA6C87F3324F5EE57D46DAB0A1545264750E6E2BD8E4909",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\site\\jacoco\\com.example.reservation\\MemberType.java.html",
+    "before": "9A88190A84BD9B092E37E06BBC8E750CAC5D1DD574A21DCD15BD5681EA6E2536",
+    "after": "9A88190A84BD9B092E37E06BBC8E750CAC5D1DD574A21DCD15BD5681EA6E2536",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\site\\jacoco\\com.example.reservation\\ReservationRequest.html",
+    "before": "40A519FD5A19DC95CF05B9ACF4CEF5F7F5969707B301B3BAA0331AD9076C18AF",
+    "after": "40A519FD5A19DC95CF05B9ACF4CEF5F7F5969707B301B3BAA0331AD9076C18AF",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\site\\jacoco\\com.example.reservation\\ReservationRequest.java.html",
+    "before": "7BB52054590A8D4E4D7A9728E879C57F2080295EE3A47EE493A3A5B448FD294F",
+    "after": "7BB52054590A8D4E4D7A9728E879C57F2080295EE3A47EE493A3A5B448FD294F",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\site\\jacoco\\com.example.reservation\\ReservationResult.html",
+    "before": "4A9A2E499562DA2A06632DBBD7AC45A498B4CEEBC14EDCA2DEC61BD616567479",
+    "after": "4A9A2E499562DA2A06632DBBD7AC45A498B4CEEBC14EDCA2DEC61BD616567479",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\site\\jacoco\\com.example.reservation\\ReservationResult.java.html",
+    "before": "7E3EB374D88D1438F9FAA7B911983349D73597A7DF445EBD28109AB15E6B5BD7",
+    "after": "7E3EB374D88D1438F9FAA7B911983349D73597A7DF445EBD28109AB15E6B5BD7",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\site\\jacoco\\com.example.reservation\\ReservationService.html",
+    "before": "7C125B2D5B7C153A783E2007E0E885A93D782C5D4D2CD2CF88B04E9EFB13653A",
+    "after": "7C125B2D5B7C153A783E2007E0E885A93D782C5D4D2CD2CF88B04E9EFB13653A",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\site\\jacoco\\com.example.reservation\\ReservationService.java.html",
+    "before": "946C1FB0DEF9C5683E3A157B1C093D1927B591E6FBFFE34DC7D7965B096DC5F6",
+    "after": "946C1FB0DEF9C5683E3A157B1C093D1927B591E6FBFFE34DC7D7965B096DC5F6",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\site\\jacoco\\jacoco-resources\\branchfc.gif",
+    "before": "A90E2ACEE1486FCC06A9DC77DC3A2C7D1103F9F65A9C833834C22079CA446D76",
+    "after": "A90E2ACEE1486FCC06A9DC77DC3A2C7D1103F9F65A9C833834C22079CA446D76",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\site\\jacoco\\jacoco-resources\\branchnc.gif",
+    "before": "CFD1D5AD1E939C895FC6C3A4B621F5B4BEC61A4B71F8386D3520F0920930BA1F",
+    "after": "CFD1D5AD1E939C895FC6C3A4B621F5B4BEC61A4B71F8386D3520F0920930BA1F",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\site\\jacoco\\jacoco-resources\\branchpc.gif",
+    "before": "A419DC4732E7C225B409BFD5457263DE4F20B6AA9737F4636F6DFAD36B194B1D",
+    "after": "A419DC4732E7C225B409BFD5457263DE4F20B6AA9737F4636F6DFAD36B194B1D",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\site\\jacoco\\jacoco-resources\\bundle.gif",
+    "before": "22656FA2E683F8E5F7ADAE31F091CE045FC91F042A8FED82EE7A05FC4029E0C2",
+    "after": "22656FA2E683F8E5F7ADAE31F091CE045FC91F042A8FED82EE7A05FC4029E0C2",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\site\\jacoco\\jacoco-resources\\class.gif",
+    "before": "7AD9AC2C3F87D220F46D077E1B03D743BA45084CBBBCCC2577E18C167F0FB2B1",
+    "after": "7AD9AC2C3F87D220F46D077E1B03D743BA45084CBBBCCC2577E18C167F0FB2B1",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\site\\jacoco\\jacoco-resources\\down.gif",
+    "before": "69233ACCDDE9FBBEEF01A6BB5C117A4AF85F24F7312054BCCBEB0F64B7BB437C",
+    "after": "69233ACCDDE9FBBEEF01A6BB5C117A4AF85F24F7312054BCCBEB0F64B7BB437C",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\site\\jacoco\\jacoco-resources\\greenbar.gif",
+    "before": "A29475AAE8C0A107BC41459EB2CA079BC34FC5092F107A78A287C4864B325791",
+    "after": "A29475AAE8C0A107BC41459EB2CA079BC34FC5092F107A78A287C4864B325791",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\site\\jacoco\\jacoco-resources\\group.gif",
+    "before": "EB39F2E57CABFD740AB8D0C5FB4B26FC5CA71B334E2CFC8D6481C34842B4C360",
+    "after": "EB39F2E57CABFD740AB8D0C5FB4B26FC5CA71B334E2CFC8D6481C34842B4C360",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\site\\jacoco\\jacoco-resources\\method.gif",
+    "before": "6308EA5FBA7F5E989F67E3E9BB3366F0CB4C90AB72E838AF7FF813ACA5AAC487",
+    "after": "6308EA5FBA7F5E989F67E3E9BB3366F0CB4C90AB72E838AF7FF813ACA5AAC487",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\site\\jacoco\\jacoco-resources\\package.gif",
+    "before": "82577B6B416BBF65CC99BC1C249E6462AE4AC708687FE2E1428B610C049300C2",
+    "after": "82577B6B416BBF65CC99BC1C249E6462AE4AC708687FE2E1428B610C049300C2",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\site\\jacoco\\jacoco-resources\\prettify.css",
+    "before": "2247D0CF27CB7FD9CD850EB33444C059F261EB63A718C26B8F357A938401C5F9",
+    "after": "2247D0CF27CB7FD9CD850EB33444C059F261EB63A718C26B8F357A938401C5F9",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\site\\jacoco\\jacoco-resources\\prettify.js",
+    "before": "743C6C4CAB9499CD0BFE18A5A62281ECCCE843F47EC75EEDB32EEB29C755AA68",
+    "after": "743C6C4CAB9499CD0BFE18A5A62281ECCCE843F47EC75EEDB32EEB29C755AA68",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\site\\jacoco\\jacoco-resources\\redbar.gif",
+    "before": "906CE7FCEC0FBAC1A26C16521E375F020A513F0CF87888766B69C4BF63F4D9BD",
+    "after": "906CE7FCEC0FBAC1A26C16521E375F020A513F0CF87888766B69C4BF63F4D9BD",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\site\\jacoco\\jacoco-resources\\report.css",
+    "before": "0C464FF9CE9154FDF1A041B0EFED7BC31DA4A4C9744249D8FFA6B80F1C36ED9E",
+    "after": "0C464FF9CE9154FDF1A041B0EFED7BC31DA4A4C9744249D8FFA6B80F1C36ED9E",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\site\\jacoco\\jacoco-resources\\report.gif",
+    "before": "C765CAFA65EC9A3C221B46062C6EF691F2DD5FF25628EE2C65CC9FE0B74AEEA6",
+    "after": "C765CAFA65EC9A3C221B46062C6EF691F2DD5FF25628EE2C65CC9FE0B74AEEA6",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\site\\jacoco\\jacoco-resources\\session.gif",
+    "before": "1EC062E347BC7DB837B9471B6C6128E1D0A5AE8D4C6A2EAA8FEE4D5CB6441DAB",
+    "after": "1EC062E347BC7DB837B9471B6C6128E1D0A5AE8D4C6A2EAA8FEE4D5CB6441DAB",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\site\\jacoco\\jacoco-resources\\sort.gif",
+    "before": "1875D39FF1BE841991AA768486F1BCFC0CA02969323E2D2EC52EC156BB5CF240",
+    "after": "1875D39FF1BE841991AA768486F1BCFC0CA02969323E2D2EC52EC156BB5CF240",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\site\\jacoco\\jacoco-resources\\sort.js",
+    "before": "4342217C32C77BC9998246F3A83AB61DFB99120F5293EF0AEB0B16BD6273CD02",
+    "after": "4342217C32C77BC9998246F3A83AB61DFB99120F5293EF0AEB0B16BD6273CD02",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\site\\jacoco\\jacoco-resources\\source.gif",
+    "before": "50257F70ADF3EBE4D18BB2432A61370DAC06DAD7A45F235C8E5F376081251AC3",
+    "after": "50257F70ADF3EBE4D18BB2432A61370DAC06DAD7A45F235C8E5F376081251AC3",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\site\\jacoco\\jacoco-resources\\up.gif",
+    "before": "E1CE2C1D5128B701F2DC5BB5F63C5C402D5D8125AD9C3FFC31C6ABC7767899A0",
+    "after": "E1CE2C1D5128B701F2DC5BB5F63C5C402D5D8125AD9C3FFC31C6ABC7767899A0",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\surefire-reports\\com.example.reservation.ReservationServiceTest.txt",
+    "before": "9EE3D222C992F862988A15FE7C3033A27D74FEFF37C0E029835A0E3270B060AB",
+    "after": "9EE3D222C992F862988A15FE7C3033A27D74FEFF37C0E029835A0E3270B060AB",
+    "unchanged": true
+  },
+  {
+    "path": "samples\\phase1\\surefire-reports\\TEST-com.example.reservation.ReservationServiceTest.xml",
+    "before": "84747545AA8A3D8FA927F96A583B33B4A43D394A2BD7262D8F7469232A023426",
+    "after": "84747545AA8A3D8FA927F96A583B33B4A43D394A2BD7262D8F7469232A023426",
+    "unchanged": true
+  }
+]

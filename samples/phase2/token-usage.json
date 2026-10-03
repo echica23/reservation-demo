@@ -1,0 +1,35 @@
+{
+  "limitations": "概算・最終計測時点まで。キャッシュ済み入力は入力の内数であり合計に再加算しない。推論出力は参考値。最終計測後のレポート追記、samplesへのコピー・確認、最終回答、ログ反映待ちの処理は含まれない可能性がある。費用には換算しない。",
+  "end": {
+    "timestamp": "2026-10-03T09:12:00.834Z",
+    "usage": {
+      "input_tokens": 1476954,
+      "cached_input_tokens": 1394816,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 25667,
+      "reasoning_output_tokens": 1293,
+      "total_tokens": 1502621
+    }
+  },
+  "threadId": "01a100f5-05c3-7cf2-8750-8d78793bf690",
+  "runId": "20261003-180427",
+  "baseline": {
+    "usage": {
+      "input_tokens": 1067529,
+      "cached_input_tokens": 996736,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 14348,
+      "reasoning_output_tokens": 924,
+      "total_tokens": 1081877
+    },
+    "timestamp": "2026-10-03T09:03:30.747Z"
+  },
+  "delta": {
+    "input_tokens": 409425,
+    "cached_input_tokens": 398080,
+    "output_tokens": 11319,
+    "total_tokens": 420744,
+    "reasoning_output_tokens": 369
+  },
+  "baselineSelection": "今回のut -spec指示直前の最後の有効な累計"
+}

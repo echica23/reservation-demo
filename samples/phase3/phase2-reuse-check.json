@@ -1,0 +1,62 @@
+[
+  {
+    "path": "src\\main\\java\\com\\example\\reservation\\CalendarService.java",
+    "phase2": "908418CDD54A5A6FA5015CFCC4237907401A5CA5E8F2D4BE382303A3F4E90F65",
+    "phase3": "908418CDD54A5A6FA5015CFCC4237907401A5CA5E8F2D4BE382303A3F4E90F65",
+    "unchanged": true
+  },
+  {
+    "path": "src\\main\\java\\com\\example\\reservation\\CustomerService.java",
+    "phase2": "5DA65555CA9A2E054059B9C1113282AB6EAF2D30F91843344F2090C6B8F15EDF",
+    "phase3": "5DA65555CA9A2E054059B9C1113282AB6EAF2D30F91843344F2090C6B8F15EDF",
+    "unchanged": true
+  },
+  {
+    "path": "src\\main\\java\\com\\example\\reservation\\InventoryService.java",
+    "phase2": "61BF034453AEEA096B175E1E90FFBB9CD7E9064B17207FB1AF8DAFF24C769656",
+    "phase3": "61BF034453AEEA096B175E1E90FFBB9CD7E9064B17207FB1AF8DAFF24C769656",
+    "unchanged": true
+  },
+  {
+    "path": "src\\main\\java\\com\\example\\reservation\\MemberType.java",
+    "phase2": "CCE3530FE64B9916BBC840A236B5EAE5EF895CFE986B5202C5E52053250ABD1A",
+    "phase3": "CCE3530FE64B9916BBC840A236B5EAE5EF895CFE986B5202C5E52053250ABD1A",
+    "unchanged": true
+  },
+  {
+    "path": "src\\main\\java\\com\\example\\reservation\\ReservationRequest.java",
+    "phase2": "2C9B3A3DAE38AAE2668606B744D17B30B7D07D73CE5F976065B7F241E9B777FD",
+    "phase3": "2C9B3A3DAE38AAE2668606B744D17B30B7D07D73CE5F976065B7F241E9B777FD",
+    "unchanged": true
+  },
+  {
+    "path": "src\\main\\java\\com\\example\\reservation\\ReservationResult.java",
+    "phase2": "89DB1CC81BB59F80AF679F69592B3979F3251DADA66B893C4B1A7E80E6E3ABB6",
+    "phase3": "89DB1CC81BB59F80AF679F69592B3979F3251DADA66B893C4B1A7E80E6E3ABB6",
+    "unchanged": true
+  },
+  {
+    "path": "src\\main\\java\\com\\example\\reservation\\ReservationService.java",
+    "phase2": "3417695CA49D2FB8DA652022F38AE7AEB914202CECE78D99E82E920CC3EC0362",
+    "phase3": "3417695CA49D2FB8DA652022F38AE7AEB914202CECE78D99E82E920CC3EC0362",
+    "unchanged": true
+  },
+  {
+    "path": "pom.xml",
+    "phase2": "782B7DE74DB09336CE4D09F24CB12F3EB86B8F74E2EE88959B00C416BDC5CEE2",
+    "phase3": "782B7DE74DB09336CE4D09F24CB12F3EB86B8F74E2EE88959B00C416BDC5CEE2",
+    "unchanged": true
+  },
+  {
+    "path": "docs\\reservation-spec.md",
+    "phase2": "9E4995059B0A504A410FDAE04FC55B2EB483FA569AF729DBA6B529F1D9CBE2D9",
+    "phase3": "9E4995059B0A504A410FDAE04FC55B2EB483FA569AF729DBA6B529F1D9CBE2D9",
+    "unchanged": true
+  },
+  {
+    "path": "demo-ut\\spec\\java\\com\\example\\reservation\\ReservationServiceSpecTest.java",
+    "phase2": "35EC46F1105BF24908D82CDC1043CC21013664BA270CD2B1F2E8AF5E5CF63DED",
+    "phase3": "35EC46F1105BF24908D82CDC1043CC21013664BA270CD2B1F2E8AF5E5CF63DED",
+    "unchanged": true
+  }
+]

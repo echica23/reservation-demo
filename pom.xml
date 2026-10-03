@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.example</groupId><artifactId>reservation-demo</artifactId><version>1.0.0-SNAPSHOT</version>
+  <properties>
+    <maven.compiler.release>21</maven.compiler.release>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <!-- PhaseごとにUT入力と成果物を分け、実ソースは共通で使う。 -->
+    <demo.testSourceDirectory>src/test/java</demo.testSourceDirectory>
+    <demo.buildDirectory>target/default</demo.buildDirectory>
+    <demo.runId>latest</demo.runId>
+  </properties>
+  <dependencies>
+    <dependency><groupId>org.junit.jupiter</groupId><artifactId>junit-jupiter</artifactId><version>5.11.4</version><scope>test</scope></dependency>
+    <dependency><groupId>org.mockito</groupId><artifactId>mockito-junit-jupiter</artifactId><version>4.11.0</version><scope>test</scope></dependency>
+  </dependencies>
+  <build>
+    <testSourceDirectory>${demo.testSourceDirectory}</testSourceDirectory>
+    <directory>${demo.buildDirectory}/${demo.runId}</directory>
+    <plugins>
+    <plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-clean-plugin</artifactId><version>3.2.0</version></plugin>
+    <plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-resources-plugin</artifactId><version>3.3.1</version></plugin>
+    <plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-compiler-plugin</artifactId><version>3.13.0</version>
+      <configuration><useModulePath>false</useModulePath></configuration>
+    </plugin>
+    <plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-surefire-plugin</artifactId><version>3.5.2</version>
+      <configuration><useModulePath>false</useModulePath><failIfNoTests>true</failIfNoTests></configuration>
+    </plugin>
+  </plugins></build>
+  <profiles>
+  <profile><id>phase1</id><properties>
+    <demo.testSourceDirectory>demo-ut/coverage/java</demo.testSourceDirectory>
+    <demo.buildDirectory>target/coverage</demo.buildDirectory>
+  </properties></profile>
+  <profile><id>phase2</id><properties>
+    <demo.testSourceDirectory>demo-ut/spec/java</demo.testSourceDirectory>
+    <demo.buildDirectory>target/spec</demo.buildDirectory>
+  </properties></profile>
+  <profile><id>phase3</id><properties>
+    <demo.testSourceDirectory>demo-ut/spec/java</demo.testSourceDirectory>
+    <demo.buildDirectory>target/review</demo.buildDirectory>
+  </properties></profile>
+  <profile>
+    <id>coverage</id><activation><activeByDefault>true</activeByDefault></activation>
+    <build><plugins><plugin>
+      <groupId>org.jacoco</groupId><artifactId>jacoco-maven-plugin</artifactId><version>0.8.12</version>
+      <configuration><append>false</append></configuration>
+      <executions>
+        <execution><id>agent</id><goals><goal>prepare-agent</goal></goals></execution>
+        <execution><id>report</id><phase>verify</phase><goals><goal>report</goal></goals></execution>
+      </executions>
+    </plugin></plugins></build>
+  </profile></profiles>
+</project>

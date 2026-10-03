@@ -1,0 +1,14 @@
+{
+  "commands": [
+    "$env:JAVA_HOME = 'C:\\Program Files\\Java\\jdk-21.0.11'",
+    "Set-Location 'C:\\demo\\reservation-demo'",
+    "& \"C:\\Users\\saram\\.m2\\wrapper\\dists\\apache-maven-3.9.9-bin\\33b4b2b4\\apache-maven-3.9.9\\bin\\mvn.cmd\" \"-Pphase2,coverage\" \"-Ddemo.runId=20261003-180427\" \"-Dmaven.repo.local=C:/Users/saram/.m2/repository\" test",
+    "& \"C:\\Users\\saram\\.m2\\wrapper\\dists\\apache-maven-3.9.9-bin\\33b4b2b4\\apache-maven-3.9.9\\bin\\mvn.cmd\" \"-Pphase2,coverage\" \"-Ddemo.runId=20261003-180427\" \"-Dmaven.repo.local=C:/Users/saram/.m2/repository\" jacoco:report"
+  ],
+  "testExitCode": 1,
+  "coverageExitCode": 0,
+  "compiledTests": [
+    "com\\example\\reservation\\ReservationServiceSpecTest.class"
+  ],
+  "parseErrors": 0
+}

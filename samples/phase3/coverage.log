@@ -1,0 +1,16 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< com.example:reservation-demo >--------------------
+[INFO] Building reservation-demo 1.0.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- jacoco:0.8.12:report (default-cli) @ reservation-demo ---
+[INFO] Loading execution data file C:\demo\reservation-demo\target\review\20261003-181648\jacoco.exec
+[INFO] Analyzed bundle 'reservation-demo' with 4 classes
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.429 s
+[INFO] Finished at: 2026-10-03T18:17:18+09:00
+[INFO] ------------------------------------------------------------------------
