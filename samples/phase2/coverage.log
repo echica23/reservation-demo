@@ -6,11 +6,11 @@
 [INFO] --------------------------------[ jar ]---------------------------------
 [INFO] 
 [INFO] --- jacoco:0.8.12:report (default-cli) @ reservation-demo ---
-[INFO] Loading execution data file C:\demo\reservation-demo\target\spec\20261003-180427\jacoco.exec
+[INFO] Loading execution data file C:\demo\reservation-demo\target\spec\20261006-112631-e91918\jacoco.exec
 [INFO] Analyzed bundle 'reservation-demo' with 4 classes
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.458 s
-[INFO] Finished at: 2026-10-03T18:07:29+09:00
+[INFO] Total time:  0.424 s
+[INFO] Finished at: 2026-10-06T11:29:11+09:00
 [INFO] ------------------------------------------------------------------------

@@ -1,35 +1,36 @@
 {
-  "baselineSelection": "今回のut -review指示直前の最後の有効な累計",
-  "limitations": "概算・最終計測時点まで。キャッシュ済み入力は入力の内数で合計に再加算しない。推論出力は参考値で合計に加算しない。最終計測後のレポート追記、samplesへのコピー・確認、最終回答、ログ反映待ちの処理は含まれない可能性がある。費用への換算は行わない。",
-  "runId": "20261003-181648",
+  "status": "approximate",
+  "delta": {
+    "cached_input_tokens": 317056,
+    "output_tokens": 1869,
+    "input_tokens": 330681,
+    "total_tokens": 332550,
+    "reasoning_output_tokens": 100
+  },
   "end": {
-    "timestamp": "2026-10-03T09:20:22.29Z",
+    "timestamp": "2026-10-06T02:32:44.993Z",
     "usage": {
-      "input_tokens": 2142838,
-      "cached_input_tokens": 2043648,
+      "input_tokens": 21216194,
+      "cached_input_tokens": 20056704,
       "cache_write_input_tokens": 0,
-      "output_tokens": 32001,
-      "reasoning_output_tokens": 1497,
-      "total_tokens": 2174839
+      "output_tokens": 118492,
+      "reasoning_output_tokens": 5301,
+      "total_tokens": 21334686
     }
   },
+  "runId": "20261006-113220-53c9ff",
+  "threadId": "01a0fd8f-fb42-7d01-b17c-8918eedc4617",
   "baseline": {
     "usage": {
-      "input_tokens": 1714806,
-      "cached_input_tokens": 1625088,
+      "input_tokens": 20885513,
+      "cached_input_tokens": 19739648,
       "cache_write_input_tokens": 0,
-      "output_tokens": 26394,
-      "reasoning_output_tokens": 1381,
-      "total_tokens": 1741200
+      "output_tokens": 116623,
+      "reasoning_output_tokens": 5201,
+      "total_tokens": 21002136
     },
-    "timestamp": "2026-10-03T09:12:44.655Z"
+    "timestamp": "2026-10-06T02:31:54.151Z"
   },
-  "threadId": "01a100f5-05c3-7cf2-8750-8d78793bf690",
-  "delta": {
-    "input_tokens": 428032,
-    "cached_input_tokens": 418560,
-    "output_tokens": 5607,
-    "total_tokens": 433639,
-    "reasoning_output_tokens": 116
-  }
+  "method": "Latest available at initial measurement; early processing excluded",
+  "limitations": "概算・最終計測時点まで。基準取得前の初期読取りと、最終取得後のレポート作成・コピー・検証・回答を含まない。キャッシュとreasoningは内数であり再加算しない。費用換算なし。"
 }

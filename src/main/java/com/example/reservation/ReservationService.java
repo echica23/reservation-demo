@@ -59,6 +59,9 @@ public class ReservationService {
 
     /** 会員種別などの予約条件から、適用する割引率を決める。 */
     private BigDecimal determineDiscount(MemberType member, boolean peakSeason, int quantity) {
+        if (quantity > 10) {
+            return new BigDecimal("0.15");
+        }
         if (member == MemberType.PREMIUM) {
             return new BigDecimal("0.10");
         }

@@ -1,38 +1,54 @@
 [
   {
-    "path": "src\\main\\java\\com\\example\\reservation\\CalendarService.java",
-    "sha256": "908418CDD54A5A6FA5015CFCC4237907401A5CA5E8F2D4BE382303A3F4E90F65"
+    "hash": "03801CFAAA64D5F288BE794B9FF25B5D1A659738B634158F62F543BB06C6FDCB",
+    "path": ".gitattributes"
   },
   {
-    "path": "src\\main\\java\\com\\example\\reservation\\CustomerService.java",
-    "sha256": "5DA65555CA9A2E054059B9C1113282AB6EAF2D30F91843344F2090C6B8F15EDF"
+    "hash": "7F7C8AC9DF305EB44041C7B6F0EFE5C847834786E74A58928D8C2CD284D7480D",
+    "path": ".gitignore"
   },
   {
-    "path": "src\\main\\java\\com\\example\\reservation\\InventoryService.java",
-    "sha256": "61BF034453AEEA096B175E1E90FFBB9CD7E9064B17207FB1AF8DAFF24C769656"
+    "hash": "782B7DE74DB09336CE4D09F24CB12F3EB86B8F74E2EE88959B00C416BDC5CEE2",
+    "path": "pom.xml"
   },
   {
-    "path": "src\\main\\java\\com\\example\\reservation\\MemberType.java",
-    "sha256": "CCE3530FE64B9916BBC840A236B5EAE5EF895CFE986B5202C5E52053250ABD1A"
+    "hash": "ADF9244FA0C25285AC6C804FE8436CC13AB975703AEDEB037FA8B8ED55675430",
+    "path": "README.md"
   },
   {
-    "path": "src\\main\\java\\com\\example\\reservation\\ReservationRequest.java",
-    "sha256": "2C9B3A3DAE38AAE2668606B744D17B30B7D07D73CE5F976065B7F241E9B777FD"
+    "hash": "9E4995059B0A504A410FDAE04FC55B2EB483FA569AF729DBA6B529F1D9CBE2D9",
+    "path": "docs\\reservation-spec.md"
   },
   {
-    "path": "src\\main\\java\\com\\example\\reservation\\ReservationResult.java",
-    "sha256": "89DB1CC81BB59F80AF679F69592B3979F3251DADA66B893C4B1A7E80E6E3ABB6"
+    "hash": "CC4DAE4544D5EB53314AEBEC006BD8264A98DE4A4F90267BF6DDDC2F5691D691",
+    "path": "prompts\\ut-instructions.md"
   },
   {
-    "path": "src\\main\\java\\com\\example\\reservation\\ReservationService.java",
-    "sha256": "3417695CA49D2FB8DA652022F38AE7AEB914202CECE78D99E82E920CC3EC0362"
+    "hash": "908418CDD54A5A6FA5015CFCC4237907401A5CA5E8F2D4BE382303A3F4E90F65",
+    "path": "src\\main\\java\\com\\example\\reservation\\CalendarService.java"
   },
   {
-    "path": "pom.xml",
-    "sha256": "782B7DE74DB09336CE4D09F24CB12F3EB86B8F74E2EE88959B00C416BDC5CEE2"
+    "hash": "5DA65555CA9A2E054059B9C1113282AB6EAF2D30F91843344F2090C6B8F15EDF",
+    "path": "src\\main\\java\\com\\example\\reservation\\CustomerService.java"
   },
   {
-    "path": ".gitignore",
-    "sha256": "7F7C8AC9DF305EB44041C7B6F0EFE5C847834786E74A58928D8C2CD284D7480D"
+    "hash": "61BF034453AEEA096B175E1E90FFBB9CD7E9064B17207FB1AF8DAFF24C769656",
+    "path": "src\\main\\java\\com\\example\\reservation\\InventoryService.java"
+  },
+  {
+    "hash": "CCE3530FE64B9916BBC840A236B5EAE5EF895CFE986B5202C5E52053250ABD1A",
+    "path": "src\\main\\java\\com\\example\\reservation\\MemberType.java"
+  },
+  {
+    "hash": "2C9B3A3DAE38AAE2668606B744D17B30B7D07D73CE5F976065B7F241E9B777FD",
+    "path": "src\\main\\java\\com\\example\\reservation\\ReservationRequest.java"
+  },
+  {
+    "hash": "89DB1CC81BB59F80AF679F69592B3979F3251DADA66B893C4B1A7E80E6E3ABB6",
+    "path": "src\\main\\java\\com\\example\\reservation\\ReservationResult.java"
+  },
+  {
+    "hash": "7477BE1C17F0062CACC071353E9E6CDE2C1CF79E130E40B2C7CFF24529AD8D1D",
+    "path": "src\\main\\java\\com\\example\\reservation\\ReservationService.java"
   }
 ]

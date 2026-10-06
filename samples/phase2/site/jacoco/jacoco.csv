@@ -2,4 +2,4 @@ GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_
 reservation-demo,com.example.reservation,ReservationRequest,0,15,0,0,0,1,0,1,0,1
 reservation-demo,com.example.reservation,ReservationResult,0,9,0,0,0,1,0,1,0,1
 reservation-demo,com.example.reservation,MemberType,0,21,0,0,0,1,0,1,0,1
-reservation-demo,com.example.reservation,ReservationService,0,145,0,24,0,32,0,16,0,4
+reservation-demo,com.example.reservation,ReservationService,5,148,1,25,1,33,1,16,0,4

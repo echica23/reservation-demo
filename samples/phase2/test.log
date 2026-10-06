@@ -6,21 +6,21 @@
 [INFO] --------------------------------[ jar ]---------------------------------
 [INFO] 
 [INFO] --- jacoco:0.8.12:prepare-agent (agent) @ reservation-demo ---
-[INFO] argLine set to -javaagent:C:\\Users\\saram\\.m2\\repository\\org\\jacoco\\org.jacoco.agent\\0.8.12\\org.jacoco.agent-0.8.12-runtime.jar=destfile=C:\\demo\\reservation-demo\\target\\spec\\20261003-180427\\jacoco.exec,append=false
+[INFO] argLine set to -javaagent:C:\\Users\\saram\\.m2\\repository\\org\\jacoco\\org.jacoco.agent\\0.8.12\\org.jacoco.agent-0.8.12-runtime.jar=destfile=C:\\demo\\reservation-demo\\target\\spec\\20261006-112631-e91918\\jacoco.exec,append=false
 [INFO] 
 [INFO] --- resources:3.3.1:resources (default-resources) @ reservation-demo ---
 [INFO] skip non existing resourceDirectory C:\demo\reservation-demo\src\main\resources
 [INFO] 
 [INFO] --- compiler:3.13.0:compile (default-compile) @ reservation-demo ---
 [INFO] Recompiling the module because of changed source code.
-[INFO] Compiling 7 source files with javac [debug release 21] to target\spec\20261003-180427\classes
+[INFO] Compiling 7 source files with javac [debug release 21] to target\spec\20261006-112631-e91918\classes
 [INFO] 
 [INFO] --- resources:3.3.1:testResources (default-testResources) @ reservation-demo ---
 [INFO] skip non existing resourceDirectory C:\demo\reservation-demo\src\test\resources
 [INFO] 
 [INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ reservation-demo ---
 [INFO] Recompiling the module because of changed dependency.
-[INFO] Compiling 1 source file with javac [debug release 21] to target\spec\20261003-180427\test-classes
+[INFO] Compiling 1 source file with javac [debug release 21] to target\spec\20261006-112631-e91918\test-classes
 [INFO] 
 [INFO] --- surefire:3.5.2:test (default-test) @ reservation-demo ---
 [INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
@@ -29,454 +29,79 @@
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.example.reservation.ReservationServiceSpecTest
-SPEC-INVENTORY-UNAVAILABLE | spec=S02 | customer=C1 | date=2026-10-03 | quantity=1 | unitPrice=100 | available=false | expected=IllegalStateException; no customer/calendar
-SPEC-PREMIUM-OFF-Q1 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=PREMIUM | peak=false | quantity=1 | unitPrice=100 | expectedRate=0.10 | actualRate=0.10 | expectedTotal=90 | actualTotal=90 | expectedScale=0 | actualScale=0
-SPEC-PREMIUM-OFF-Q4 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=PREMIUM | peak=false | quantity=4 | unitPrice=100 | expectedRate=0.10 | actualRate=0.10 | expectedTotal=360 | actualTotal=360 | expectedScale=0 | actualScale=0
-SPEC-PREMIUM-OFF-Q5 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=PREMIUM | peak=false | quantity=5 | unitPrice=100 | expectedRate=0.10 | actualRate=0.10 | expectedTotal=450 | actualTotal=450 | expectedScale=0 | actualScale=0
-SPEC-PREMIUM-OFF-Q10 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=PREMIUM | peak=false | quantity=10 | unitPrice=100 | expectedRate=0.10 | actualRate=0.10 | expectedTotal=900 | actualTotal=900 | expectedScale=0 | actualScale=0
-SPEC-PREMIUM-PEAK-Q1 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=PREMIUM | peak=true | quantity=1 | unitPrice=100 | expectedRate=0.05 | actualRate=0.10 | expectedTotal=95 | actualTotal=90 | expectedScale=0 | actualScale=0
-SPEC-PREMIUM-PEAK-Q4 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=PREMIUM | peak=true | quantity=4 | unitPrice=100 | expectedRate=0.05 | actualRate=0.10 | expectedTotal=380 | actualTotal=360 | expectedScale=0 | actualScale=0
-SPEC-PREMIUM-PEAK-Q5 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=PREMIUM | peak=true | quantity=5 | unitPrice=100 | expectedRate=0.05 | actualRate=0.10 | expectedTotal=475 | actualTotal=450 | expectedScale=0 | actualScale=0
-SPEC-PREMIUM-PEAK-Q10 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=PREMIUM | peak=true | quantity=10 | unitPrice=100 | expectedRate=0.05 | actualRate=0.10 | expectedTotal=950 | actualTotal=900 | expectedScale=0 | actualScale=0
-SPEC-STANDARD-OFF-Q1 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=STANDARD | peak=false | quantity=1 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=100 | actualTotal=100 | expectedScale=0 | actualScale=0
-SPEC-STANDARD-OFF-Q4 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=STANDARD | peak=false | quantity=4 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=400 | actualTotal=400 | expectedScale=0 | actualScale=0
-SPEC-STANDARD-OFF-Q5 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=STANDARD | peak=false | quantity=5 | unitPrice=100 | expectedRate=0.05 | actualRate=0.00 | expectedTotal=475 | actualTotal=500 | expectedScale=0 | actualScale=0
-SPEC-STANDARD-OFF-Q10 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=STANDARD | peak=false | quantity=10 | unitPrice=100 | expectedRate=0.05 | actualRate=0.05 | expectedTotal=950 | actualTotal=950 | expectedScale=0 | actualScale=0
-SPEC-STANDARD-PEAK-Q1 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=STANDARD | peak=true | quantity=1 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=100 | actualTotal=100 | expectedScale=0 | actualScale=0
-SPEC-STANDARD-PEAK-Q4 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=STANDARD | peak=true | quantity=4 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=400 | actualTotal=400 | expectedScale=0 | actualScale=0
-SPEC-STANDARD-PEAK-Q5 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=STANDARD | peak=true | quantity=5 | unitPrice=100 | expectedRate=0.05 | actualRate=0.00 | expectedTotal=475 | actualTotal=500 | expectedScale=0 | actualScale=0
-SPEC-STANDARD-PEAK-Q10 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=STANDARD | peak=true | quantity=10 | unitPrice=100 | expectedRate=0.05 | actualRate=0.05 | expectedTotal=950 | actualTotal=950 | expectedScale=0 | actualScale=0
-SPEC-NONE-OFF-Q1 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=NONE | peak=false | quantity=1 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=100 | actualTotal=100 | expectedScale=0 | actualScale=0
-SPEC-NONE-OFF-Q4 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=NONE | peak=false | quantity=4 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=400 | actualTotal=400 | expectedScale=0 | actualScale=0
-SPEC-NONE-OFF-Q5 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=NONE | peak=false | quantity=5 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=500 | actualTotal=500 | expectedScale=0 | actualScale=0
-SPEC-NONE-OFF-Q10 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=NONE | peak=false | quantity=10 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=1000 | actualTotal=1000 | expectedScale=0 | actualScale=0
-SPEC-NONE-PEAK-Q1 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=NONE | peak=true | quantity=1 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=100 | actualTotal=100 | expectedScale=0 | actualScale=0
-SPEC-NONE-PEAK-Q4 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=NONE | peak=true | quantity=4 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=400 | actualTotal=400 | expectedScale=0 | actualScale=0
-SPEC-NONE-PEAK-Q5 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=NONE | peak=true | quantity=5 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=500 | actualTotal=500 | expectedScale=0 | actualScale=0
-SPEC-NONE-PEAK-Q10 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=NONE | peak=true | quantity=10 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=1000 | actualTotal=1000 | expectedScale=0 | actualScale=0
-SPEC-STANDARD-OFF-Q6 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=STANDARD | peak=false | quantity=6 | unitPrice=100 | expectedRate=0.05 | actualRate=0.05 | expectedTotal=570 | actualTotal=570 | expectedScale=0 | actualScale=0
-SPEC-STANDARD-PEAK-Q6 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=STANDARD | peak=true | quantity=6 | unitPrice=100 | expectedRate=0.05 | actualRate=0.05 | expectedTotal=570 | actualTotal=570 | expectedScale=0 | actualScale=0
-SPEC-ROUND-BELOW-HALF | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=NONE | peak=false | quantity=1 | unitPrice=100.49 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=100 | actualTotal=100 | expectedScale=0 | actualScale=0
-SPEC-ROUND-AT-HALF | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=NONE | peak=false | quantity=1 | unitPrice=100.50 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=101 | actualTotal=101 | expectedScale=0 | actualScale=0
-SPEC-ROUND-ABOVE-HALF | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=NONE | peak=false | quantity=1 | unitPrice=100.51 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=101 | actualTotal=101 | expectedScale=0 | actualScale=0
-SPEC-ROUND-PREMIUM-HALF | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=PREMIUM | peak=false | quantity=1 | unitPrice=105 | expectedRate=0.10 | actualRate=0.10 | expectedTotal=95 | actualTotal=95 | expectedScale=0 | actualScale=0
-SPEC-ROUND-STANDARD-HALF | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=STANDARD | peak=false | quantity=6 | unitPrice=105 | expectedRate=0.05 | actualRate=0.05 | expectedTotal=599 | actualTotal=599 | expectedScale=0 | actualScale=0
-SPEC-ROUND-AFTER-QUANTITY | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=NONE | peak=false | quantity=3 | unitPrice=0.49 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=1 | actualTotal=1 | expectedScale=0 | actualScale=0
-SPEC-ROUND-AFTER-DISCOUNT | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=PREMIUM | peak=false | quantity=3 | unitPrice=0.55 | expectedRate=0.10 | actualRate=0.10 | expectedTotal=1 | actualTotal=1 | expectedScale=0 | actualScale=0
-SPEC-PRICE-SMALL-POSITIVE | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=NONE | peak=false | quantity=1 | unitPrice=0.01 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=0 | actualTotal=0 | expectedScale=0 | actualScale=0
-SPEC-INPUT-REQUEST-NULL | spec=S01 | input=null | expected=IllegalArgumentException; no dependencies
-SPEC-INPUT-CUSTOMER-NULL | spec=S01 | input=ReservationRequest[customerId=null, date=2026-10-03, quantity=1, unitPrice=100] | expected=IllegalArgumentException; no dependencies
-SPEC-INPUT-CUSTOMER-EMPTY | spec=S01 | input=ReservationRequest[customerId=, date=2026-10-03, quantity=1, unitPrice=100] | expected=IllegalArgumentException; no dependencies
-SPEC-INPUT-CUSTOMER-BLANK | spec=S01 | input=ReservationRequest[customerId= 	
-, date=2026-10-03, quantity=1, unitPrice=100] | expected=IllegalArgumentException; no dependencies
-SPEC-INPUT-DATE-NULL | spec=S01 | input=ReservationRequest[customerId=C1, date=null, quantity=1, unitPrice=100] | expected=IllegalArgumentException; no dependencies
-SPEC-INPUT-QUANTITY-NEGATIVE | spec=S01 | input=ReservationRequest[customerId=C1, date=2026-10-03, quantity=-1, unitPrice=100] | expected=IllegalArgumentException; no dependencies
-SPEC-INPUT-QUANTITY-ZERO | spec=S01 | input=ReservationRequest[customerId=C1, date=2026-10-03, quantity=0, unitPrice=100] | expected=IllegalArgumentException; no dependencies
-SPEC-INPUT-QUANTITY-ELEVEN | spec=S01 | input=ReservationRequest[customerId=C1, date=2026-10-03, quantity=11, unitPrice=100] | expected=IllegalArgumentException; no dependencies
-SPEC-INPUT-PRICE-NULL | spec=S01 | input=ReservationRequest[customerId=C1, date=2026-10-03, quantity=1, unitPrice=null] | expected=IllegalArgumentException; no dependencies
-SPEC-INPUT-PRICE-ZERO | spec=S01 | input=ReservationRequest[customerId=C1, date=2026-10-03, quantity=1, unitPrice=0.00] | expected=IllegalArgumentException; no dependencies
-SPEC-INPUT-PRICE-NEGATIVE | spec=S01 | input=ReservationRequest[customerId=C1, date=2026-10-03, quantity=1, unitPrice=-0.01] | expected=IllegalArgumentException; no dependencies
+SPEC-INVENTORY-UNAVAILABLE | spec=S02 | quantity=1 | date=2026-10-06 | available=false | expected=IllegalStateException
+SPEC-INVENTORY-UNAVAILABLE | actual=IllegalStateException
+SPEC-NONE-OFF-Q1 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=NONE | peak=false | quantity=1 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=100 | actualTotal=100 | expectedScale=0 | actualScale=0
+SPEC-NONE-OFF-Q4 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=NONE | peak=false | quantity=4 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=400 | actualTotal=400 | expectedScale=0 | actualScale=0
+SPEC-NONE-OFF-Q5 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=NONE | peak=false | quantity=5 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=500 | actualTotal=500 | expectedScale=0 | actualScale=0
+SPEC-NONE-OFF-Q6 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=NONE | peak=false | quantity=6 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=600 | actualTotal=600 | expectedScale=0 | actualScale=0
+SPEC-NONE-OFF-Q10 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=NONE | peak=false | quantity=10 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=1000 | actualTotal=1000 | expectedScale=0 | actualScale=0
+SPEC-NONE-PEAK-Q1 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=NONE | peak=true | quantity=1 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=100 | actualTotal=100 | expectedScale=0 | actualScale=0
+SPEC-NONE-PEAK-Q4 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=NONE | peak=true | quantity=4 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=400 | actualTotal=400 | expectedScale=0 | actualScale=0
+SPEC-NONE-PEAK-Q5 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=NONE | peak=true | quantity=5 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=500 | actualTotal=500 | expectedScale=0 | actualScale=0
+SPEC-NONE-PEAK-Q6 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=NONE | peak=true | quantity=6 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=600 | actualTotal=600 | expectedScale=0 | actualScale=0
+SPEC-NONE-PEAK-Q10 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=NONE | peak=true | quantity=10 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=1000 | actualTotal=1000 | expectedScale=0 | actualScale=0
+SPEC-STANDARD-OFF-Q1 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=STANDARD | peak=false | quantity=1 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=100 | actualTotal=100 | expectedScale=0 | actualScale=0
+SPEC-STANDARD-OFF-Q4 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=STANDARD | peak=false | quantity=4 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=400 | actualTotal=400 | expectedScale=0 | actualScale=0
+SPEC-STANDARD-OFF-Q5 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=STANDARD | peak=false | quantity=5 | unitPrice=100 | expectedRate=0.05 | actualRate=0.00 | expectedTotal=475 | actualTotal=500 | expectedScale=0 | actualScale=0
+SPEC-STANDARD-OFF-Q6 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=STANDARD | peak=false | quantity=6 | unitPrice=100 | expectedRate=0.05 | actualRate=0.05 | expectedTotal=570 | actualTotal=570 | expectedScale=0 | actualScale=0
+SPEC-STANDARD-OFF-Q10 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=STANDARD | peak=false | quantity=10 | unitPrice=100 | expectedRate=0.05 | actualRate=0.05 | expectedTotal=950 | actualTotal=950 | expectedScale=0 | actualScale=0
+SPEC-STANDARD-PEAK-Q1 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=STANDARD | peak=true | quantity=1 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=100 | actualTotal=100 | expectedScale=0 | actualScale=0
+SPEC-STANDARD-PEAK-Q4 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=STANDARD | peak=true | quantity=4 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=400 | actualTotal=400 | expectedScale=0 | actualScale=0
+SPEC-STANDARD-PEAK-Q5 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=STANDARD | peak=true | quantity=5 | unitPrice=100 | expectedRate=0.05 | actualRate=0.00 | expectedTotal=475 | actualTotal=500 | expectedScale=0 | actualScale=0
+SPEC-STANDARD-PEAK-Q6 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=STANDARD | peak=true | quantity=6 | unitPrice=100 | expectedRate=0.05 | actualRate=0.05 | expectedTotal=570 | actualTotal=570 | expectedScale=0 | actualScale=0
+SPEC-STANDARD-PEAK-Q10 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=STANDARD | peak=true | quantity=10 | unitPrice=100 | expectedRate=0.05 | actualRate=0.05 | expectedTotal=950 | actualTotal=950 | expectedScale=0 | actualScale=0
+SPEC-PREMIUM-OFF-Q1 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=PREMIUM | peak=false | quantity=1 | unitPrice=100 | expectedRate=0.10 | actualRate=0.10 | expectedTotal=90 | actualTotal=90 | expectedScale=0 | actualScale=0
+SPEC-PREMIUM-OFF-Q4 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=PREMIUM | peak=false | quantity=4 | unitPrice=100 | expectedRate=0.10 | actualRate=0.10 | expectedTotal=360 | actualTotal=360 | expectedScale=0 | actualScale=0
+SPEC-PREMIUM-OFF-Q5 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=PREMIUM | peak=false | quantity=5 | unitPrice=100 | expectedRate=0.10 | actualRate=0.10 | expectedTotal=450 | actualTotal=450 | expectedScale=0 | actualScale=0
+SPEC-PREMIUM-OFF-Q6 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=PREMIUM | peak=false | quantity=6 | unitPrice=100 | expectedRate=0.10 | actualRate=0.10 | expectedTotal=540 | actualTotal=540 | expectedScale=0 | actualScale=0
+SPEC-PREMIUM-OFF-Q10 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=PREMIUM | peak=false | quantity=10 | unitPrice=100 | expectedRate=0.10 | actualRate=0.10 | expectedTotal=900 | actualTotal=900 | expectedScale=0 | actualScale=0
+SPEC-PREMIUM-PEAK-Q1 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=PREMIUM | peak=true | quantity=1 | unitPrice=100 | expectedRate=0.05 | actualRate=0.10 | expectedTotal=95 | actualTotal=90 | expectedScale=0 | actualScale=0
+SPEC-PREMIUM-PEAK-Q4 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=PREMIUM | peak=true | quantity=4 | unitPrice=100 | expectedRate=0.05 | actualRate=0.10 | expectedTotal=380 | actualTotal=360 | expectedScale=0 | actualScale=0
+SPEC-PREMIUM-PEAK-Q5 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=PREMIUM | peak=true | quantity=5 | unitPrice=100 | expectedRate=0.05 | actualRate=0.10 | expectedTotal=475 | actualTotal=450 | expectedScale=0 | actualScale=0
+SPEC-PREMIUM-PEAK-Q6 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=PREMIUM | peak=true | quantity=6 | unitPrice=100 | expectedRate=0.05 | actualRate=0.10 | expectedTotal=570 | actualTotal=540 | expectedScale=0 | actualScale=0
+SPEC-PREMIUM-PEAK-Q10 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=PREMIUM | peak=true | quantity=10 | unitPrice=100 | expectedRate=0.05 | actualRate=0.10 | expectedTotal=950 | actualTotal=900 | expectedScale=0 | actualScale=0
+SPEC-INPUT-REQUEST-NULL | spec=S01 | input=null | expected=IllegalArgumentException
+SPEC-INPUT-REQUEST-NULL | actual=IllegalArgumentException
+SPEC-INPUT-CUSTOMER-NULL | spec=S01 | input=ReservationRequest[customerId=null, date=2026-10-06, quantity=1, unitPrice=100] | expected=IllegalArgumentException
+SPEC-INPUT-CUSTOMER-NULL | actual=IllegalArgumentException
+SPEC-INPUT-CUSTOMER-EMPTY | spec=S01 | input=ReservationRequest[customerId=, date=2026-10-06, quantity=1, unitPrice=100] | expected=IllegalArgumentException
+SPEC-INPUT-CUSTOMER-EMPTY | actual=IllegalArgumentException
+SPEC-INPUT-CUSTOMER-BLANK | spec=S01 | input=ReservationRequest[customerId= 	, date=2026-10-06, quantity=1, unitPrice=100] | expected=IllegalArgumentException
+SPEC-INPUT-CUSTOMER-BLANK | actual=IllegalArgumentException
+SPEC-INPUT-DATE-NULL | spec=S01 | input=ReservationRequest[customerId=C1, date=null, quantity=1, unitPrice=100] | expected=IllegalArgumentException
+SPEC-INPUT-DATE-NULL | actual=IllegalArgumentException
+SPEC-INPUT-QUANTITY-NEGATIVE | spec=S01 | input=ReservationRequest[customerId=C1, date=2026-10-06, quantity=-1, unitPrice=100] | expected=IllegalArgumentException
+SPEC-INPUT-QUANTITY-NEGATIVE | actual=IllegalArgumentException
+SPEC-INPUT-QUANTITY-ZERO | spec=S01 | input=ReservationRequest[customerId=C1, date=2026-10-06, quantity=0, unitPrice=100] | expected=IllegalArgumentException
+SPEC-INPUT-QUANTITY-ZERO | actual=IllegalArgumentException
+SPEC-INPUT-QUANTITY-ELEVEN | spec=S01 | input=ReservationRequest[customerId=C1, date=2026-10-06, quantity=11, unitPrice=100] | expected=IllegalArgumentException
+SPEC-INPUT-QUANTITY-ELEVEN | actual=IllegalArgumentException
+SPEC-INPUT-PRICE-NULL | spec=S01 | input=ReservationRequest[customerId=C1, date=2026-10-06, quantity=1, unitPrice=null] | expected=IllegalArgumentException
+SPEC-INPUT-PRICE-NULL | actual=IllegalArgumentException
+SPEC-INPUT-PRICE-ZERO | spec=S01 | input=ReservationRequest[customerId=C1, date=2026-10-06, quantity=1, unitPrice=0] | expected=IllegalArgumentException
+SPEC-INPUT-PRICE-ZERO | actual=IllegalArgumentException
+SPEC-INPUT-PRICE-NEGATIVE | spec=S01 | input=ReservationRequest[customerId=C1, date=2026-10-06, quantity=1, unitPrice=-0.01] | expected=IllegalArgumentException
+SPEC-INPUT-PRICE-NEGATIVE | actual=IllegalArgumentException
+SPEC-ROUND-BELOW | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=NONE | peak=false | quantity=1 | unitPrice=0.49 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=0 | actualTotal=0 | expectedScale=0 | actualScale=0
+SPEC-ROUND-HALF | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=NONE | peak=false | quantity=1 | unitPrice=0.50 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=1 | actualTotal=1 | expectedScale=0 | actualScale=0
+SPEC-ROUND-ABOVE | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=NONE | peak=false | quantity=1 | unitPrice=0.51 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=1 | actualTotal=1 | expectedScale=0 | actualScale=0
+SPEC-ROUND-PREMIUM | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=PREMIUM | peak=false | quantity=1 | unitPrice=1.67 | expectedRate=0.10 | actualRate=0.10 | expectedTotal=2 | actualTotal=2 | expectedScale=0 | actualScale=0
+SPEC-ROUND-STANDARD | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=STANDARD | peak=false | quantity=6 | unitPrice=0.10 | expectedRate=0.05 | actualRate=0.05 | expectedTotal=1 | actualTotal=1 | expectedScale=0 | actualScale=0
+SPEC-ROUND-NO-INTERMEDIATE | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=NONE | peak=false | quantity=3 | unitPrice=0.49 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=1 | actualTotal=1 | expectedScale=0 | actualScale=0
 SPEC-DATE-PAST | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2000-01-01 | member=NONE | peak=false | quantity=1 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=100 | actualTotal=100 | expectedScale=0 | actualScale=0
 SPEC-DATE-FUTURE | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2100-01-01 | member=NONE | peak=false | quantity=1 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=100 | actualTotal=100 | expectedScale=0 | actualScale=0
-[ERROR] Tests run: 48, Failures: 6, Errors: 0, Skipped: 0, Time elapsed: 0.784 s <<< FAILURE! -- in com.example.reservation.ReservationServiceSpecTest
-[ERROR] com.example.reservation.ReservationServiceSpecTest.returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[5] -- Time elapsed: 0.008 s <<< FAILURE!
-org.opentest4j.MultipleFailuresError: 
-SPEC-PREMIUM-PEAK-Q1 (2 failures)
-	org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q1 discountRate; S03 ==> expected: <0.05> but was: <0.10>
-	org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q1 totalAmount; S04 ==> expected: <95> but was: <90>
-	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:80)
-	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:44)
-	at org.junit.jupiter.api.Assertions.assertAll(Assertions.java:2961)
-	at com.example.reservation.ReservationServiceSpecTest.assertPrice(ReservationServiceSpecTest.java:137)
-	at com.example.reservation.ReservationServiceSpecTest.returnsSpecifiedPrice(ReservationServiceSpecTest.java:109)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
-	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
-	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
-	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
-	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
-	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	Suppressed: org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q1 discountRate; S03 ==> expected: <0.05> but was: <0.10>
-		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-		at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-		at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-		at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
-		at com.example.reservation.ReservationServiceSpecTest.lambda$assertPrice$1(ReservationServiceSpecTest.java:138)
-		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
-		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
-		at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-		at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
-		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-		at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
-		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
-		... 56 more
-	Suppressed: org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q1 totalAmount; S04 ==> expected: <95> but was: <90>
-		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-		at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-		at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-		at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
-		at com.example.reservation.ReservationServiceSpecTest.lambda$assertPrice$2(ReservationServiceSpecTest.java:139)
-		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
-		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
-		at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-		at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
-		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-		at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
-		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
-		... 56 more
-
-[ERROR] com.example.reservation.ReservationServiceSpecTest.returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[6] -- Time elapsed: 0.006 s <<< FAILURE!
-org.opentest4j.MultipleFailuresError: 
-SPEC-PREMIUM-PEAK-Q4 (2 failures)
-	org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q4 discountRate; S03 ==> expected: <0.05> but was: <0.10>
-	org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q4 totalAmount; S04 ==> expected: <380> but was: <360>
-	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:80)
-	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:44)
-	at org.junit.jupiter.api.Assertions.assertAll(Assertions.java:2961)
-	at com.example.reservation.ReservationServiceSpecTest.assertPrice(ReservationServiceSpecTest.java:137)
-	at com.example.reservation.ReservationServiceSpecTest.returnsSpecifiedPrice(ReservationServiceSpecTest.java:109)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
-	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
-	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
-	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
-	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
-	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	Suppressed: org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q4 discountRate; S03 ==> expected: <0.05> but was: <0.10>
-		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-		at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-		at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-		at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
-		at com.example.reservation.ReservationServiceSpecTest.lambda$assertPrice$1(ReservationServiceSpecTest.java:138)
-		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
-		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
-		at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-		at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
-		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-		at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
-		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
-		... 56 more
-	Suppressed: org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q4 totalAmount; S04 ==> expected: <380> but was: <360>
-		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-		at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-		at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-		at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
-		at com.example.reservation.ReservationServiceSpecTest.lambda$assertPrice$2(ReservationServiceSpecTest.java:139)
-		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
-		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
-		at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-		at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
-		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-		at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
-		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
-		... 56 more
-
-[ERROR] com.example.reservation.ReservationServiceSpecTest.returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[7] -- Time elapsed: 0.004 s <<< FAILURE!
-org.opentest4j.MultipleFailuresError: 
-SPEC-PREMIUM-PEAK-Q5 (2 failures)
-	org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q5 discountRate; S03 ==> expected: <0.05> but was: <0.10>
-	org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q5 totalAmount; S04 ==> expected: <475> but was: <450>
-	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:80)
-	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:44)
-	at org.junit.jupiter.api.Assertions.assertAll(Assertions.java:2961)
-	at com.example.reservation.ReservationServiceSpecTest.assertPrice(ReservationServiceSpecTest.java:137)
-	at com.example.reservation.ReservationServiceSpecTest.returnsSpecifiedPrice(ReservationServiceSpecTest.java:109)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
-	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
-	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
-	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
-	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
-	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	Suppressed: org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q5 discountRate; S03 ==> expected: <0.05> but was: <0.10>
-		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-		at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-		at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-		at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
-		at com.example.reservation.ReservationServiceSpecTest.lambda$assertPrice$1(ReservationServiceSpecTest.java:138)
-		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
-		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
-		at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-		at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
-		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-		at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
-		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
-		... 56 more
-	Suppressed: org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q5 totalAmount; S04 ==> expected: <475> but was: <450>
-		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-		at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-		at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-		at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
-		at com.example.reservation.ReservationServiceSpecTest.lambda$assertPrice$2(ReservationServiceSpecTest.java:139)
-		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
-		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
-		at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-		at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
-		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-		at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
-		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
-		... 56 more
-
-[ERROR] com.example.reservation.ReservationServiceSpecTest.returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[8] -- Time elapsed: 0.004 s <<< FAILURE!
-org.opentest4j.MultipleFailuresError: 
-SPEC-PREMIUM-PEAK-Q10 (2 failures)
-	org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q10 discountRate; S03 ==> expected: <0.05> but was: <0.10>
-	org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q10 totalAmount; S04 ==> expected: <950> but was: <900>
-	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:80)
-	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:44)
-	at org.junit.jupiter.api.Assertions.assertAll(Assertions.java:2961)
-	at com.example.reservation.ReservationServiceSpecTest.assertPrice(ReservationServiceSpecTest.java:137)
-	at com.example.reservation.ReservationServiceSpecTest.returnsSpecifiedPrice(ReservationServiceSpecTest.java:109)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
-	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
-	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
-	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
-	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
-	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	Suppressed: org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q10 discountRate; S03 ==> expected: <0.05> but was: <0.10>
-		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-		at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-		at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-		at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
-		at com.example.reservation.ReservationServiceSpecTest.lambda$assertPrice$1(ReservationServiceSpecTest.java:138)
-		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
-		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
-		at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-		at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
-		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-		at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
-		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
-		... 56 more
-	Suppressed: org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q10 totalAmount; S04 ==> expected: <950> but was: <900>
-		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-		at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-		at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-		at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
-		at com.example.reservation.ReservationServiceSpecTest.lambda$assertPrice$2(ReservationServiceSpecTest.java:139)
-		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
-		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
-		at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-		at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
-		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-		at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
-		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
-		... 56 more
-
-[ERROR] com.example.reservation.ReservationServiceSpecTest.returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[11] -- Time elapsed: 0.005 s <<< FAILURE!
+[ERROR] Tests run: 50, Failures: 7, Errors: 0, Skipped: 0, Time elapsed: 0.800 s <<< FAILURE! -- in com.example.reservation.ReservationServiceSpecTest
+[ERROR] com.example.reservation.ReservationServiceSpecTest.returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[13] -- Time elapsed: 0.010 s <<< FAILURE!
 org.opentest4j.MultipleFailuresError: 
 SPEC-STANDARD-OFF-Q5 (2 failures)
-	org.opentest4j.AssertionFailedError: SPEC-STANDARD-OFF-Q5 discountRate; S03 ==> expected: <0.05> but was: <0.00>
-	org.opentest4j.AssertionFailedError: SPEC-STANDARD-OFF-Q5 totalAmount; S04 ==> expected: <475> but was: <500>
+	org.opentest4j.AssertionFailedError: SPEC-STANDARD-OFF-Q5 S03 rate ==> expected: <0.05> but was: <0.00>
+	org.opentest4j.AssertionFailedError: SPEC-STANDARD-OFF-Q5 S04 total ==> expected: <475> but was: <500>
 	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:80)
 	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:44)
 	at org.junit.jupiter.api.Assertions.assertAll(Assertions.java:2961)
-	at com.example.reservation.ReservationServiceSpecTest.assertPrice(ReservationServiceSpecTest.java:137)
-	at com.example.reservation.ReservationServiceSpecTest.returnsSpecifiedPrice(ReservationServiceSpecTest.java:109)
+	at com.example.reservation.ReservationServiceSpecTest.assertPrice(ReservationServiceSpecTest.java:156)
+	at com.example.reservation.ReservationServiceSpecTest.returnsSpecifiedPrice(ReservationServiceSpecTest.java:98)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
 	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
@@ -485,22 +110,9 @@ SPEC-STANDARD-OFF-Q5 (2 failures)
 	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
 	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
 	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
 	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
 	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
-	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
 	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
 	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
 	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
@@ -529,13 +141,13 @@ SPEC-STANDARD-OFF-Q5 (2 failures)
 	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	Suppressed: org.opentest4j.AssertionFailedError: SPEC-STANDARD-OFF-Q5 discountRate; S03 ==> expected: <0.05> but was: <0.00>
+	Suppressed: org.opentest4j.AssertionFailedError: SPEC-STANDARD-OFF-Q5 S03 rate ==> expected: <0.05> but was: <0.00>
 		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
 		at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
 		at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
 		at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
-		at com.example.reservation.ReservationServiceSpecTest.lambda$assertPrice$1(ReservationServiceSpecTest.java:138)
+		at com.example.reservation.ReservationServiceSpecTest.lambda$assertPrice$2(ReservationServiceSpecTest.java:157)
 		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
 		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
 		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
@@ -545,14 +157,14 @@ SPEC-STANDARD-OFF-Q5 (2 failures)
 		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
 		at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
 		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
-		... 56 more
-	Suppressed: org.opentest4j.AssertionFailedError: SPEC-STANDARD-OFF-Q5 totalAmount; S04 ==> expected: <475> but was: <500>
+		... 43 more
+	Suppressed: org.opentest4j.AssertionFailedError: SPEC-STANDARD-OFF-Q5 S04 total ==> expected: <475> but was: <500>
 		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
 		at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
 		at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
 		at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
-		at com.example.reservation.ReservationServiceSpecTest.lambda$assertPrice$2(ReservationServiceSpecTest.java:139)
+		at com.example.reservation.ReservationServiceSpecTest.lambda$assertPrice$3(ReservationServiceSpecTest.java:158)
 		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
 		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
 		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
@@ -562,18 +174,18 @@ SPEC-STANDARD-OFF-Q5 (2 failures)
 		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
 		at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
 		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
-		... 56 more
+		... 43 more
 
-[ERROR] com.example.reservation.ReservationServiceSpecTest.returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[15] -- Time elapsed: 0.002 s <<< FAILURE!
+[ERROR] com.example.reservation.ReservationServiceSpecTest.returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[18] -- Time elapsed: 0.016 s <<< FAILURE!
 org.opentest4j.MultipleFailuresError: 
 SPEC-STANDARD-PEAK-Q5 (2 failures)
-	org.opentest4j.AssertionFailedError: SPEC-STANDARD-PEAK-Q5 discountRate; S03 ==> expected: <0.05> but was: <0.00>
-	org.opentest4j.AssertionFailedError: SPEC-STANDARD-PEAK-Q5 totalAmount; S04 ==> expected: <475> but was: <500>
+	org.opentest4j.AssertionFailedError: SPEC-STANDARD-PEAK-Q5 S03 rate ==> expected: <0.05> but was: <0.00>
+	org.opentest4j.AssertionFailedError: SPEC-STANDARD-PEAK-Q5 S04 total ==> expected: <475> but was: <500>
 	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:80)
 	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:44)
 	at org.junit.jupiter.api.Assertions.assertAll(Assertions.java:2961)
-	at com.example.reservation.ReservationServiceSpecTest.assertPrice(ReservationServiceSpecTest.java:137)
-	at com.example.reservation.ReservationServiceSpecTest.returnsSpecifiedPrice(ReservationServiceSpecTest.java:109)
+	at com.example.reservation.ReservationServiceSpecTest.assertPrice(ReservationServiceSpecTest.java:156)
+	at com.example.reservation.ReservationServiceSpecTest.returnsSpecifiedPrice(ReservationServiceSpecTest.java:98)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
 	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
@@ -582,21 +194,92 @@ SPEC-STANDARD-PEAK-Q5 (2 failures)
 	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
 	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
 	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
 	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
 	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
 	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
 	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
 	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
 	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
 	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
 	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: org.opentest4j.AssertionFailedError: SPEC-STANDARD-PEAK-Q5 S03 rate ==> expected: <0.05> but was: <0.00>
+		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+		at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+		at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+		at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
+		at com.example.reservation.ReservationServiceSpecTest.lambda$assertPrice$2(ReservationServiceSpecTest.java:157)
+		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
+		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+		at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+		at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+		at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
+		... 43 more
+	Suppressed: org.opentest4j.AssertionFailedError: SPEC-STANDARD-PEAK-Q5 S04 total ==> expected: <475> but was: <500>
+		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+		at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+		at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+		at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
+		at com.example.reservation.ReservationServiceSpecTest.lambda$assertPrice$3(ReservationServiceSpecTest.java:158)
+		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
+		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+		at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+		at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+		at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
+		... 43 more
+
+[ERROR] com.example.reservation.ReservationServiceSpecTest.returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[26] -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.MultipleFailuresError: 
+SPEC-PREMIUM-PEAK-Q1 (2 failures)
+	org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q1 S03 rate ==> expected: <0.05> but was: <0.10>
+	org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q1 S04 total ==> expected: <95> but was: <90>
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:80)
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:44)
+	at org.junit.jupiter.api.Assertions.assertAll(Assertions.java:2961)
+	at com.example.reservation.ReservationServiceSpecTest.assertPrice(ReservationServiceSpecTest.java:156)
+	at com.example.reservation.ReservationServiceSpecTest.returnsSpecifiedPrice(ReservationServiceSpecTest.java:98)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
 	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
 	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
 	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
@@ -626,13 +309,13 @@ SPEC-STANDARD-PEAK-Q5 (2 failures)
 	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	Suppressed: org.opentest4j.AssertionFailedError: SPEC-STANDARD-PEAK-Q5 discountRate; S03 ==> expected: <0.05> but was: <0.00>
+	Suppressed: org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q1 S03 rate ==> expected: <0.05> but was: <0.10>
 		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
 		at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
 		at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
 		at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
-		at com.example.reservation.ReservationServiceSpecTest.lambda$assertPrice$1(ReservationServiceSpecTest.java:138)
+		at com.example.reservation.ReservationServiceSpecTest.lambda$assertPrice$2(ReservationServiceSpecTest.java:157)
 		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
 		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
 		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
@@ -642,14 +325,14 @@ SPEC-STANDARD-PEAK-Q5 (2 failures)
 		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
 		at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
 		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
-		... 56 more
-	Suppressed: org.opentest4j.AssertionFailedError: SPEC-STANDARD-PEAK-Q5 totalAmount; S04 ==> expected: <475> but was: <500>
+		... 43 more
+	Suppressed: org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q1 S04 total ==> expected: <95> but was: <90>
 		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
 		at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
 		at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
 		at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
-		at com.example.reservation.ReservationServiceSpecTest.lambda$assertPrice$2(ReservationServiceSpecTest.java:139)
+		at com.example.reservation.ReservationServiceSpecTest.lambda$assertPrice$3(ReservationServiceSpecTest.java:158)
 		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
 		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
 		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
@@ -659,42 +342,381 @@ SPEC-STANDARD-PEAK-Q5 (2 failures)
 		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
 		at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
 		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
-		... 56 more
+		... 43 more
+
+[ERROR] com.example.reservation.ReservationServiceSpecTest.returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[27] -- Time elapsed: 0.004 s <<< FAILURE!
+org.opentest4j.MultipleFailuresError: 
+SPEC-PREMIUM-PEAK-Q4 (2 failures)
+	org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q4 S03 rate ==> expected: <0.05> but was: <0.10>
+	org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q4 S04 total ==> expected: <380> but was: <360>
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:80)
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:44)
+	at org.junit.jupiter.api.Assertions.assertAll(Assertions.java:2961)
+	at com.example.reservation.ReservationServiceSpecTest.assertPrice(ReservationServiceSpecTest.java:156)
+	at com.example.reservation.ReservationServiceSpecTest.returnsSpecifiedPrice(ReservationServiceSpecTest.java:98)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q4 S03 rate ==> expected: <0.05> but was: <0.10>
+		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+		at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+		at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+		at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
+		at com.example.reservation.ReservationServiceSpecTest.lambda$assertPrice$2(ReservationServiceSpecTest.java:157)
+		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
+		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+		at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+		at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+		at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
+		... 43 more
+	Suppressed: org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q4 S04 total ==> expected: <380> but was: <360>
+		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+		at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+		at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+		at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
+		at com.example.reservation.ReservationServiceSpecTest.lambda$assertPrice$3(ReservationServiceSpecTest.java:158)
+		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
+		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+		at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+		at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+		at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
+		... 43 more
+
+[ERROR] com.example.reservation.ReservationServiceSpecTest.returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[28] -- Time elapsed: 0 s <<< FAILURE!
+org.opentest4j.MultipleFailuresError: 
+SPEC-PREMIUM-PEAK-Q5 (2 failures)
+	org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q5 S03 rate ==> expected: <0.05> but was: <0.10>
+	org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q5 S04 total ==> expected: <475> but was: <450>
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:80)
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:44)
+	at org.junit.jupiter.api.Assertions.assertAll(Assertions.java:2961)
+	at com.example.reservation.ReservationServiceSpecTest.assertPrice(ReservationServiceSpecTest.java:156)
+	at com.example.reservation.ReservationServiceSpecTest.returnsSpecifiedPrice(ReservationServiceSpecTest.java:98)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q5 S03 rate ==> expected: <0.05> but was: <0.10>
+		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+		at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+		at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+		at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
+		at com.example.reservation.ReservationServiceSpecTest.lambda$assertPrice$2(ReservationServiceSpecTest.java:157)
+		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
+		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+		at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+		at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+		at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
+		... 43 more
+	Suppressed: org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q5 S04 total ==> expected: <475> but was: <450>
+		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+		at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+		at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+		at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
+		at com.example.reservation.ReservationServiceSpecTest.lambda$assertPrice$3(ReservationServiceSpecTest.java:158)
+		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
+		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+		at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+		at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+		at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
+		... 43 more
+
+[ERROR] com.example.reservation.ReservationServiceSpecTest.returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[29] -- Time elapsed: 0 s <<< FAILURE!
+org.opentest4j.MultipleFailuresError: 
+SPEC-PREMIUM-PEAK-Q6 (2 failures)
+	org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q6 S03 rate ==> expected: <0.05> but was: <0.10>
+	org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q6 S04 total ==> expected: <570> but was: <540>
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:80)
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:44)
+	at org.junit.jupiter.api.Assertions.assertAll(Assertions.java:2961)
+	at com.example.reservation.ReservationServiceSpecTest.assertPrice(ReservationServiceSpecTest.java:156)
+	at com.example.reservation.ReservationServiceSpecTest.returnsSpecifiedPrice(ReservationServiceSpecTest.java:98)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q6 S03 rate ==> expected: <0.05> but was: <0.10>
+		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+		at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+		at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+		at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
+		at com.example.reservation.ReservationServiceSpecTest.lambda$assertPrice$2(ReservationServiceSpecTest.java:157)
+		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
+		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+		at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+		at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+		at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
+		... 43 more
+	Suppressed: org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q6 S04 total ==> expected: <570> but was: <540>
+		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+		at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+		at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+		at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
+		at com.example.reservation.ReservationServiceSpecTest.lambda$assertPrice$3(ReservationServiceSpecTest.java:158)
+		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
+		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+		at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+		at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+		at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
+		... 43 more
+
+[ERROR] com.example.reservation.ReservationServiceSpecTest.returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[30] -- Time elapsed: 0.013 s <<< FAILURE!
+org.opentest4j.MultipleFailuresError: 
+SPEC-PREMIUM-PEAK-Q10 (2 failures)
+	org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q10 S03 rate ==> expected: <0.05> but was: <0.10>
+	org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q10 S04 total ==> expected: <950> but was: <900>
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:80)
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:44)
+	at org.junit.jupiter.api.Assertions.assertAll(Assertions.java:2961)
+	at com.example.reservation.ReservationServiceSpecTest.assertPrice(ReservationServiceSpecTest.java:156)
+	at com.example.reservation.ReservationServiceSpecTest.returnsSpecifiedPrice(ReservationServiceSpecTest.java:98)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q10 S03 rate ==> expected: <0.05> but was: <0.10>
+		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+		at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+		at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+		at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
+		at com.example.reservation.ReservationServiceSpecTest.lambda$assertPrice$2(ReservationServiceSpecTest.java:157)
+		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
+		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+		at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+		at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+		at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
+		... 43 more
+	Suppressed: org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q10 S04 total ==> expected: <950> but was: <900>
+		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+		at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+		at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+		at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
+		at com.example.reservation.ReservationServiceSpecTest.lambda$assertPrice$3(ReservationServiceSpecTest.java:158)
+		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
+		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+		at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+		at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+		at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
+		... 43 more
 
 [INFO] 
 [INFO] Results:
 [INFO] 
 [ERROR] Failures: 
-[ERROR]   ReservationServiceSpecTest.returnsSpecifiedPrice:109->assertPrice:137 SPEC-STANDARD-OFF-Q5 (2 failures)
-	org.opentest4j.AssertionFailedError: SPEC-STANDARD-OFF-Q5 discountRate; S03 ==> expected: <0.05> but was: <0.00>
-	org.opentest4j.AssertionFailedError: SPEC-STANDARD-OFF-Q5 totalAmount; S04 ==> expected: <475> but was: <500>
-[ERROR]   ReservationServiceSpecTest.returnsSpecifiedPrice:109->assertPrice:137 SPEC-STANDARD-PEAK-Q5 (2 failures)
-	org.opentest4j.AssertionFailedError: SPEC-STANDARD-PEAK-Q5 discountRate; S03 ==> expected: <0.05> but was: <0.00>
-	org.opentest4j.AssertionFailedError: SPEC-STANDARD-PEAK-Q5 totalAmount; S04 ==> expected: <475> but was: <500>
-[ERROR]   ReservationServiceSpecTest.returnsSpecifiedPrice:109->assertPrice:137 SPEC-PREMIUM-PEAK-Q1 (2 failures)
-	org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q1 discountRate; S03 ==> expected: <0.05> but was: <0.10>
-	org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q1 totalAmount; S04 ==> expected: <95> but was: <90>
-[ERROR]   ReservationServiceSpecTest.returnsSpecifiedPrice:109->assertPrice:137 SPEC-PREMIUM-PEAK-Q4 (2 failures)
-	org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q4 discountRate; S03 ==> expected: <0.05> but was: <0.10>
-	org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q4 totalAmount; S04 ==> expected: <380> but was: <360>
-[ERROR]   ReservationServiceSpecTest.returnsSpecifiedPrice:109->assertPrice:137 SPEC-PREMIUM-PEAK-Q5 (2 failures)
-	org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q5 discountRate; S03 ==> expected: <0.05> but was: <0.10>
-	org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q5 totalAmount; S04 ==> expected: <475> but was: <450>
-[ERROR]   ReservationServiceSpecTest.returnsSpecifiedPrice:109->assertPrice:137 SPEC-PREMIUM-PEAK-Q10 (2 failures)
-	org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q10 discountRate; S03 ==> expected: <0.05> but was: <0.10>
-	org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q10 totalAmount; S04 ==> expected: <950> but was: <900>
+[ERROR]   ReservationServiceSpecTest.returnsSpecifiedPrice:98->assertPrice:156 SPEC-STANDARD-OFF-Q5 (2 failures)
+	org.opentest4j.AssertionFailedError: SPEC-STANDARD-OFF-Q5 S03 rate ==> expected: <0.05> but was: <0.00>
+	org.opentest4j.AssertionFailedError: SPEC-STANDARD-OFF-Q5 S04 total ==> expected: <475> but was: <500>
+[ERROR]   ReservationServiceSpecTest.returnsSpecifiedPrice:98->assertPrice:156 SPEC-STANDARD-PEAK-Q5 (2 failures)
+	org.opentest4j.AssertionFailedError: SPEC-STANDARD-PEAK-Q5 S03 rate ==> expected: <0.05> but was: <0.00>
+	org.opentest4j.AssertionFailedError: SPEC-STANDARD-PEAK-Q5 S04 total ==> expected: <475> but was: <500>
+[ERROR]   ReservationServiceSpecTest.returnsSpecifiedPrice:98->assertPrice:156 SPEC-PREMIUM-PEAK-Q1 (2 failures)
+	org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q1 S03 rate ==> expected: <0.05> but was: <0.10>
+	org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q1 S04 total ==> expected: <95> but was: <90>
+[ERROR]   ReservationServiceSpecTest.returnsSpecifiedPrice:98->assertPrice:156 SPEC-PREMIUM-PEAK-Q4 (2 failures)
+	org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q4 S03 rate ==> expected: <0.05> but was: <0.10>
+	org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q4 S04 total ==> expected: <380> but was: <360>
+[ERROR]   ReservationServiceSpecTest.returnsSpecifiedPrice:98->assertPrice:156 SPEC-PREMIUM-PEAK-Q5 (2 failures)
+	org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q5 S03 rate ==> expected: <0.05> but was: <0.10>
+	org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q5 S04 total ==> expected: <475> but was: <450>
+[ERROR]   ReservationServiceSpecTest.returnsSpecifiedPrice:98->assertPrice:156 SPEC-PREMIUM-PEAK-Q6 (2 failures)
+	org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q6 S03 rate ==> expected: <0.05> but was: <0.10>
+	org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q6 S04 total ==> expected: <570> but was: <540>
+[ERROR]   ReservationServiceSpecTest.returnsSpecifiedPrice:98->assertPrice:156 SPEC-PREMIUM-PEAK-Q10 (2 failures)
+	org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q10 S03 rate ==> expected: <0.05> but was: <0.10>
+	org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q10 S04 total ==> expected: <950> but was: <900>
 [INFO] 
-[ERROR] Tests run: 48, Failures: 6, Errors: 0, Skipped: 0
+[ERROR] Tests run: 50, Failures: 7, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  2.912 s
-[INFO] Finished at: 2026-10-03T18:07:27+09:00
+[INFO] Total time:  2.845 s
+[INFO] Finished at: 2026-10-06T11:29:10+09:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.5.2:test (default-test) on project reservation-demo: There are test failures.
 [ERROR] 
-[ERROR] See C:\demo\reservation-demo\target\spec\20261003-180427\surefire-reports for the individual test results.
+[ERROR] See C:\demo\reservation-demo\target\spec\20261006-112631-e91918\surefire-reports for the individual test results.
 [ERROR] See dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
 [ERROR] -> [Help 1]
 [ERROR] 

@@ -2,7 +2,7 @@
 
 AIによる単体テスト（UT）の生成・実行・レビューを、同じJavaの予約サービスで段階的に試すデモです。
 
-実装を基準にテストすると何が確認できるのか、業務仕様を基準にすると何が見つかるのかを比較します。特に、**カバレッジが100%でも、業務仕様に合っているとは限らない**ことを、実際のテスト結果で示します。
+実装を基準にテストすると何が確認できるのか、業務仕様を基準にすると何が見つかるのかを比較します。特に、**到達不能なコードによる未カバー**と、**実行できても業務仕様に合わない処理によるテストFAIL**を区別して確認します。カバレッジの高さだけでは、業務上の正しさを判断できません。
 
 ## デモの概要
 
@@ -12,7 +12,7 @@ AIによる単体テスト（UT）の生成・実行・レビューを、同じJ
 
 | 段階 | AIが行うこと | 確認したいこと |
 | --- | --- | --- |
-| Phase1：coverage | 実装を読んでUTを生成・実行し、カバレッジを計測 | 実装の経路をどこまで通せるか |
+| Phase1：coverage | 実装を読んでUTを生成・実行し、カバレッジを計測 | 実装の経路をどこまで通せるか、通せない箇所にはどんな理由があるか |
 | Phase2：spec | 業務仕様から別のUTを生成・実行し、カバレッジも計測 | 仕様どおりの結果を返すか |
 | Phase3：review | Phase2のUTをそのまま再実行し、仕様・実装・結果を照合 | なぜ失敗したか、どこをどう直すべきか |
 
@@ -45,7 +45,7 @@ MavenがPATHにない場合は、利用する `mvn.cmd` の場所も伝えてく
 ut -P "C:\demo\reservation-demo" -coverage com.example.reservation.ReservationService
 ```
 
-業務仕様を期待値の根拠にせず、実装の正常系・異常系・分岐を検証します。目標は対象クラスのLine Coverage 100%で、Branch Coverageも別途報告します。
+業務仕様を期待値の根拠にせず、実装の正常系・異常系・分岐を検証します。目標は対象クラスのLine Coverage 100%で、Branch Coverageも別途報告します。ただし、未カバーだけで到達不能とは断定せず、呼び出し経路と条件を解析して理由を説明します。到達不能な処理は未カバーとして残し、privateメソッドの直接呼び出しや本番コードの変更で100%にしません。未カバーは、期待値と実際値の不一致によるテストFAILとは別に報告します。
 
 ### 3. Phase2：仕様を基準にテストする
 
@@ -85,7 +85,7 @@ Phase2のUTを再利用し、失敗ケースと問題箇所を対応付けます
 | `target/spec/<実行ID>/` | Phase2の結果 |
 | `target/review/<実行ID>/` | Phase3の結果とレビュー |
 
-実行IDはAIが未使用のものを選びます。`ut` コマンドは実行後、配布用成果物を `samples/phase1/`〜`samples/phase3/` の該当フォルダへ保存し、READMEの該当Phaseの結果・リンクも更新します。既存の配布用成果物は `samples/history/phase<Phase番号>/<保存日時>/` へ退避して照合してから更新します。Mavenの作業用出力と元の結果は `target/` に保持します。各Phaseには、次の成果物を保存します。
+実行IDはAIが未使用のものを選びます。`ut` コマンドは実行後、配布用成果物を `samples/phase1/`〜`samples/phase3/` の該当フォルダへ保存します。既存の配布用成果物は `samples/history/phase<Phase番号>/<保存日時>/` へ退避して照合してから更新します。Mavenの作業用出力と元の結果は `target/` に保持します。各Phaseには、次の成果物を保存します。
 
 - `report.md`：実行条件、UT、テスト結果、カバレッジ、変更確認
 - `surefire-reports/`：テスト結果の詳細
@@ -94,27 +94,9 @@ Phase2のUTを再利用し、失敗ケースと問題箇所を対応付けます
 - 実行ログ
 - `review.md`：Phase3の原因分析と修正案
 
+各Phaseの実行結果は `samples/phase1/report.md`〜`samples/phase3/report.md`、原因と修正案は `samples/phase3/review.md` を参照してください。実行日・実行ID・件数・カバレッジは各レポートに記録し、READMEには転載しません。
+
 JaCoCoレポート全体には他の本番クラスも含まれます。デモの評価対象は `ReservationService` 単体です。
-
-## サンプル結果
-
-2026年10月3日に、このフォルダで実行した結果です。生成UTは `demo-ut/`、配布用の実行成果物は `samples/phase1/`〜`samples/phase3/` に保存しています。テスト件数や結果は、この実行で生成したUTによる実測値であり、再生成時に同じ件数・結果を強制するものではありません。
-
-| Phase | 実行件数 | 成功 | 失敗 | Line Coverage | Branch Coverage | レポート |
-| --- | ---: | ---: | ---: | --- | --- | --- |
-全Phaseでエラー・スキップは0件です。本番ソースと `pom.xml` が未変更であることをSHA-256で確認しました。
-
-Phase2・3では、STANDARDの数量5で割引が適用されない問題（2ケース）と、PREMIUMの繁忙期に10%割引が適用される問題（5ケース）を検出しました。Phase3では、それぞれ数量境界の比較条件と繁忙期判定の欠落に原因を特定しています。修正案は未適用・未検証です。
-
-**読みどころは、全Phaseでカバレッジが100%でも、仕様を基準にしたPhase2・3では失敗が見つかる点です。**
-
-配布用の `samples/` にはレポート、実行ログ、Surefire結果、JaCoCoのHTML/XML/CSVと実行データ、変更確認用のハッシュ記録を同梱しています。コンパイル済みファイルは含めていません。元の実行結果は `target/` に残し、Gitの除外を維持しています。`ut` コマンドで再実行すると、AIが履歴を保持して該当Phaseの配布用成果物を更新します。ログやハッシュ記録には実行当時のローカルパスが含まれます。
-
-Phase1 実測（2026-10-03、実行ID：`20261003-175803`）：35件成功、失敗・エラー・スキップ0。ReservationService のLine Coverage 32/32（100%）、Branch Coverage 24/24（100%）。[実行レポート](samples/phase1/report.md) / [対象クラスcoverage](samples/phase1/site/jacoco/com.example.reservation/ReservationService.html)。業務仕様への適合はPhase1では判定しない。
-
-Phase2 実測（2026-10-03、実行ID：`20261003-180427`）：48件中42件成功、6件失敗、エラー・スキップ0。ReservationService のLine Coverage 32/32（100%）、Branch Coverage 24/24（100%）。[仕様基準UTレポート](samples/phase2/report.md) / [対象クラスcoverage](samples/phase2/site/jacoco/com.example.reservation/ReservationService.html)。PREMIUM繁忙期とSTANDARD予約数5で仕様不一致を検出。
-
-Phase3 実測（2026-10-03、実行ID：`20261003-181648`）：Phase2 UTを変更せず再利用し、48件中42件成功・6件失敗、エラー・スキップ0。Line 32/32（100%）、Branch 24/24（100%）。[実行レポート](samples/phase3/report.md) / [原因・修正案レビュー](samples/phase3/review.md) / [対象クラスcoverage](samples/phase3/site/jacoco/com.example.reservation/ReservationService.html)。繁忙期判定の欠落と数量境界の不一致を確認。修正案は未適用・未検証。
 
 ## 生成済みUTをMavenで再実行する
 
@@ -139,6 +121,6 @@ PowerShellではカンマを含む引数の解釈を避けるため、上記の�
 & "C:\Users\saram\.m2\wrapper\dists\apache-maven-3.9.9-bin\33b4b2b4\apache-maven-3.9.9\bin\mvn.cmd" "-Pphase1,coverage" "-Ddemo.runId=manual-phase1-001" jacoco:report
 ```
 
-テストが失敗しても、続く `jacoco:report` を別に実行してください。同じ実行IDを使うことで、その実行のカバレッジを生成できます。Maven単体では、AIが作成する `report.md` や `review.md` の生成、`samples/` やREADMEの更新は行われません。
+テストが失敗しても、続く `jacoco:report` を別に実行してください。同じ実行IDを使うことで、その実行のカバレッジを生成できます。Maven単体では、AIが作成する `report.md` や `review.md` の生成、`samples/` の更新は行われません。
 
 

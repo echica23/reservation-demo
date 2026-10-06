@@ -1,0 +1,20 @@
+{
+  "coverage": [
+    {
+      "metric": "BRANCH",
+      "percent": 96.15,
+      "missed": 1,
+      "covered": 25
+    },
+    {
+      "metric": "LINE",
+      "percent": 97.06,
+      "missed": 1,
+      "covered": 33
+    }
+  ],
+  "failures": 7,
+  "tests": 50,
+  "errors": 0,
+  "skipped": 0
+}

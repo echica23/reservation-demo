@@ -1,111 +1,87 @@
-# Phase1 UT実行レポート：ReservationService
+配布用コピー。元実行ID：20261006-111406。元出力：C:\demo\reservation-demo\target\coverage\20261006-111406。
 
-## 1. 実行概要
+# Phase1 UT・カバレッジ実行レポート
 
+## 実行概要
+
+- 実行日：2026-10-06（Asia/Tokyo）。Phase1：実装基準。
 - 入力：`ut -P "C:\demo\reservation-demo" -coverage com.example.reservation.ReservationService`
-- プロジェクト：`C:\demo\reservation-demo`
-- 実行日：2026-10-03（Asia/Tokyo）、最終実行ID：`20261003-175803`
-- 実際の対象：`com.example.reservation.ReservationService` の1クラス。
-- 参照：対象実装、Request/Result、MemberType、依存先3インターフェース、pom.xml、.gitignore、今回のUT・実行結果・JaCoCo。
-- 業務仕様、Phase2 UT、既存レビュー、READMEのサンプル結果、過去の成果物は生成・評価の根拠にしていない。READMEの見出しだけを確認し、結果更新は機械的に実施。
-- 元の出力：`C:\demo\reservation-demo\target\coverage\20261003-175803`
-- このファイルは上記実行出力から作成した配布用コピー。
+- プロジェクトルート：`C:\demo\reservation-demo`
+- 解決した対象一覧：`com.example.reservation.ReservationService`（1クラス）
+- 最終実行ID：`20261006-111406`
+- 元出力：`C:\demo\reservation-demo\target\coverage\20261006-111406`
+- 参照：対象実装、同パッケージの3依存インターフェース・2レコード・MemberType、pom.xml、ut-instructions.md、今回のSurefire・JaCoCo結果。業務仕様、Phase2 UT、過去レビューは未参照。
 
-## 2. 生成したUT
+## 生成・利用したUT
 
-[ReservationServiceTest.java](../../demo-ut/coverage/java/com/example/reservation/ReservationServiceTest.java) を新規生成。JUnit5とMockitoを使用し、依存先3サービスをMock化。公開入口 reserve のみから検証し、private methodの直接呼出しは行わない。
+[ReservationServiceTest.java](../../demo-ut/coverage/java/com/example/reservation/ReservationServiceTest.java)を新規作成。Phase1 UTのみ実行。既存UTは作業ツリーに存在しなかった。Gitでは過去ファイルの削除として表示されていたが、復元・参照していない。Phase2 UTは生成していない。
 
-既存UTは開始時に存在しなかった。Phase1専用の demo-ut/coverage/java/ を利用。Phase2/3 UTは生成・実行していない。割引率・金額の期待値は実装の観測可能な挙動に基づくケースごとの固定値。共通の有効入力は顧客C1・日付2026-10-03。
+JUnit5とMockitoで3依存先をMock化。公開メソッドreserve経由で検証し、privateへの直接アクセスなし。期待値は実装の観測可能な挙動に基づく固定値。
 
-パラメータの固定IDを表示名・アサーションメッセージに含めた。SurefireのXMLは表示名を省略するため、各 testcase の system-out に固定IDと入力・期待値を記録した。35件すべてのIDが一意で、実際のXMLから対応を確認済み。[対応データ](case-results.json)。
+- 入力検証11件：request null、顧客ID null/空/空白、日付null、数量0/-1/11、価格null/0/負数。例外種別・メッセージ、依存先未呼び出しを確認。
+- 料金20件：NONE/STANDARD/PREMIUM/null会員、数量1/5/6/10、繁忙期有無、HALF_UP境界、数量・割引適用後の丸め、正の微小価格から0への丸め。
+- 在庫なし1件：例外と顧客・カレンダー未呼び出しを確認。
 
-| 固定ケースID | 入力・固定期待値／検証内容 | 結果 |
-| --- | --- | --- |
-| INVENTORY-UNAVAILABLE | customer=C1  /  date=2026-10-03  /  quantity=1  /  unitPrice=100  /  available=false | PASS |
-| INPUT-REQUEST-NULL | input=null  /  expectedException=Request is required | PASS |
-| INPUT-CUSTOMER-NULL | input=ReservationRequest[customerId=null, date=2026-10-03, quantity=1, unitPrice=100]  /  expectedException=Customer ID is required | PASS |
-| INPUT-CUSTOMER-EMPTY | input=ReservationRequest[customerId=, date=2026-10-03, quantity=1, unitPrice=100]  /  expectedException=Customer ID is required | PASS |
-| INPUT-CUSTOMER-BLANK | input=ReservationRequest[customerId= \t\n, date=2026-10-03, quantity=1, unitPrice=100]  /  expectedException=Customer ID is required | PASS |
-| INPUT-DATE-NULL | input=ReservationRequest[customerId=C1, date=null, quantity=1, unitPrice=100]  /  expectedException=Date is required | PASS |
-| INPUT-QUANTITY-ZERO | input=ReservationRequest[customerId=C1, date=2026-10-03, quantity=0, unitPrice=100]  /  expectedException=Quantity must be between 1 and 10 | PASS |
-| INPUT-QUANTITY-NEGATIVE | input=ReservationRequest[customerId=C1, date=2026-10-03, quantity=-1, unitPrice=100]  /  expectedException=Quantity must be between 1 and 10 | PASS |
-| INPUT-QUANTITY-ELEVEN | input=ReservationRequest[customerId=C1, date=2026-10-03, quantity=11, unitPrice=100]  /  expectedException=Quantity must be between 1 and 10 | PASS |
-| INPUT-PRICE-NULL | input=ReservationRequest[customerId=C1, date=2026-10-03, quantity=1, unitPrice=null]  /  expectedException=Unit price must be positive | PASS |
-| INPUT-PRICE-ZERO | input=ReservationRequest[customerId=C1, date=2026-10-03, quantity=1, unitPrice=0]  /  expectedException=Unit price must be positive | PASS |
-| INPUT-PRICE-NEGATIVE | input=ReservationRequest[customerId=C1, date=2026-10-03, quantity=1, unitPrice=-0.01]  /  expectedException=Unit price must be positive | PASS |
-| DISCOUNT-PREMIUM-OFF-Q1 | member=PREMIUM  /  peak=false  /  quantity=1  /  unitPrice=100  /  expectedRate=0.10  /  expectedTotal=90 | PASS |
-| DISCOUNT-PREMIUM-PEAK-Q1 | member=PREMIUM  /  peak=true  /  quantity=1  /  unitPrice=100  /  expectedRate=0.10  /  expectedTotal=90 | PASS |
-| DISCOUNT-PREMIUM-OFF-Q10 | member=PREMIUM  /  peak=false  /  quantity=10  /  unitPrice=100  /  expectedRate=0.10  /  expectedTotal=900 | PASS |
-| DISCOUNT-PREMIUM-PEAK-Q10 | member=PREMIUM  /  peak=true  /  quantity=10  /  unitPrice=100  /  expectedRate=0.10  /  expectedTotal=900 | PASS |
-| DISCOUNT-STANDARD-OFF-Q1 | member=STANDARD  /  peak=false  /  quantity=1  /  unitPrice=100  /  expectedRate=0.00  /  expectedTotal=100 | PASS |
-| DISCOUNT-STANDARD-OFF-Q5 | member=STANDARD  /  peak=false  /  quantity=5  /  unitPrice=100  /  expectedRate=0.00  /  expectedTotal=500 | PASS |
-| DISCOUNT-STANDARD-PEAK-Q5 | member=STANDARD  /  peak=true  /  quantity=5  /  unitPrice=100  /  expectedRate=0.00  /  expectedTotal=500 | PASS |
-| DISCOUNT-STANDARD-OFF-Q6 | member=STANDARD  /  peak=false  /  quantity=6  /  unitPrice=100  /  expectedRate=0.05  /  expectedTotal=570 | PASS |
-| DISCOUNT-STANDARD-PEAK-Q6 | member=STANDARD  /  peak=true  /  quantity=6  /  unitPrice=100  /  expectedRate=0.05  /  expectedTotal=570 | PASS |
-| DISCOUNT-STANDARD-OFF-Q10 | member=STANDARD  /  peak=false  /  quantity=10  /  unitPrice=100  /  expectedRate=0.05  /  expectedTotal=950 | PASS |
-| DISCOUNT-NONE-OFF-Q1 | member=NONE  /  peak=false  /  quantity=1  /  unitPrice=100  /  expectedRate=0.00  /  expectedTotal=100 | PASS |
-| DISCOUNT-NONE-PEAK-Q10 | member=NONE  /  peak=true  /  quantity=10  /  unitPrice=100  /  expectedRate=0.00  /  expectedTotal=1000 | PASS |
-| DISCOUNT-MEMBER-NULL | member=null  /  peak=false  /  quantity=6  /  unitPrice=100  /  expectedRate=0.00  /  expectedTotal=600 | PASS |
-| ROUND-NONE-BELOW-HALF | member=NONE  /  peak=false  /  quantity=1  /  unitPrice=100.49  /  expectedRate=0.00  /  expectedTotal=100 | PASS |
-| ROUND-NONE-HALF | member=NONE  /  peak=false  /  quantity=1  /  unitPrice=100.50  /  expectedRate=0.00  /  expectedTotal=101 | PASS |
-| ROUND-NONE-ABOVE-HALF | member=NONE  /  peak=false  /  quantity=1  /  unitPrice=100.51  /  expectedRate=0.00  /  expectedTotal=101 | PASS |
-| ROUND-PREMIUM-HALF | member=PREMIUM  /  peak=false  /  quantity=1  /  unitPrice=105  /  expectedRate=0.10  /  expectedTotal=95 | PASS |
-| ROUND-STANDARD-HALF | member=STANDARD  /  peak=false  /  quantity=6  /  unitPrice=105  /  expectedRate=0.05  /  expectedTotal=599 | PASS |
-| ROUND-AFTER-QUANTITY | member=NONE  /  peak=false  /  quantity=3  /  unitPrice=0.49  /  expectedRate=0.00  /  expectedTotal=1 | PASS |
-| PRICE-POSITIVE-SMALL | member=NONE  /  peak=false  /  quantity=1  /  unitPrice=0.01  /  expectedRate=0.00  /  expectedTotal=0 | PASS |
-| DEPENDENCY-INVENTORY-THROWS | customer=C1  /  date=2026-10-03  /  quantity=1  /  unitPrice=100  /  failing=inventory | PASS |
-| DEPENDENCY-CUSTOMER-THROWS | customer=C1  /  date=2026-10-03  /  quantity=1  /  unitPrice=100  /  failing=customer | PASS |
-| DEPENDENCY-CALENDAR-THROWS | customer=C1  /  date=2026-10-03  /  quantity=1  /  unitPrice=100  /  failing=calendar | PASS |
+UTのケース表には固定ID、入力、固定の期待割引率・金額を記載。固定IDは表示名、アサーション、Surefire XMLの各testcase内system-outにも記録。[ケース結果対応表](case-results.json)の32件は一意で、実行順番号に依存しない。
 
-## 3. 実行結果
+## 実行結果
 
-35件実行、成功35、失敗0、エラー0、スキップ0。test と jacoco:report は終了コード0。
+| 実行 | 成功 | 失敗 | エラー | スキップ |
+| ---: | ---: | ---: | ---: | ---: |
+| 32 | 32 | 0 | 0 | 0 |
 
-最初の試行は既定ローカルリポジトリが C:\.m2\repository となりテスト開始前に環境エラー。既存の C:\Users\saram\.m2\repository をコマンド引数で指定して解消。初回実行ID 20261003-175205 の出力は保持。その実行は35件成功・Line 32/32・Branch 24/24。ID記録を補った後、別の未使用IDで最終検証を実施した。環境エラーをテストFAILや実装不備とは扱わない。
+Java 21.0.11、Maven 3.9.9、JUnit 5.11.4、Mockito 4.11.0、JaCoCo 0.8.12。テストとcoverage生成の終了コードはいずれも0。既存pom.xmlの設定を使用。
 
-以下は最終実行時の記録。再実行するときは demo.runId を未使用IDへ変更し、test と jacoco:report に同じIDを指定する。PowerShell構文解析済み。[構文確認](command-check.json)。
+プロジェクトルートで実行した当時のコマンド：
 
 ```powershell
-$env:JAVA_HOME = 'C:\Program Files\Java\jdk-21.0.11'
-Set-Location 'C:\demo\reservation-demo'
-& "C:\Users\saram\.m2\wrapper\dists\apache-maven-3.9.9-bin\33b4b2b4\apache-maven-3.9.9\bin\mvn.cmd" "-Pphase1,coverage" "-Ddemo.runId=20261003-175803" "-Dmaven.repo.local=C:/Users/saram/.m2/repository" test
-& "C:\Users\saram\.m2\wrapper\dists\apache-maven-3.9.9-bin\33b4b2b4\apache-maven-3.9.9\bin\mvn.cmd" "-Pphase1,coverage" "-Ddemo.runId=20261003-175803" "-Dmaven.repo.local=C:/Users/saram/.m2/repository" jacoco:report
+& "C:\Users\saram\.m2\wrapper\dists\apache-maven-3.9.9-bin\33b4b2b4\apache-maven-3.9.9\bin\mvn.cmd" "-Pphase1,coverage" "-Ddemo.runId=20261006-111406" test
+& "C:\Users\saram\.m2\wrapper\dists\apache-maven-3.9.9-bin\33b4b2b4\apache-maven-3.9.9\bin\mvn.cmd" "-Pphase1,coverage" "-Ddemo.runId=20261006-111406" jacoco:report
 ```
 
-[実行ログ](test.log) / [Surefire XML](surefire-reports/TEST-com.example.reservation.ReservationServiceTest.xml) / [Surefire概要](surefire-reports/com.example.reservation.ReservationServiceTest.txt) / [計測レポート生成ログ](coverage.log)
+これは実行記録。再実行にはdemo.runIdを未使用のIDに変更すること。[PowerShell構文確認](command-check.json)済み。構文確認のためだけのテスト再実行は行っていない。
 
-## 4. Coverage
+[テストログ](test.log)、[coverageログ](coverage.log)、[Surefire XML](surefire-reports/TEST-com.example.reservation.ReservationServiceTest.xml)、[Surefire要約](surefire-reports/com.example.reservation.ReservationServiceTest.txt)。
 
-対象クラスのJaCoCo XMLカウンタを使用。依存先、レコード、enum、UTは以下の分母に含めない。HTMLのプロジェクト全体集計とは区別する。
+初回20261006-111220も32件成功。Surefire結果に固定IDを残す標準出力を追加し、新IDで再実行した。初回結果はtargetに保持。
 
-| 指標 | covered | missed | 割合 |
-| --- | ---: | ---: | ---: |
-| Line Coverage | 32 | 0 | 100% |
-| Branch Coverage | 24 | 0 | 100% |
+## カバレッジ
 
-Line 100%の目標達成。対象クラスに未カバー行・分岐なし。除外設定追加、対象縮小、production codeの変更なし。
+JaCoCo XMLのReservationServiceクラスcounterのみを集計。依存先、DTO、enum、UTを分母に含めない。HTMLトップのプロジェクト集計と区別する。
 
-[対象クラスHTML](site/jacoco/com.example.reservation/ReservationService.html) / [HTMLトップ](site/jacoco/index.html) / [XML](site/jacoco/jacoco.xml) / [CSV](site/jacoco/jacoco.csv) / [実測データ](jacoco.exec)
+| 指標 | covered | missed | 合計 | 割合 |
+| --- | ---: | ---: | ---: | ---: |
+| Line Coverage | 33 | 1 | 34 | 97.06% |
+| Branch Coverage | 25 | 1 | 26 | 96.15% |
 
-## 5. 制約と未完了
+Line Coverage 100%は未達。ReservationService.javaの63行目 `return new BigDecimal("0.15");` が未実行。62行目 `quantity > 10` のtrue側が未カバー。validateが数量11以上を拒否するため、公開入口から到達できない。数量11の拒否はUTで確認済み。実装変更、リフレクション、除外設定、対象縮小は行っていない。
 
-Phase1は実装の挙動を確認したもの。PASSとcoverage 100%から業務仕様への適合は結論付けない。仕様との不一致判定・原因レビューは未実施で、Phase2/3の範囲。Gitリポジトリではないため変更確認は開始時と終了時のSHA-256比較で実施した。公開・デプロイは行わない。
+[対象クラスHTML](site/jacoco/com.example.reservation/ReservationService.html)、[ソース行別HTML](site/jacoco/com.example.reservation/ReservationService.java.html)、[XML](site/jacoco/jacoco.xml)、[CSV](site/jacoco/jacoco.csv)、[計測データ](jacoco.exec)。
 
-## 6. 変更確認と配布
+## 制約と未完了
 
-- 新規UT：demo-ut/coverage/java/com/example/reservation/ReservationServiceTest.java
-- 新規出力：target/coverage/20261003-175205/ と target/coverage/20261003-175803/（ログ、計測、レポート、確認記録）。作業補助：target/phase1-current-run.txt、target/finish-phase1.ps1。
-- 配布：samples/phase1/ に最終実行のreport.md、ログ、Surefire、site/jacoco全体、jacoco.exec、ケース対応、トークン・ハッシュ・変更確認記録。既存のsamples/phase1はなかったため履歴退避不要。
-- README.md：Phase1の今回の結果・日付・ID・リンクを更新。他Phaseの結果は保持。
-- 本番ソース7ファイル、pom.xml、.gitignore のSHA-256が開始前と一致。[開始前ハッシュ](before-hashes.json) / [変更確認](change-check.json)。target/除外を維持しsamples/は除外していない。
-- 配布確認は [distribution-check.json](distribution-check.json) に記録。レポート以外のコピーのハッシュ、ローカルリンク、コンパイル済みファイル不在を確認する。
+実行・計測完了。Line Coverage目標は到達不能行により未達。業務仕様への適合は評価していない。PASSと高いcoverageだけで仕様適合とは結論付けない。Phase2の仕様不一致判定、Phase3レビューは今回対象外。
 
-## 7. トークン使用量（概算）
+通常の実行環境が起動に失敗したため、承認された権限で実行した。既存Mavenを使用し、インストールやビルド設定変更なし。
 
-入力 813202、うちキャッシュ済み入力 765184、出力 13114、合計 826316 tokens。推論出力（参考）684。
+## 変更確認・配布
 
-計測区間（UTC）：10/03/2026 08:50:39 ～ 10/03/2026 09:02:37。チャットID：01a100f5-05c3-7cf2-8750-8d78793bf690。基準値：ut指示より前の最後の有効な累計。
+[変更前SHA256](before-hashes.json)と[変更照合](change-check.json)で、開始時点の13ファイルが一致。production code、pom.xml、README、プロンプト、仕様資料、.gitignoreは未変更。開始前のGit変更を保持。
 
-概算・最終計測時点まで。キャッシュ済み入力は入力の内数。推論出力は参考値で合計に再加算しない。最終計測後のレポート追記、samplesへのコピー・確認、最終回答、ログ反映待ちの処理を含まない可能性がある。費用換算は行わない。
+今回追加・更新したもの：上記UT 1ファイル、target/coverageの2実行分の成果物、target内の作業補助ファイル、samples/phase1の配布用成果物。既存samplesフォルダは開始時に存在せず、退避対象なし。Phase2・Phase3の成果物は変更していない。Git公開なし。
 
-[数値・時刻・差分・制約](token-usage.json)
+配布にはレポート、実行ログ、終了コード、Surefire、site/jacoco全体、jacoco.exec、ハッシュ・ケースID・コマンド・トークン記録を含む。classes/test-classes等は配布しない。[配布検証](distribution-check.json)にハッシュ・リンク・コンパイル済みファイル非混入の結果を保存。
+
+## トークン使用量（概算）
+
+概算・最終計測時点まで。対象チャット：01a10ef8-e498-7c81-ba82-7b36363b6867。実行ID：20261006-111406。基準値は今回のut指示直前の最後の有効な累計。
+
+| 項目 | 差分 |
+| --- | ---: |
+| 入力 | 493985 |
+| うちキャッシュ済み入力（内数） | 477952 |
+| 出力 | 13524 |
+| 合計 | 507509 |
+| 推論出力（参考値） | 429 |
+
+計測区間：10/06/2026 02:11:48 ～ 10/06/2026 02:17:53（UTC）。[数値・時刻・差分の根拠](token-usage.json)。キャッシュ済み入力・推論出力を合計へ再加算しない。最終計測後のレポート追記、samplesコピー・確認、最終回答、ログ反映待ちは含まれない可能性があり、厳密な全作業使用量ではない。費用換算なし。

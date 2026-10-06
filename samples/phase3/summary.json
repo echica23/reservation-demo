@@ -1,0 +1,21 @@
+{
+  "phase2CaseResultsMatch": true,
+  "failures": 7,
+  "skipped": 0,
+  "coverage": [
+    {
+      "percent": 96.15,
+      "missed": 1,
+      "metric": "BRANCH",
+      "covered": 25
+    },
+    {
+      "percent": 97.06,
+      "missed": 1,
+      "metric": "LINE",
+      "covered": 33
+    }
+  ],
+  "errors": 0,
+  "tests": 50
+}

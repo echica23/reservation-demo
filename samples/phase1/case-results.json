@@ -1,212 +1,162 @@
 [
   {
-    "id": "INVENTORY-UNAVAILABLE",
-    "method": "rejectsUnavailableInventory",
-    "detail": "INVENTORY-UNAVAILABLE | customer=C1 | date=2026-10-03 | quantity=1 | unitPrice=100 | available=false",
-    "outcome": "PASS"
+    "status": "PASS",
+    "name": "rejectsUnavailableInventory",
+    "id": "INVENTORY-UNAVAILABLE"
   },
   {
-    "id": "INPUT-REQUEST-NULL",
-    "method": "rejectsInvalidInput(String, ReservationRequest, String)[1]",
-    "detail": "INPUT-REQUEST-NULL | input=null | expectedException=Request is required",
-    "outcome": "PASS"
+    "status": "PASS",
+    "name": "rejectsInvalidInput(String, ReservationRequest, String)[1]",
+    "id": "INPUT-REQUEST-NULL"
   },
   {
-    "id": "INPUT-CUSTOMER-NULL",
-    "method": "rejectsInvalidInput(String, ReservationRequest, String)[2]",
-    "detail": "INPUT-CUSTOMER-NULL | input=ReservationRequest[customerId=null, date=2026-10-03, quantity=1, unitPrice=100] | expectedException=Customer ID is required",
-    "outcome": "PASS"
+    "status": "PASS",
+    "name": "rejectsInvalidInput(String, ReservationRequest, String)[2]",
+    "id": "INPUT-CUSTOMER-NULL"
   },
   {
-    "id": "INPUT-CUSTOMER-EMPTY",
-    "method": "rejectsInvalidInput(String, ReservationRequest, String)[3]",
-    "detail": "INPUT-CUSTOMER-EMPTY | input=ReservationRequest[customerId=, date=2026-10-03, quantity=1, unitPrice=100] | expectedException=Customer ID is required",
-    "outcome": "PASS"
+    "status": "PASS",
+    "name": "rejectsInvalidInput(String, ReservationRequest, String)[3]",
+    "id": "INPUT-CUSTOMER-EMPTY"
   },
   {
-    "id": "INPUT-CUSTOMER-BLANK",
-    "method": "rejectsInvalidInput(String, ReservationRequest, String)[4]",
-    "detail": "INPUT-CUSTOMER-BLANK | input=ReservationRequest[customerId= \t\n, date=2026-10-03, quantity=1, unitPrice=100] | expectedException=Customer ID is required",
-    "outcome": "PASS"
+    "status": "PASS",
+    "name": "rejectsInvalidInput(String, ReservationRequest, String)[4]",
+    "id": "INPUT-CUSTOMER-BLANK"
   },
   {
-    "id": "INPUT-DATE-NULL",
-    "method": "rejectsInvalidInput(String, ReservationRequest, String)[5]",
-    "detail": "INPUT-DATE-NULL | input=ReservationRequest[customerId=C1, date=null, quantity=1, unitPrice=100] | expectedException=Date is required",
-    "outcome": "PASS"
+    "status": "PASS",
+    "name": "rejectsInvalidInput(String, ReservationRequest, String)[5]",
+    "id": "INPUT-DATE-NULL"
   },
   {
-    "id": "INPUT-QUANTITY-ZERO",
-    "method": "rejectsInvalidInput(String, ReservationRequest, String)[6]",
-    "detail": "INPUT-QUANTITY-ZERO | input=ReservationRequest[customerId=C1, date=2026-10-03, quantity=0, unitPrice=100] | expectedException=Quantity must be between 1 and 10",
-    "outcome": "PASS"
+    "status": "PASS",
+    "name": "rejectsInvalidInput(String, ReservationRequest, String)[6]",
+    "id": "INPUT-QUANTITY-ZERO"
   },
   {
-    "id": "INPUT-QUANTITY-NEGATIVE",
-    "method": "rejectsInvalidInput(String, ReservationRequest, String)[7]",
-    "detail": "INPUT-QUANTITY-NEGATIVE | input=ReservationRequest[customerId=C1, date=2026-10-03, quantity=-1, unitPrice=100] | expectedException=Quantity must be between 1 and 10",
-    "outcome": "PASS"
+    "status": "PASS",
+    "name": "rejectsInvalidInput(String, ReservationRequest, String)[7]",
+    "id": "INPUT-QUANTITY-NEGATIVE"
   },
   {
-    "id": "INPUT-QUANTITY-ELEVEN",
-    "method": "rejectsInvalidInput(String, ReservationRequest, String)[8]",
-    "detail": "INPUT-QUANTITY-ELEVEN | input=ReservationRequest[customerId=C1, date=2026-10-03, quantity=11, unitPrice=100] | expectedException=Quantity must be between 1 and 10",
-    "outcome": "PASS"
+    "status": "PASS",
+    "name": "rejectsInvalidInput(String, ReservationRequest, String)[8]",
+    "id": "INPUT-QUANTITY-ELEVEN"
   },
   {
-    "id": "INPUT-PRICE-NULL",
-    "method": "rejectsInvalidInput(String, ReservationRequest, String)[9]",
-    "detail": "INPUT-PRICE-NULL | input=ReservationRequest[customerId=C1, date=2026-10-03, quantity=1, unitPrice=null] | expectedException=Unit price must be positive",
-    "outcome": "PASS"
+    "status": "PASS",
+    "name": "rejectsInvalidInput(String, ReservationRequest, String)[9]",
+    "id": "INPUT-PRICE-NULL"
   },
   {
-    "id": "INPUT-PRICE-ZERO",
-    "method": "rejectsInvalidInput(String, ReservationRequest, String)[10]",
-    "detail": "INPUT-PRICE-ZERO | input=ReservationRequest[customerId=C1, date=2026-10-03, quantity=1, unitPrice=0] | expectedException=Unit price must be positive",
-    "outcome": "PASS"
+    "status": "PASS",
+    "name": "rejectsInvalidInput(String, ReservationRequest, String)[10]",
+    "id": "INPUT-PRICE-ZERO"
   },
   {
-    "id": "INPUT-PRICE-NEGATIVE",
-    "method": "rejectsInvalidInput(String, ReservationRequest, String)[11]",
-    "detail": "INPUT-PRICE-NEGATIVE | input=ReservationRequest[customerId=C1, date=2026-10-03, quantity=1, unitPrice=-0.01] | expectedException=Unit price must be positive",
-    "outcome": "PASS"
+    "status": "PASS",
+    "name": "rejectsInvalidInput(String, ReservationRequest, String)[11]",
+    "id": "INPUT-PRICE-NEGATIVE"
   },
   {
-    "id": "DISCOUNT-PREMIUM-OFF-Q1",
-    "method": "computesObservedPrice(String, MemberType, boolean, int, String, String, String)[1]",
-    "detail": "DISCOUNT-PREMIUM-OFF-Q1 | member=PREMIUM | peak=false | quantity=1 | unitPrice=100 | expectedRate=0.10 | expectedTotal=90",
-    "outcome": "PASS"
+    "status": "PASS",
+    "name": "calculatesPrice(String, MemberType, boolean, int, String, String, String)[1]",
+    "id": "DISCOUNT-NONE-OFF-Q1"
   },
   {
-    "id": "DISCOUNT-PREMIUM-PEAK-Q1",
-    "method": "computesObservedPrice(String, MemberType, boolean, int, String, String, String)[2]",
-    "detail": "DISCOUNT-PREMIUM-PEAK-Q1 | member=PREMIUM | peak=true | quantity=1 | unitPrice=100 | expectedRate=0.10 | expectedTotal=90",
-    "outcome": "PASS"
+    "status": "PASS",
+    "name": "calculatesPrice(String, MemberType, boolean, int, String, String, String)[2]",
+    "id": "DISCOUNT-NONE-PEAK-Q10"
   },
   {
-    "id": "DISCOUNT-PREMIUM-OFF-Q10",
-    "method": "computesObservedPrice(String, MemberType, boolean, int, String, String, String)[3]",
-    "detail": "DISCOUNT-PREMIUM-OFF-Q10 | member=PREMIUM | peak=false | quantity=10 | unitPrice=100 | expectedRate=0.10 | expectedTotal=900",
-    "outcome": "PASS"
+    "status": "PASS",
+    "name": "calculatesPrice(String, MemberType, boolean, int, String, String, String)[3]",
+    "id": "DISCOUNT-STANDARD-OFF-Q1"
   },
   {
-    "id": "DISCOUNT-PREMIUM-PEAK-Q10",
-    "method": "computesObservedPrice(String, MemberType, boolean, int, String, String, String)[4]",
-    "detail": "DISCOUNT-PREMIUM-PEAK-Q10 | member=PREMIUM | peak=true | quantity=10 | unitPrice=100 | expectedRate=0.10 | expectedTotal=900",
-    "outcome": "PASS"
+    "status": "PASS",
+    "name": "calculatesPrice(String, MemberType, boolean, int, String, String, String)[4]",
+    "id": "DISCOUNT-STANDARD-OFF-Q5"
   },
   {
-    "id": "DISCOUNT-STANDARD-OFF-Q1",
-    "method": "computesObservedPrice(String, MemberType, boolean, int, String, String, String)[5]",
-    "detail": "DISCOUNT-STANDARD-OFF-Q1 | member=STANDARD | peak=false | quantity=1 | unitPrice=100 | expectedRate=0.00 | expectedTotal=100",
-    "outcome": "PASS"
+    "status": "PASS",
+    "name": "calculatesPrice(String, MemberType, boolean, int, String, String, String)[5]",
+    "id": "DISCOUNT-STANDARD-PEAK-Q5"
   },
   {
-    "id": "DISCOUNT-STANDARD-OFF-Q5",
-    "method": "computesObservedPrice(String, MemberType, boolean, int, String, String, String)[6]",
-    "detail": "DISCOUNT-STANDARD-OFF-Q5 | member=STANDARD | peak=false | quantity=5 | unitPrice=100 | expectedRate=0.00 | expectedTotal=500",
-    "outcome": "PASS"
+    "status": "PASS",
+    "name": "calculatesPrice(String, MemberType, boolean, int, String, String, String)[6]",
+    "id": "DISCOUNT-STANDARD-OFF-Q6"
   },
   {
-    "id": "DISCOUNT-STANDARD-PEAK-Q5",
-    "method": "computesObservedPrice(String, MemberType, boolean, int, String, String, String)[7]",
-    "detail": "DISCOUNT-STANDARD-PEAK-Q5 | member=STANDARD | peak=true | quantity=5 | unitPrice=100 | expectedRate=0.00 | expectedTotal=500",
-    "outcome": "PASS"
+    "status": "PASS",
+    "name": "calculatesPrice(String, MemberType, boolean, int, String, String, String)[7]",
+    "id": "DISCOUNT-STANDARD-PEAK-Q6"
   },
   {
-    "id": "DISCOUNT-STANDARD-OFF-Q6",
-    "method": "computesObservedPrice(String, MemberType, boolean, int, String, String, String)[8]",
-    "detail": "DISCOUNT-STANDARD-OFF-Q6 | member=STANDARD | peak=false | quantity=6 | unitPrice=100 | expectedRate=0.05 | expectedTotal=570",
-    "outcome": "PASS"
+    "status": "PASS",
+    "name": "calculatesPrice(String, MemberType, boolean, int, String, String, String)[8]",
+    "id": "DISCOUNT-STANDARD-OFF-Q10"
   },
   {
-    "id": "DISCOUNT-STANDARD-PEAK-Q6",
-    "method": "computesObservedPrice(String, MemberType, boolean, int, String, String, String)[9]",
-    "detail": "DISCOUNT-STANDARD-PEAK-Q6 | member=STANDARD | peak=true | quantity=6 | unitPrice=100 | expectedRate=0.05 | expectedTotal=570",
-    "outcome": "PASS"
+    "status": "PASS",
+    "name": "calculatesPrice(String, MemberType, boolean, int, String, String, String)[9]",
+    "id": "DISCOUNT-PREMIUM-OFF-Q1"
   },
   {
-    "id": "DISCOUNT-STANDARD-OFF-Q10",
-    "method": "computesObservedPrice(String, MemberType, boolean, int, String, String, String)[10]",
-    "detail": "DISCOUNT-STANDARD-OFF-Q10 | member=STANDARD | peak=false | quantity=10 | unitPrice=100 | expectedRate=0.05 | expectedTotal=950",
-    "outcome": "PASS"
+    "status": "PASS",
+    "name": "calculatesPrice(String, MemberType, boolean, int, String, String, String)[10]",
+    "id": "DISCOUNT-PREMIUM-PEAK-Q1"
   },
   {
-    "id": "DISCOUNT-NONE-OFF-Q1",
-    "method": "computesObservedPrice(String, MemberType, boolean, int, String, String, String)[11]",
-    "detail": "DISCOUNT-NONE-OFF-Q1 | member=NONE | peak=false | quantity=1 | unitPrice=100 | expectedRate=0.00 | expectedTotal=100",
-    "outcome": "PASS"
+    "status": "PASS",
+    "name": "calculatesPrice(String, MemberType, boolean, int, String, String, String)[11]",
+    "id": "DISCOUNT-PREMIUM-OFF-Q5"
   },
   {
-    "id": "DISCOUNT-NONE-PEAK-Q10",
-    "method": "computesObservedPrice(String, MemberType, boolean, int, String, String, String)[12]",
-    "detail": "DISCOUNT-NONE-PEAK-Q10 | member=NONE | peak=true | quantity=10 | unitPrice=100 | expectedRate=0.00 | expectedTotal=1000",
-    "outcome": "PASS"
+    "status": "PASS",
+    "name": "calculatesPrice(String, MemberType, boolean, int, String, String, String)[12]",
+    "id": "DISCOUNT-PREMIUM-PEAK-Q10"
   },
   {
-    "id": "DISCOUNT-MEMBER-NULL",
-    "method": "computesObservedPrice(String, MemberType, boolean, int, String, String, String)[13]",
-    "detail": "DISCOUNT-MEMBER-NULL | member=null | peak=false | quantity=6 | unitPrice=100 | expectedRate=0.00 | expectedTotal=600",
-    "outcome": "PASS"
+    "status": "PASS",
+    "name": "calculatesPrice(String, MemberType, boolean, int, String, String, String)[13]",
+    "id": "DISCOUNT-MEMBER-NULL"
   },
   {
-    "id": "ROUND-NONE-BELOW-HALF",
-    "method": "computesObservedPrice(String, MemberType, boolean, int, String, String, String)[14]",
-    "detail": "ROUND-NONE-BELOW-HALF | member=NONE | peak=false | quantity=1 | unitPrice=100.49 | expectedRate=0.00 | expectedTotal=100",
-    "outcome": "PASS"
+    "status": "PASS",
+    "name": "calculatesPrice(String, MemberType, boolean, int, String, String, String)[14]",
+    "id": "ROUND-NONE-BELOW-HALF"
   },
   {
-    "id": "ROUND-NONE-HALF",
-    "method": "computesObservedPrice(String, MemberType, boolean, int, String, String, String)[15]",
-    "detail": "ROUND-NONE-HALF | member=NONE | peak=false | quantity=1 | unitPrice=100.50 | expectedRate=0.00 | expectedTotal=101",
-    "outcome": "PASS"
+    "status": "PASS",
+    "name": "calculatesPrice(String, MemberType, boolean, int, String, String, String)[15]",
+    "id": "ROUND-NONE-AT-HALF"
   },
   {
-    "id": "ROUND-NONE-ABOVE-HALF",
-    "method": "computesObservedPrice(String, MemberType, boolean, int, String, String, String)[16]",
-    "detail": "ROUND-NONE-ABOVE-HALF | member=NONE | peak=false | quantity=1 | unitPrice=100.51 | expectedRate=0.00 | expectedTotal=101",
-    "outcome": "PASS"
+    "status": "PASS",
+    "name": "calculatesPrice(String, MemberType, boolean, int, String, String, String)[16]",
+    "id": "ROUND-PREMIUM-BELOW-HALF"
   },
   {
-    "id": "ROUND-PREMIUM-HALF",
-    "method": "computesObservedPrice(String, MemberType, boolean, int, String, String, String)[17]",
-    "detail": "ROUND-PREMIUM-HALF | member=PREMIUM | peak=false | quantity=1 | unitPrice=105 | expectedRate=0.10 | expectedTotal=95",
-    "outcome": "PASS"
+    "status": "PASS",
+    "name": "calculatesPrice(String, MemberType, boolean, int, String, String, String)[17]",
+    "id": "ROUND-PREMIUM-ABOVE-HALF"
   },
   {
-    "id": "ROUND-STANDARD-HALF",
-    "method": "computesObservedPrice(String, MemberType, boolean, int, String, String, String)[18]",
-    "detail": "ROUND-STANDARD-HALF | member=STANDARD | peak=false | quantity=6 | unitPrice=105 | expectedRate=0.05 | expectedTotal=599",
-    "outcome": "PASS"
+    "status": "PASS",
+    "name": "calculatesPrice(String, MemberType, boolean, int, String, String, String)[18]",
+    "id": "ROUND-AFTER-QUANTITY"
   },
   {
-    "id": "ROUND-AFTER-QUANTITY",
-    "method": "computesObservedPrice(String, MemberType, boolean, int, String, String, String)[19]",
-    "detail": "ROUND-AFTER-QUANTITY | member=NONE | peak=false | quantity=3 | unitPrice=0.49 | expectedRate=0.00 | expectedTotal=1",
-    "outcome": "PASS"
+    "status": "PASS",
+    "name": "calculatesPrice(String, MemberType, boolean, int, String, String, String)[19]",
+    "id": "ROUND-STANDARD-AT-HALF"
   },
   {
-    "id": "PRICE-POSITIVE-SMALL",
-    "method": "computesObservedPrice(String, MemberType, boolean, int, String, String, String)[20]",
-    "detail": "PRICE-POSITIVE-SMALL | member=NONE | peak=false | quantity=1 | unitPrice=0.01 | expectedRate=0.00 | expectedTotal=0",
-    "outcome": "PASS"
-  },
-  {
-    "id": "DEPENDENCY-INVENTORY-THROWS",
-    "method": "propagatesDependencyFailure(String, String)[1]",
-    "detail": "DEPENDENCY-INVENTORY-THROWS | customer=C1 | date=2026-10-03 | quantity=1 | unitPrice=100 | failing=inventory",
-    "outcome": "PASS"
-  },
-  {
-    "id": "DEPENDENCY-CUSTOMER-THROWS",
-    "method": "propagatesDependencyFailure(String, String)[2]",
-    "detail": "DEPENDENCY-CUSTOMER-THROWS | customer=C1 | date=2026-10-03 | quantity=1 | unitPrice=100 | failing=customer",
-    "outcome": "PASS"
-  },
-  {
-    "id": "DEPENDENCY-CALENDAR-THROWS",
-    "method": "propagatesDependencyFailure(String, String)[3]",
-    "detail": "DEPENDENCY-CALENDAR-THROWS | customer=C1 | date=2026-10-03 | quantity=1 | unitPrice=100 | failing=calendar",
-    "outcome": "PASS"
+    "status": "PASS",
+    "name": "calculatesPrice(String, MemberType, boolean, int, String, String, String)[20]",
+    "id": "ROUND-POSITIVE-TO-ZERO"
   }
 ]

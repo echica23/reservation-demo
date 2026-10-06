@@ -1,338 +1,352 @@
 [
   {
-    "id": "SPEC-INVENTORY-UNAVAILABLE",
-    "method": "rejectsUnavailableInventory",
-    "detail": "SPEC-INVENTORY-UNAVAILABLE | spec=S02 | customer=C1 | date=2026-10-03 | quantity=1 | unitPrice=100 | available=false | expected=IllegalStateException; no customer/calendar",
-    "outcome": "PASS",
-    "failure": null
+    "failure": "",
+    "status": "PASS",
+    "output": "SPEC-INVENTORY-UNAVAILABLE | spec=S02 | quantity=1 | date=2026-10-06 | available=false | expected=IllegalStateException\nSPEC-INVENTORY-UNAVAILABLE | actual=IllegalStateException\n",
+    "name": "rejectsUnavailableInventory",
+    "id": "SPEC-INVENTORY-UNAVAILABLE"
   },
   {
-    "id": "SPEC-PREMIUM-OFF-Q1",
-    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[1]",
-    "detail": "SPEC-PREMIUM-OFF-Q1 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=PREMIUM | peak=false | quantity=1 | unitPrice=100 | expectedRate=0.10 | actualRate=0.10 | expectedTotal=90 | actualTotal=90 | expectedScale=0 | actualScale=0",
-    "outcome": "PASS",
-    "failure": null
+    "failure": "",
+    "status": "PASS",
+    "output": "SPEC-NONE-OFF-Q1 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=NONE | peak=false | quantity=1 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=100 | actualTotal=100 | expectedScale=0 | actualScale=0\n",
+    "name": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[1]",
+    "id": "SPEC-NONE-OFF-Q1"
   },
   {
-    "id": "SPEC-PREMIUM-OFF-Q4",
-    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[2]",
-    "detail": "SPEC-PREMIUM-OFF-Q4 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=PREMIUM | peak=false | quantity=4 | unitPrice=100 | expectedRate=0.10 | actualRate=0.10 | expectedTotal=360 | actualTotal=360 | expectedScale=0 | actualScale=0",
-    "outcome": "PASS",
-    "failure": null
+    "failure": "",
+    "status": "PASS",
+    "output": "SPEC-NONE-OFF-Q4 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=NONE | peak=false | quantity=4 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=400 | actualTotal=400 | expectedScale=0 | actualScale=0\n",
+    "name": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[2]",
+    "id": "SPEC-NONE-OFF-Q4"
   },
   {
-    "id": "SPEC-PREMIUM-OFF-Q5",
-    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[3]",
-    "detail": "SPEC-PREMIUM-OFF-Q5 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=PREMIUM | peak=false | quantity=5 | unitPrice=100 | expectedRate=0.10 | actualRate=0.10 | expectedTotal=450 | actualTotal=450 | expectedScale=0 | actualScale=0",
-    "outcome": "PASS",
-    "failure": null
+    "failure": "",
+    "status": "PASS",
+    "output": "SPEC-NONE-OFF-Q5 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=NONE | peak=false | quantity=5 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=500 | actualTotal=500 | expectedScale=0 | actualScale=0\n",
+    "name": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[3]",
+    "id": "SPEC-NONE-OFF-Q5"
   },
   {
-    "id": "SPEC-PREMIUM-OFF-Q10",
-    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[4]",
-    "detail": "SPEC-PREMIUM-OFF-Q10 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=PREMIUM | peak=false | quantity=10 | unitPrice=100 | expectedRate=0.10 | actualRate=0.10 | expectedTotal=900 | actualTotal=900 | expectedScale=0 | actualScale=0",
-    "outcome": "PASS",
-    "failure": null
+    "failure": "",
+    "status": "PASS",
+    "output": "SPEC-NONE-OFF-Q6 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=NONE | peak=false | quantity=6 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=600 | actualTotal=600 | expectedScale=0 | actualScale=0\n",
+    "name": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[4]",
+    "id": "SPEC-NONE-OFF-Q6"
   },
   {
-    "id": "SPEC-PREMIUM-PEAK-Q1",
-    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[5]",
-    "detail": "SPEC-PREMIUM-PEAK-Q1 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=PREMIUM | peak=true | quantity=1 | unitPrice=100 | expectedRate=0.05 | actualRate=0.10 | expectedTotal=95 | actualTotal=90 | expectedScale=0 | actualScale=0",
-    "outcome": "FAIL",
-    "failure": "SPEC-PREMIUM-PEAK-Q1 (2 failures)\n org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q1 discountRate; S03 ==> expected: <0.05> but was: <0.10>\n org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q1 totalAmount; S04 ==> expected: <95> but was: <90>"
+    "failure": "",
+    "status": "PASS",
+    "output": "SPEC-NONE-OFF-Q10 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=NONE | peak=false | quantity=10 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=1000 | actualTotal=1000 | expectedScale=0 | actualScale=0\n",
+    "name": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[5]",
+    "id": "SPEC-NONE-OFF-Q10"
   },
   {
-    "id": "SPEC-PREMIUM-PEAK-Q4",
-    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[6]",
-    "detail": "SPEC-PREMIUM-PEAK-Q4 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=PREMIUM | peak=true | quantity=4 | unitPrice=100 | expectedRate=0.05 | actualRate=0.10 | expectedTotal=380 | actualTotal=360 | expectedScale=0 | actualScale=0",
-    "outcome": "FAIL",
-    "failure": "SPEC-PREMIUM-PEAK-Q4 (2 failures)\n org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q4 discountRate; S03 ==> expected: <0.05> but was: <0.10>\n org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q4 totalAmount; S04 ==> expected: <380> but was: <360>"
+    "failure": "",
+    "status": "PASS",
+    "output": "SPEC-NONE-PEAK-Q1 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=NONE | peak=true | quantity=1 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=100 | actualTotal=100 | expectedScale=0 | actualScale=0\n",
+    "name": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[6]",
+    "id": "SPEC-NONE-PEAK-Q1"
   },
   {
-    "id": "SPEC-PREMIUM-PEAK-Q5",
-    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[7]",
-    "detail": "SPEC-PREMIUM-PEAK-Q5 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=PREMIUM | peak=true | quantity=5 | unitPrice=100 | expectedRate=0.05 | actualRate=0.10 | expectedTotal=475 | actualTotal=450 | expectedScale=0 | actualScale=0",
-    "outcome": "FAIL",
-    "failure": "SPEC-PREMIUM-PEAK-Q5 (2 failures)\n org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q5 discountRate; S03 ==> expected: <0.05> but was: <0.10>\n org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q5 totalAmount; S04 ==> expected: <475> but was: <450>"
+    "failure": "",
+    "status": "PASS",
+    "output": "SPEC-NONE-PEAK-Q4 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=NONE | peak=true | quantity=4 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=400 | actualTotal=400 | expectedScale=0 | actualScale=0\n",
+    "name": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[7]",
+    "id": "SPEC-NONE-PEAK-Q4"
   },
   {
-    "id": "SPEC-PREMIUM-PEAK-Q10",
-    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[8]",
-    "detail": "SPEC-PREMIUM-PEAK-Q10 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=PREMIUM | peak=true | quantity=10 | unitPrice=100 | expectedRate=0.05 | actualRate=0.10 | expectedTotal=950 | actualTotal=900 | expectedScale=0 | actualScale=0",
-    "outcome": "FAIL",
-    "failure": "SPEC-PREMIUM-PEAK-Q10 (2 failures)\n org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q10 discountRate; S03 ==> expected: <0.05> but was: <0.10>\n org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q10 totalAmount; S04 ==> expected: <950> but was: <900>"
+    "failure": "",
+    "status": "PASS",
+    "output": "SPEC-NONE-PEAK-Q5 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=NONE | peak=true | quantity=5 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=500 | actualTotal=500 | expectedScale=0 | actualScale=0\n",
+    "name": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[8]",
+    "id": "SPEC-NONE-PEAK-Q5"
   },
   {
-    "id": "SPEC-STANDARD-OFF-Q1",
-    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[9]",
-    "detail": "SPEC-STANDARD-OFF-Q1 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=STANDARD | peak=false | quantity=1 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=100 | actualTotal=100 | expectedScale=0 | actualScale=0",
-    "outcome": "PASS",
-    "failure": null
+    "failure": "",
+    "status": "PASS",
+    "output": "SPEC-NONE-PEAK-Q6 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=NONE | peak=true | quantity=6 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=600 | actualTotal=600 | expectedScale=0 | actualScale=0\n",
+    "name": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[9]",
+    "id": "SPEC-NONE-PEAK-Q6"
   },
   {
-    "id": "SPEC-STANDARD-OFF-Q4",
-    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[10]",
-    "detail": "SPEC-STANDARD-OFF-Q4 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=STANDARD | peak=false | quantity=4 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=400 | actualTotal=400 | expectedScale=0 | actualScale=0",
-    "outcome": "PASS",
-    "failure": null
+    "failure": "",
+    "status": "PASS",
+    "output": "SPEC-NONE-PEAK-Q10 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=NONE | peak=true | quantity=10 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=1000 | actualTotal=1000 | expectedScale=0 | actualScale=0\n",
+    "name": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[10]",
+    "id": "SPEC-NONE-PEAK-Q10"
   },
   {
-    "id": "SPEC-STANDARD-OFF-Q5",
-    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[11]",
-    "detail": "SPEC-STANDARD-OFF-Q5 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=STANDARD | peak=false | quantity=5 | unitPrice=100 | expectedRate=0.05 | actualRate=0.00 | expectedTotal=475 | actualTotal=500 | expectedScale=0 | actualScale=0",
-    "outcome": "FAIL",
-    "failure": "SPEC-STANDARD-OFF-Q5 (2 failures)\n org.opentest4j.AssertionFailedError: SPEC-STANDARD-OFF-Q5 discountRate; S03 ==> expected: <0.05> but was: <0.00>\n org.opentest4j.AssertionFailedError: SPEC-STANDARD-OFF-Q5 totalAmount; S04 ==> expected: <475> but was: <500>"
+    "failure": "",
+    "status": "PASS",
+    "output": "SPEC-STANDARD-OFF-Q1 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=STANDARD | peak=false | quantity=1 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=100 | actualTotal=100 | expectedScale=0 | actualScale=0\n",
+    "name": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[11]",
+    "id": "SPEC-STANDARD-OFF-Q1"
   },
   {
-    "id": "SPEC-STANDARD-OFF-Q10",
-    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[12]",
-    "detail": "SPEC-STANDARD-OFF-Q10 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=STANDARD | peak=false | quantity=10 | unitPrice=100 | expectedRate=0.05 | actualRate=0.05 | expectedTotal=950 | actualTotal=950 | expectedScale=0 | actualScale=0",
-    "outcome": "PASS",
-    "failure": null
+    "failure": "",
+    "status": "PASS",
+    "output": "SPEC-STANDARD-OFF-Q4 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=STANDARD | peak=false | quantity=4 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=400 | actualTotal=400 | expectedScale=0 | actualScale=0\n",
+    "name": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[12]",
+    "id": "SPEC-STANDARD-OFF-Q4"
   },
   {
-    "id": "SPEC-STANDARD-PEAK-Q1",
-    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[13]",
-    "detail": "SPEC-STANDARD-PEAK-Q1 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=STANDARD | peak=true | quantity=1 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=100 | actualTotal=100 | expectedScale=0 | actualScale=0",
-    "outcome": "PASS",
-    "failure": null
+    "failure": "SPEC-STANDARD-OFF-Q5 (2 failures)\n org.opentest4j.AssertionFailedError: SPEC-STANDARD-OFF-Q5 S03 rate ==> expected: <0.05> but was: <0.00>\n org.opentest4j.AssertionFailedError: SPEC-STANDARD-OFF-Q5 S04 total ==> expected: <475> but was: <500>",
+    "status": "FAIL",
+    "output": "SPEC-STANDARD-OFF-Q5 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=STANDARD | peak=false | quantity=5 | unitPrice=100 | expectedRate=0.05 | actualRate=0.00 | expectedTotal=475 | actualTotal=500 | expectedScale=0 | actualScale=0\n",
+    "name": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[13]",
+    "id": "SPEC-STANDARD-OFF-Q5"
   },
   {
-    "id": "SPEC-STANDARD-PEAK-Q4",
-    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[14]",
-    "detail": "SPEC-STANDARD-PEAK-Q4 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=STANDARD | peak=true | quantity=4 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=400 | actualTotal=400 | expectedScale=0 | actualScale=0",
-    "outcome": "PASS",
-    "failure": null
+    "failure": "",
+    "status": "PASS",
+    "output": "SPEC-STANDARD-OFF-Q6 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=STANDARD | peak=false | quantity=6 | unitPrice=100 | expectedRate=0.05 | actualRate=0.05 | expectedTotal=570 | actualTotal=570 | expectedScale=0 | actualScale=0\n",
+    "name": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[14]",
+    "id": "SPEC-STANDARD-OFF-Q6"
   },
   {
-    "id": "SPEC-STANDARD-PEAK-Q5",
-    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[15]",
-    "detail": "SPEC-STANDARD-PEAK-Q5 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=STANDARD | peak=true | quantity=5 | unitPrice=100 | expectedRate=0.05 | actualRate=0.00 | expectedTotal=475 | actualTotal=500 | expectedScale=0 | actualScale=0",
-    "outcome": "FAIL",
-    "failure": "SPEC-STANDARD-PEAK-Q5 (2 failures)\n org.opentest4j.AssertionFailedError: SPEC-STANDARD-PEAK-Q5 discountRate; S03 ==> expected: <0.05> but was: <0.00>\n org.opentest4j.AssertionFailedError: SPEC-STANDARD-PEAK-Q5 totalAmount; S04 ==> expected: <475> but was: <500>"
+    "failure": "",
+    "status": "PASS",
+    "output": "SPEC-STANDARD-OFF-Q10 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=STANDARD | peak=false | quantity=10 | unitPrice=100 | expectedRate=0.05 | actualRate=0.05 | expectedTotal=950 | actualTotal=950 | expectedScale=0 | actualScale=0\n",
+    "name": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[15]",
+    "id": "SPEC-STANDARD-OFF-Q10"
   },
   {
-    "id": "SPEC-STANDARD-PEAK-Q10",
-    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[16]",
-    "detail": "SPEC-STANDARD-PEAK-Q10 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=STANDARD | peak=true | quantity=10 | unitPrice=100 | expectedRate=0.05 | actualRate=0.05 | expectedTotal=950 | actualTotal=950 | expectedScale=0 | actualScale=0",
-    "outcome": "PASS",
-    "failure": null
+    "failure": "",
+    "status": "PASS",
+    "output": "SPEC-STANDARD-PEAK-Q1 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=STANDARD | peak=true | quantity=1 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=100 | actualTotal=100 | expectedScale=0 | actualScale=0\n",
+    "name": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[16]",
+    "id": "SPEC-STANDARD-PEAK-Q1"
   },
   {
-    "id": "SPEC-NONE-OFF-Q1",
-    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[17]",
-    "detail": "SPEC-NONE-OFF-Q1 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=NONE | peak=false | quantity=1 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=100 | actualTotal=100 | expectedScale=0 | actualScale=0",
-    "outcome": "PASS",
-    "failure": null
+    "failure": "",
+    "status": "PASS",
+    "output": "SPEC-STANDARD-PEAK-Q4 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=STANDARD | peak=true | quantity=4 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=400 | actualTotal=400 | expectedScale=0 | actualScale=0\n",
+    "name": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[17]",
+    "id": "SPEC-STANDARD-PEAK-Q4"
   },
   {
-    "id": "SPEC-NONE-OFF-Q4",
-    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[18]",
-    "detail": "SPEC-NONE-OFF-Q4 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=NONE | peak=false | quantity=4 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=400 | actualTotal=400 | expectedScale=0 | actualScale=0",
-    "outcome": "PASS",
-    "failure": null
+    "failure": "SPEC-STANDARD-PEAK-Q5 (2 failures)\n org.opentest4j.AssertionFailedError: SPEC-STANDARD-PEAK-Q5 S03 rate ==> expected: <0.05> but was: <0.00>\n org.opentest4j.AssertionFailedError: SPEC-STANDARD-PEAK-Q5 S04 total ==> expected: <475> but was: <500>",
+    "status": "FAIL",
+    "output": "SPEC-STANDARD-PEAK-Q5 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=STANDARD | peak=true | quantity=5 | unitPrice=100 | expectedRate=0.05 | actualRate=0.00 | expectedTotal=475 | actualTotal=500 | expectedScale=0 | actualScale=0\n",
+    "name": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[18]",
+    "id": "SPEC-STANDARD-PEAK-Q5"
   },
   {
-    "id": "SPEC-NONE-OFF-Q5",
-    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[19]",
-    "detail": "SPEC-NONE-OFF-Q5 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=NONE | peak=false | quantity=5 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=500 | actualTotal=500 | expectedScale=0 | actualScale=0",
-    "outcome": "PASS",
-    "failure": null
+    "failure": "",
+    "status": "PASS",
+    "output": "SPEC-STANDARD-PEAK-Q6 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=STANDARD | peak=true | quantity=6 | unitPrice=100 | expectedRate=0.05 | actualRate=0.05 | expectedTotal=570 | actualTotal=570 | expectedScale=0 | actualScale=0\n",
+    "name": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[19]",
+    "id": "SPEC-STANDARD-PEAK-Q6"
   },
   {
-    "id": "SPEC-NONE-OFF-Q10",
-    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[20]",
-    "detail": "SPEC-NONE-OFF-Q10 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=NONE | peak=false | quantity=10 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=1000 | actualTotal=1000 | expectedScale=0 | actualScale=0",
-    "outcome": "PASS",
-    "failure": null
+    "failure": "",
+    "status": "PASS",
+    "output": "SPEC-STANDARD-PEAK-Q10 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=STANDARD | peak=true | quantity=10 | unitPrice=100 | expectedRate=0.05 | actualRate=0.05 | expectedTotal=950 | actualTotal=950 | expectedScale=0 | actualScale=0\n",
+    "name": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[20]",
+    "id": "SPEC-STANDARD-PEAK-Q10"
   },
   {
-    "id": "SPEC-NONE-PEAK-Q1",
-    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[21]",
-    "detail": "SPEC-NONE-PEAK-Q1 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=NONE | peak=true | quantity=1 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=100 | actualTotal=100 | expectedScale=0 | actualScale=0",
-    "outcome": "PASS",
-    "failure": null
+    "failure": "",
+    "status": "PASS",
+    "output": "SPEC-PREMIUM-OFF-Q1 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=PREMIUM | peak=false | quantity=1 | unitPrice=100 | expectedRate=0.10 | actualRate=0.10 | expectedTotal=90 | actualTotal=90 | expectedScale=0 | actualScale=0\n",
+    "name": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[21]",
+    "id": "SPEC-PREMIUM-OFF-Q1"
   },
   {
-    "id": "SPEC-NONE-PEAK-Q4",
-    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[22]",
-    "detail": "SPEC-NONE-PEAK-Q4 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=NONE | peak=true | quantity=4 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=400 | actualTotal=400 | expectedScale=0 | actualScale=0",
-    "outcome": "PASS",
-    "failure": null
+    "failure": "",
+    "status": "PASS",
+    "output": "SPEC-PREMIUM-OFF-Q4 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=PREMIUM | peak=false | quantity=4 | unitPrice=100 | expectedRate=0.10 | actualRate=0.10 | expectedTotal=360 | actualTotal=360 | expectedScale=0 | actualScale=0\n",
+    "name": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[22]",
+    "id": "SPEC-PREMIUM-OFF-Q4"
   },
   {
-    "id": "SPEC-NONE-PEAK-Q5",
-    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[23]",
-    "detail": "SPEC-NONE-PEAK-Q5 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=NONE | peak=true | quantity=5 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=500 | actualTotal=500 | expectedScale=0 | actualScale=0",
-    "outcome": "PASS",
-    "failure": null
+    "failure": "",
+    "status": "PASS",
+    "output": "SPEC-PREMIUM-OFF-Q5 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=PREMIUM | peak=false | quantity=5 | unitPrice=100 | expectedRate=0.10 | actualRate=0.10 | expectedTotal=450 | actualTotal=450 | expectedScale=0 | actualScale=0\n",
+    "name": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[23]",
+    "id": "SPEC-PREMIUM-OFF-Q5"
   },
   {
-    "id": "SPEC-NONE-PEAK-Q10",
-    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[24]",
-    "detail": "SPEC-NONE-PEAK-Q10 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=NONE | peak=true | quantity=10 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=1000 | actualTotal=1000 | expectedScale=0 | actualScale=0",
-    "outcome": "PASS",
-    "failure": null
+    "failure": "",
+    "status": "PASS",
+    "output": "SPEC-PREMIUM-OFF-Q6 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=PREMIUM | peak=false | quantity=6 | unitPrice=100 | expectedRate=0.10 | actualRate=0.10 | expectedTotal=540 | actualTotal=540 | expectedScale=0 | actualScale=0\n",
+    "name": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[24]",
+    "id": "SPEC-PREMIUM-OFF-Q6"
   },
   {
-    "id": "SPEC-STANDARD-OFF-Q6",
-    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[25]",
-    "detail": "SPEC-STANDARD-OFF-Q6 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=STANDARD | peak=false | quantity=6 | unitPrice=100 | expectedRate=0.05 | actualRate=0.05 | expectedTotal=570 | actualTotal=570 | expectedScale=0 | actualScale=0",
-    "outcome": "PASS",
-    "failure": null
+    "failure": "",
+    "status": "PASS",
+    "output": "SPEC-PREMIUM-OFF-Q10 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=PREMIUM | peak=false | quantity=10 | unitPrice=100 | expectedRate=0.10 | actualRate=0.10 | expectedTotal=900 | actualTotal=900 | expectedScale=0 | actualScale=0\n",
+    "name": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[25]",
+    "id": "SPEC-PREMIUM-OFF-Q10"
   },
   {
-    "id": "SPEC-STANDARD-PEAK-Q6",
-    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[26]",
-    "detail": "SPEC-STANDARD-PEAK-Q6 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=STANDARD | peak=true | quantity=6 | unitPrice=100 | expectedRate=0.05 | actualRate=0.05 | expectedTotal=570 | actualTotal=570 | expectedScale=0 | actualScale=0",
-    "outcome": "PASS",
-    "failure": null
+    "failure": "SPEC-PREMIUM-PEAK-Q1 (2 failures)\n org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q1 S03 rate ==> expected: <0.05> but was: <0.10>\n org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q1 S04 total ==> expected: <95> but was: <90>",
+    "status": "FAIL",
+    "output": "SPEC-PREMIUM-PEAK-Q1 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=PREMIUM | peak=true | quantity=1 | unitPrice=100 | expectedRate=0.05 | actualRate=0.10 | expectedTotal=95 | actualTotal=90 | expectedScale=0 | actualScale=0\n",
+    "name": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[26]",
+    "id": "SPEC-PREMIUM-PEAK-Q1"
   },
   {
-    "id": "SPEC-ROUND-BELOW-HALF",
-    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[27]",
-    "detail": "SPEC-ROUND-BELOW-HALF | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=NONE | peak=false | quantity=1 | unitPrice=100.49 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=100 | actualTotal=100 | expectedScale=0 | actualScale=0",
-    "outcome": "PASS",
-    "failure": null
+    "failure": "SPEC-PREMIUM-PEAK-Q4 (2 failures)\n org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q4 S03 rate ==> expected: <0.05> but was: <0.10>\n org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q4 S04 total ==> expected: <380> but was: <360>",
+    "status": "FAIL",
+    "output": "SPEC-PREMIUM-PEAK-Q4 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=PREMIUM | peak=true | quantity=4 | unitPrice=100 | expectedRate=0.05 | actualRate=0.10 | expectedTotal=380 | actualTotal=360 | expectedScale=0 | actualScale=0\n",
+    "name": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[27]",
+    "id": "SPEC-PREMIUM-PEAK-Q4"
   },
   {
-    "id": "SPEC-ROUND-AT-HALF",
-    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[28]",
-    "detail": "SPEC-ROUND-AT-HALF | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=NONE | peak=false | quantity=1 | unitPrice=100.50 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=101 | actualTotal=101 | expectedScale=0 | actualScale=0",
-    "outcome": "PASS",
-    "failure": null
+    "failure": "SPEC-PREMIUM-PEAK-Q5 (2 failures)\n org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q5 S03 rate ==> expected: <0.05> but was: <0.10>\n org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q5 S04 total ==> expected: <475> but was: <450>",
+    "status": "FAIL",
+    "output": "SPEC-PREMIUM-PEAK-Q5 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=PREMIUM | peak=true | quantity=5 | unitPrice=100 | expectedRate=0.05 | actualRate=0.10 | expectedTotal=475 | actualTotal=450 | expectedScale=0 | actualScale=0\n",
+    "name": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[28]",
+    "id": "SPEC-PREMIUM-PEAK-Q5"
   },
   {
-    "id": "SPEC-ROUND-ABOVE-HALF",
-    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[29]",
-    "detail": "SPEC-ROUND-ABOVE-HALF | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=NONE | peak=false | quantity=1 | unitPrice=100.51 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=101 | actualTotal=101 | expectedScale=0 | actualScale=0",
-    "outcome": "PASS",
-    "failure": null
+    "failure": "SPEC-PREMIUM-PEAK-Q6 (2 failures)\n org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q6 S03 rate ==> expected: <0.05> but was: <0.10>\n org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q6 S04 total ==> expected: <570> but was: <540>",
+    "status": "FAIL",
+    "output": "SPEC-PREMIUM-PEAK-Q6 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=PREMIUM | peak=true | quantity=6 | unitPrice=100 | expectedRate=0.05 | actualRate=0.10 | expectedTotal=570 | actualTotal=540 | expectedScale=0 | actualScale=0\n",
+    "name": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[29]",
+    "id": "SPEC-PREMIUM-PEAK-Q6"
   },
   {
-    "id": "SPEC-ROUND-PREMIUM-HALF",
-    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[30]",
-    "detail": "SPEC-ROUND-PREMIUM-HALF | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=PREMIUM | peak=false | quantity=1 | unitPrice=105 | expectedRate=0.10 | actualRate=0.10 | expectedTotal=95 | actualTotal=95 | expectedScale=0 | actualScale=0",
-    "outcome": "PASS",
-    "failure": null
+    "failure": "SPEC-PREMIUM-PEAK-Q10 (2 failures)\n org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q10 S03 rate ==> expected: <0.05> but was: <0.10>\n org.opentest4j.AssertionFailedError: SPEC-PREMIUM-PEAK-Q10 S04 total ==> expected: <950> but was: <900>",
+    "status": "FAIL",
+    "output": "SPEC-PREMIUM-PEAK-Q10 | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=PREMIUM | peak=true | quantity=10 | unitPrice=100 | expectedRate=0.05 | actualRate=0.10 | expectedTotal=950 | actualTotal=900 | expectedScale=0 | actualScale=0\n",
+    "name": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[30]",
+    "id": "SPEC-PREMIUM-PEAK-Q10"
   },
   {
-    "id": "SPEC-ROUND-STANDARD-HALF",
-    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[31]",
-    "detail": "SPEC-ROUND-STANDARD-HALF | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=STANDARD | peak=false | quantity=6 | unitPrice=105 | expectedRate=0.05 | actualRate=0.05 | expectedTotal=599 | actualTotal=599 | expectedScale=0 | actualScale=0",
-    "outcome": "PASS",
-    "failure": null
+    "failure": "",
+    "status": "PASS",
+    "output": "SPEC-INPUT-REQUEST-NULL | spec=S01 | input=null | expected=IllegalArgumentException\nSPEC-INPUT-REQUEST-NULL | actual=IllegalArgumentException\n",
+    "name": "rejectsInvalidInput(String, ReservationRequest)[1]",
+    "id": "SPEC-INPUT-REQUEST-NULL"
   },
   {
-    "id": "SPEC-ROUND-AFTER-QUANTITY",
-    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[32]",
-    "detail": "SPEC-ROUND-AFTER-QUANTITY | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=NONE | peak=false | quantity=3 | unitPrice=0.49 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=1 | actualTotal=1 | expectedScale=0 | actualScale=0",
-    "outcome": "PASS",
-    "failure": null
+    "failure": "",
+    "status": "PASS",
+    "output": "SPEC-INPUT-CUSTOMER-NULL | spec=S01 | input=ReservationRequest[customerId=null, date=2026-10-06, quantity=1, unitPrice=100] | expected=IllegalArgumentException\nSPEC-INPUT-CUSTOMER-NULL | actual=IllegalArgumentException\n",
+    "name": "rejectsInvalidInput(String, ReservationRequest)[2]",
+    "id": "SPEC-INPUT-CUSTOMER-NULL"
   },
   {
-    "id": "SPEC-ROUND-AFTER-DISCOUNT",
-    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[33]",
-    "detail": "SPEC-ROUND-AFTER-DISCOUNT | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=PREMIUM | peak=false | quantity=3 | unitPrice=0.55 | expectedRate=0.10 | actualRate=0.10 | expectedTotal=1 | actualTotal=1 | expectedScale=0 | actualScale=0",
-    "outcome": "PASS",
-    "failure": null
+    "failure": "",
+    "status": "PASS",
+    "output": "SPEC-INPUT-CUSTOMER-EMPTY | spec=S01 | input=ReservationRequest[customerId=, date=2026-10-06, quantity=1, unitPrice=100] | expected=IllegalArgumentException\nSPEC-INPUT-CUSTOMER-EMPTY | actual=IllegalArgumentException\n",
+    "name": "rejectsInvalidInput(String, ReservationRequest)[3]",
+    "id": "SPEC-INPUT-CUSTOMER-EMPTY"
   },
   {
-    "id": "SPEC-PRICE-SMALL-POSITIVE",
-    "method": "returnsSpecifiedPrice(String, MemberType, boolean, int, String, String, String)[34]",
-    "detail": "SPEC-PRICE-SMALL-POSITIVE | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-03 | member=NONE | peak=false | quantity=1 | unitPrice=0.01 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=0 | actualTotal=0 | expectedScale=0 | actualScale=0",
-    "outcome": "PASS",
-    "failure": null
+    "failure": "",
+    "status": "PASS",
+    "output": "SPEC-INPUT-CUSTOMER-BLANK | spec=S01 | input=ReservationRequest[customerId= \t, date=2026-10-06, quantity=1, unitPrice=100] | expected=IllegalArgumentException\nSPEC-INPUT-CUSTOMER-BLANK | actual=IllegalArgumentException\n",
+    "name": "rejectsInvalidInput(String, ReservationRequest)[4]",
+    "id": "SPEC-INPUT-CUSTOMER-BLANK"
   },
   {
-    "id": "SPEC-INPUT-REQUEST-NULL",
-    "method": "rejectsInvalidInputWithoutDependencies(String, ReservationRequest)[1]",
-    "detail": "SPEC-INPUT-REQUEST-NULL | spec=S01 | input=null | expected=IllegalArgumentException; no dependencies",
-    "outcome": "PASS",
-    "failure": null
+    "failure": "",
+    "status": "PASS",
+    "output": "SPEC-INPUT-DATE-NULL | spec=S01 | input=ReservationRequest[customerId=C1, date=null, quantity=1, unitPrice=100] | expected=IllegalArgumentException\nSPEC-INPUT-DATE-NULL | actual=IllegalArgumentException\n",
+    "name": "rejectsInvalidInput(String, ReservationRequest)[5]",
+    "id": "SPEC-INPUT-DATE-NULL"
   },
   {
-    "id": "SPEC-INPUT-CUSTOMER-NULL",
-    "method": "rejectsInvalidInputWithoutDependencies(String, ReservationRequest)[2]",
-    "detail": "SPEC-INPUT-CUSTOMER-NULL | spec=S01 | input=ReservationRequest[customerId=null, date=2026-10-03, quantity=1, unitPrice=100] | expected=IllegalArgumentException; no dependencies",
-    "outcome": "PASS",
-    "failure": null
+    "failure": "",
+    "status": "PASS",
+    "output": "SPEC-INPUT-QUANTITY-NEGATIVE | spec=S01 | input=ReservationRequest[customerId=C1, date=2026-10-06, quantity=-1, unitPrice=100] | expected=IllegalArgumentException\nSPEC-INPUT-QUANTITY-NEGATIVE | actual=IllegalArgumentException\n",
+    "name": "rejectsInvalidInput(String, ReservationRequest)[6]",
+    "id": "SPEC-INPUT-QUANTITY-NEGATIVE"
   },
   {
-    "id": "SPEC-INPUT-CUSTOMER-EMPTY",
-    "method": "rejectsInvalidInputWithoutDependencies(String, ReservationRequest)[3]",
-    "detail": "SPEC-INPUT-CUSTOMER-EMPTY | spec=S01 | input=ReservationRequest[customerId=, date=2026-10-03, quantity=1, unitPrice=100] | expected=IllegalArgumentException; no dependencies",
-    "outcome": "PASS",
-    "failure": null
+    "failure": "",
+    "status": "PASS",
+    "output": "SPEC-INPUT-QUANTITY-ZERO | spec=S01 | input=ReservationRequest[customerId=C1, date=2026-10-06, quantity=0, unitPrice=100] | expected=IllegalArgumentException\nSPEC-INPUT-QUANTITY-ZERO | actual=IllegalArgumentException\n",
+    "name": "rejectsInvalidInput(String, ReservationRequest)[7]",
+    "id": "SPEC-INPUT-QUANTITY-ZERO"
   },
   {
-    "id": "SPEC-INPUT-CUSTOMER-BLANK",
-    "method": "rejectsInvalidInputWithoutDependencies(String, ReservationRequest)[4]",
-    "detail": "SPEC-INPUT-CUSTOMER-BLANK | spec=S01 | input=ReservationRequest[customerId= \t\n, date=2026-10-03, quantity=1, unitPrice=100] | expected=IllegalArgumentException; no dependencies",
-    "outcome": "PASS",
-    "failure": null
+    "failure": "",
+    "status": "PASS",
+    "output": "SPEC-INPUT-QUANTITY-ELEVEN | spec=S01 | input=ReservationRequest[customerId=C1, date=2026-10-06, quantity=11, unitPrice=100] | expected=IllegalArgumentException\nSPEC-INPUT-QUANTITY-ELEVEN | actual=IllegalArgumentException\n",
+    "name": "rejectsInvalidInput(String, ReservationRequest)[8]",
+    "id": "SPEC-INPUT-QUANTITY-ELEVEN"
   },
   {
-    "id": "SPEC-INPUT-DATE-NULL",
-    "method": "rejectsInvalidInputWithoutDependencies(String, ReservationRequest)[5]",
-    "detail": "SPEC-INPUT-DATE-NULL | spec=S01 | input=ReservationRequest[customerId=C1, date=null, quantity=1, unitPrice=100] | expected=IllegalArgumentException; no dependencies",
-    "outcome": "PASS",
-    "failure": null
+    "failure": "",
+    "status": "PASS",
+    "output": "SPEC-INPUT-PRICE-NULL | spec=S01 | input=ReservationRequest[customerId=C1, date=2026-10-06, quantity=1, unitPrice=null] | expected=IllegalArgumentException\nSPEC-INPUT-PRICE-NULL | actual=IllegalArgumentException\n",
+    "name": "rejectsInvalidInput(String, ReservationRequest)[9]",
+    "id": "SPEC-INPUT-PRICE-NULL"
   },
   {
-    "id": "SPEC-INPUT-QUANTITY-NEGATIVE",
-    "method": "rejectsInvalidInputWithoutDependencies(String, ReservationRequest)[6]",
-    "detail": "SPEC-INPUT-QUANTITY-NEGATIVE | spec=S01 | input=ReservationRequest[customerId=C1, date=2026-10-03, quantity=-1, unitPrice=100] | expected=IllegalArgumentException; no dependencies",
-    "outcome": "PASS",
-    "failure": null
+    "failure": "",
+    "status": "PASS",
+    "output": "SPEC-INPUT-PRICE-ZERO | spec=S01 | input=ReservationRequest[customerId=C1, date=2026-10-06, quantity=1, unitPrice=0] | expected=IllegalArgumentException\nSPEC-INPUT-PRICE-ZERO | actual=IllegalArgumentException\n",
+    "name": "rejectsInvalidInput(String, ReservationRequest)[10]",
+    "id": "SPEC-INPUT-PRICE-ZERO"
   },
   {
-    "id": "SPEC-INPUT-QUANTITY-ZERO",
-    "method": "rejectsInvalidInputWithoutDependencies(String, ReservationRequest)[7]",
-    "detail": "SPEC-INPUT-QUANTITY-ZERO | spec=S01 | input=ReservationRequest[customerId=C1, date=2026-10-03, quantity=0, unitPrice=100] | expected=IllegalArgumentException; no dependencies",
-    "outcome": "PASS",
-    "failure": null
+    "failure": "",
+    "status": "PASS",
+    "output": "SPEC-INPUT-PRICE-NEGATIVE | spec=S01 | input=ReservationRequest[customerId=C1, date=2026-10-06, quantity=1, unitPrice=-0.01] | expected=IllegalArgumentException\nSPEC-INPUT-PRICE-NEGATIVE | actual=IllegalArgumentException\n",
+    "name": "rejectsInvalidInput(String, ReservationRequest)[11]",
+    "id": "SPEC-INPUT-PRICE-NEGATIVE"
   },
   {
-    "id": "SPEC-INPUT-QUANTITY-ELEVEN",
-    "method": "rejectsInvalidInputWithoutDependencies(String, ReservationRequest)[8]",
-    "detail": "SPEC-INPUT-QUANTITY-ELEVEN | spec=S01 | input=ReservationRequest[customerId=C1, date=2026-10-03, quantity=11, unitPrice=100] | expected=IllegalArgumentException; no dependencies",
-    "outcome": "PASS",
-    "failure": null
+    "failure": "",
+    "status": "PASS",
+    "output": "SPEC-ROUND-BELOW | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=NONE | peak=false | quantity=1 | unitPrice=0.49 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=0 | actualTotal=0 | expectedScale=0 | actualScale=0\n",
+    "name": "roundsOnlyFinalTotal(String, MemberType, boolean, int, String, String, String)[1]",
+    "id": "SPEC-ROUND-BELOW"
   },
   {
-    "id": "SPEC-INPUT-PRICE-NULL",
-    "method": "rejectsInvalidInputWithoutDependencies(String, ReservationRequest)[9]",
-    "detail": "SPEC-INPUT-PRICE-NULL | spec=S01 | input=ReservationRequest[customerId=C1, date=2026-10-03, quantity=1, unitPrice=null] | expected=IllegalArgumentException; no dependencies",
-    "outcome": "PASS",
-    "failure": null
+    "failure": "",
+    "status": "PASS",
+    "output": "SPEC-ROUND-HALF | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=NONE | peak=false | quantity=1 | unitPrice=0.50 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=1 | actualTotal=1 | expectedScale=0 | actualScale=0\n",
+    "name": "roundsOnlyFinalTotal(String, MemberType, boolean, int, String, String, String)[2]",
+    "id": "SPEC-ROUND-HALF"
   },
   {
-    "id": "SPEC-INPUT-PRICE-ZERO",
-    "method": "rejectsInvalidInputWithoutDependencies(String, ReservationRequest)[10]",
-    "detail": "SPEC-INPUT-PRICE-ZERO | spec=S01 | input=ReservationRequest[customerId=C1, date=2026-10-03, quantity=1, unitPrice=0.00] | expected=IllegalArgumentException; no dependencies",
-    "outcome": "PASS",
-    "failure": null
+    "failure": "",
+    "status": "PASS",
+    "output": "SPEC-ROUND-ABOVE | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=NONE | peak=false | quantity=1 | unitPrice=0.51 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=1 | actualTotal=1 | expectedScale=0 | actualScale=0\n",
+    "name": "roundsOnlyFinalTotal(String, MemberType, boolean, int, String, String, String)[3]",
+    "id": "SPEC-ROUND-ABOVE"
   },
   {
-    "id": "SPEC-INPUT-PRICE-NEGATIVE",
-    "method": "rejectsInvalidInputWithoutDependencies(String, ReservationRequest)[11]",
-    "detail": "SPEC-INPUT-PRICE-NEGATIVE | spec=S01 | input=ReservationRequest[customerId=C1, date=2026-10-03, quantity=1, unitPrice=-0.01] | expected=IllegalArgumentException; no dependencies",
-    "outcome": "PASS",
-    "failure": null
+    "failure": "",
+    "status": "PASS",
+    "output": "SPEC-ROUND-PREMIUM | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=PREMIUM | peak=false | quantity=1 | unitPrice=1.67 | expectedRate=0.10 | actualRate=0.10 | expectedTotal=2 | actualTotal=2 | expectedScale=0 | actualScale=0\n",
+    "name": "roundsOnlyFinalTotal(String, MemberType, boolean, int, String, String, String)[4]",
+    "id": "SPEC-ROUND-PREMIUM"
   },
   {
-    "id": "SPEC-DATE-PAST",
-    "method": "acceptsPastAndFuture(String, LocalDate)[1]",
-    "detail": "SPEC-DATE-PAST | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2000-01-01 | member=NONE | peak=false | quantity=1 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=100 | actualTotal=100 | expectedScale=0 | actualScale=0",
-    "outcome": "PASS",
-    "failure": null
+    "failure": "",
+    "status": "PASS",
+    "output": "SPEC-ROUND-STANDARD | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=STANDARD | peak=false | quantity=6 | unitPrice=0.10 | expectedRate=0.05 | actualRate=0.05 | expectedTotal=1 | actualTotal=1 | expectedScale=0 | actualScale=0\n",
+    "name": "roundsOnlyFinalTotal(String, MemberType, boolean, int, String, String, String)[5]",
+    "id": "SPEC-ROUND-STANDARD"
   },
   {
-    "id": "SPEC-DATE-FUTURE",
-    "method": "acceptsPastAndFuture(String, LocalDate)[2]",
-    "detail": "SPEC-DATE-FUTURE | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2100-01-01 | member=NONE | peak=false | quantity=1 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=100 | actualTotal=100 | expectedScale=0 | actualScale=0",
-    "outcome": "PASS",
-    "failure": null
+    "failure": "",
+    "status": "PASS",
+    "output": "SPEC-ROUND-NO-INTERMEDIATE | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2026-10-06 | member=NONE | peak=false | quantity=3 | unitPrice=0.49 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=1 | actualTotal=1 | expectedScale=0 | actualScale=0\n",
+    "name": "roundsOnlyFinalTotal(String, MemberType, boolean, int, String, String, String)[6]",
+    "id": "SPEC-ROUND-NO-INTERMEDIATE"
+  },
+  {
+    "failure": "",
+    "status": "PASS",
+    "output": "SPEC-DATE-PAST | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2000-01-01 | member=NONE | peak=false | quantity=1 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=100 | actualTotal=100 | expectedScale=0 | actualScale=0\n",
+    "name": "acceptsPastAndFuture(String, LocalDate)[1]",
+    "id": "SPEC-DATE-PAST"
+  },
+  {
+    "failure": "",
+    "status": "PASS",
+    "output": "SPEC-DATE-FUTURE | spec=S01,S02,S03,S04,S05 | customer=C1 | date=2100-01-01 | member=NONE | peak=false | quantity=1 | unitPrice=100 | expectedRate=0.00 | actualRate=0.00 | expectedTotal=100 | actualTotal=100 | expectedScale=0 | actualScale=0\n",
+    "name": "acceptsPastAndFuture(String, LocalDate)[2]",
+    "id": "SPEC-DATE-FUTURE"
   }
 ]

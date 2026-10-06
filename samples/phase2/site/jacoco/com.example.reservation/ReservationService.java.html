@@ -59,13 +59,16 @@ public class ReservationService {
 
     /** 会員種別などの予約条件から、適用する割引率を決める。 */
     private BigDecimal determineDiscount(MemberType member, boolean peakSeason, int quantity) {
-<span class="fc bfc" id="L62" title="All 2 branches covered.">        if (member == MemberType.PREMIUM) {</span>
-<span class="fc" id="L63">            return new BigDecimal(&quot;0.10&quot;);</span>
+<span class="pc bpc" id="L62" title="1 of 2 branches missed.">        if (quantity &gt; 10) {</span>
+<span class="nc" id="L63">            return new BigDecimal(&quot;0.15&quot;);</span>
         }
-<span class="fc bfc" id="L65" title="All 4 branches covered.">        if (member == MemberType.STANDARD &amp;&amp; quantity &gt; 5) {</span>
-<span class="fc" id="L66">            return new BigDecimal(&quot;0.05&quot;);</span>
+<span class="fc bfc" id="L65" title="All 2 branches covered.">        if (member == MemberType.PREMIUM) {</span>
+<span class="fc" id="L66">            return new BigDecimal(&quot;0.10&quot;);</span>
         }
-<span class="fc" id="L68">        return new BigDecimal(&quot;0.00&quot;);</span>
+<span class="fc bfc" id="L68" title="All 4 branches covered.">        if (member == MemberType.STANDARD &amp;&amp; quantity &gt; 5) {</span>
+<span class="fc" id="L69">            return new BigDecimal(&quot;0.05&quot;);</span>
+        }
+<span class="fc" id="L71">        return new BigDecimal(&quot;0.00&quot;);</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

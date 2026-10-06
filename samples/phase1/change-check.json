@@ -1,56 +1,80 @@
 [
   {
-    "path": "src\\main\\java\\com\\example\\reservation\\CalendarService.java",
-    "before": "908418CDD54A5A6FA5015CFCC4237907401A5CA5E8F2D4BE382303A3F4E90F65",
-    "after": "908418CDD54A5A6FA5015CFCC4237907401A5CA5E8F2D4BE382303A3F4E90F65",
+    "after": "03801CFAAA64D5F288BE794B9FF25B5D1A659738B634158F62F543BB06C6FDCB",
+    "before": "03801CFAAA64D5F288BE794B9FF25B5D1A659738B634158F62F543BB06C6FDCB",
+    "path": ".gitattributes",
     "unchanged": true
   },
   {
-    "path": "src\\main\\java\\com\\example\\reservation\\CustomerService.java",
-    "before": "5DA65555CA9A2E054059B9C1113282AB6EAF2D30F91843344F2090C6B8F15EDF",
-    "after": "5DA65555CA9A2E054059B9C1113282AB6EAF2D30F91843344F2090C6B8F15EDF",
-    "unchanged": true
-  },
-  {
-    "path": "src\\main\\java\\com\\example\\reservation\\InventoryService.java",
-    "before": "61BF034453AEEA096B175E1E90FFBB9CD7E9064B17207FB1AF8DAFF24C769656",
-    "after": "61BF034453AEEA096B175E1E90FFBB9CD7E9064B17207FB1AF8DAFF24C769656",
-    "unchanged": true
-  },
-  {
-    "path": "src\\main\\java\\com\\example\\reservation\\MemberType.java",
-    "before": "CCE3530FE64B9916BBC840A236B5EAE5EF895CFE986B5202C5E52053250ABD1A",
-    "after": "CCE3530FE64B9916BBC840A236B5EAE5EF895CFE986B5202C5E52053250ABD1A",
-    "unchanged": true
-  },
-  {
-    "path": "src\\main\\java\\com\\example\\reservation\\ReservationRequest.java",
-    "before": "2C9B3A3DAE38AAE2668606B744D17B30B7D07D73CE5F976065B7F241E9B777FD",
-    "after": "2C9B3A3DAE38AAE2668606B744D17B30B7D07D73CE5F976065B7F241E9B777FD",
-    "unchanged": true
-  },
-  {
-    "path": "src\\main\\java\\com\\example\\reservation\\ReservationResult.java",
-    "before": "89DB1CC81BB59F80AF679F69592B3979F3251DADA66B893C4B1A7E80E6E3ABB6",
-    "after": "89DB1CC81BB59F80AF679F69592B3979F3251DADA66B893C4B1A7E80E6E3ABB6",
-    "unchanged": true
-  },
-  {
-    "path": "src\\main\\java\\com\\example\\reservation\\ReservationService.java",
-    "before": "3417695CA49D2FB8DA652022F38AE7AEB914202CECE78D99E82E920CC3EC0362",
-    "after": "3417695CA49D2FB8DA652022F38AE7AEB914202CECE78D99E82E920CC3EC0362",
-    "unchanged": true
-  },
-  {
-    "path": "pom.xml",
-    "before": "782B7DE74DB09336CE4D09F24CB12F3EB86B8F74E2EE88959B00C416BDC5CEE2",
-    "after": "782B7DE74DB09336CE4D09F24CB12F3EB86B8F74E2EE88959B00C416BDC5CEE2",
-    "unchanged": true
-  },
-  {
-    "path": ".gitignore",
-    "before": "7F7C8AC9DF305EB44041C7B6F0EFE5C847834786E74A58928D8C2CD284D7480D",
     "after": "7F7C8AC9DF305EB44041C7B6F0EFE5C847834786E74A58928D8C2CD284D7480D",
+    "before": "7F7C8AC9DF305EB44041C7B6F0EFE5C847834786E74A58928D8C2CD284D7480D",
+    "path": ".gitignore",
+    "unchanged": true
+  },
+  {
+    "after": "782B7DE74DB09336CE4D09F24CB12F3EB86B8F74E2EE88959B00C416BDC5CEE2",
+    "before": "782B7DE74DB09336CE4D09F24CB12F3EB86B8F74E2EE88959B00C416BDC5CEE2",
+    "path": "pom.xml",
+    "unchanged": true
+  },
+  {
+    "after": "ADF9244FA0C25285AC6C804FE8436CC13AB975703AEDEB037FA8B8ED55675430",
+    "before": "ADF9244FA0C25285AC6C804FE8436CC13AB975703AEDEB037FA8B8ED55675430",
+    "path": "README.md",
+    "unchanged": true
+  },
+  {
+    "after": "9E4995059B0A504A410FDAE04FC55B2EB483FA569AF729DBA6B529F1D9CBE2D9",
+    "before": "9E4995059B0A504A410FDAE04FC55B2EB483FA569AF729DBA6B529F1D9CBE2D9",
+    "path": "docs\\reservation-spec.md",
+    "unchanged": true
+  },
+  {
+    "after": "CC4DAE4544D5EB53314AEBEC006BD8264A98DE4A4F90267BF6DDDC2F5691D691",
+    "before": "CC4DAE4544D5EB53314AEBEC006BD8264A98DE4A4F90267BF6DDDC2F5691D691",
+    "path": "prompts\\ut-instructions.md",
+    "unchanged": true
+  },
+  {
+    "after": "908418CDD54A5A6FA5015CFCC4237907401A5CA5E8F2D4BE382303A3F4E90F65",
+    "before": "908418CDD54A5A6FA5015CFCC4237907401A5CA5E8F2D4BE382303A3F4E90F65",
+    "path": "src\\main\\java\\com\\example\\reservation\\CalendarService.java",
+    "unchanged": true
+  },
+  {
+    "after": "5DA65555CA9A2E054059B9C1113282AB6EAF2D30F91843344F2090C6B8F15EDF",
+    "before": "5DA65555CA9A2E054059B9C1113282AB6EAF2D30F91843344F2090C6B8F15EDF",
+    "path": "src\\main\\java\\com\\example\\reservation\\CustomerService.java",
+    "unchanged": true
+  },
+  {
+    "after": "61BF034453AEEA096B175E1E90FFBB9CD7E9064B17207FB1AF8DAFF24C769656",
+    "before": "61BF034453AEEA096B175E1E90FFBB9CD7E9064B17207FB1AF8DAFF24C769656",
+    "path": "src\\main\\java\\com\\example\\reservation\\InventoryService.java",
+    "unchanged": true
+  },
+  {
+    "after": "CCE3530FE64B9916BBC840A236B5EAE5EF895CFE986B5202C5E52053250ABD1A",
+    "before": "CCE3530FE64B9916BBC840A236B5EAE5EF895CFE986B5202C5E52053250ABD1A",
+    "path": "src\\main\\java\\com\\example\\reservation\\MemberType.java",
+    "unchanged": true
+  },
+  {
+    "after": "2C9B3A3DAE38AAE2668606B744D17B30B7D07D73CE5F976065B7F241E9B777FD",
+    "before": "2C9B3A3DAE38AAE2668606B744D17B30B7D07D73CE5F976065B7F241E9B777FD",
+    "path": "src\\main\\java\\com\\example\\reservation\\ReservationRequest.java",
+    "unchanged": true
+  },
+  {
+    "after": "89DB1CC81BB59F80AF679F69592B3979F3251DADA66B893C4B1A7E80E6E3ABB6",
+    "before": "89DB1CC81BB59F80AF679F69592B3979F3251DADA66B893C4B1A7E80E6E3ABB6",
+    "path": "src\\main\\java\\com\\example\\reservation\\ReservationResult.java",
+    "unchanged": true
+  },
+  {
+    "after": "7477BE1C17F0062CACC071353E9E6CDE2C1CF79E130E40B2C7CFF24529AD8D1D",
+    "before": "7477BE1C17F0062CACC071353E9E6CDE2C1CF79E130E40B2C7CFF24529AD8D1D",
+    "path": "src\\main\\java\\com\\example\\reservation\\ReservationService.java",
     "unchanged": true
   }
 ]
