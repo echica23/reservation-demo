@@ -10,11 +10,13 @@ AIによる単体テスト（UT）の生成・実行・レビューを、同じJ
 
 業務仕様はデモ用に用意したものです。実装には仕様との不一致があり、それを検出・説明するところまでを扱います。
 
-| 段階 | AIが行うこと | 確認したいこと |
-| --- | --- | --- |
-| Phase1：coverage | 実装を読んでUTを生成・実行し、カバレッジを計測 | 実装の経路をどこまで通せるか、通せない箇所にはどんな理由があるか |
-| Phase2：spec | 業務仕様から別のUTを生成・実行し、カバレッジも計測 | 仕様どおりの結果を返すか |
-| Phase3：review | Phase2のUTをそのまま再実行し、仕様・実装・結果を照合 | なぜ失敗したか、どこをどう直すべきか |
+
+| 段階              | AIが行うこと                                                           | 確認したいこと                          |
+| --------------- | ----------------------------------------------------------------- | -------------------------------- |
+| Phase1：coverage | 実装を読んでUTを生成・実行し、カバレッジを計測※保証されるのはLine CoverageおよびBranch Coverrage | 実装の経路をどこまで通せるか、通せない箇所にはどんな理由があるか |
+| Phase2：spec     | 業務仕様から別のUTを生成・実行し、カバレッジも計測                                        | 仕様どおりの結果を返すか                     |
+| Phase3：review   | Phase2のUTをそのまま再実行し、仕様・実装・結果を照合                                    | なぜ失敗したか、どこをどう直すべきか               |
+
 
 全Phaseで同じ本番ソースとビルド設定を使います。Phase1とPhase2のUTは分離し、Phase3ではUTを追加・変更しません。本番コードの修正は行わず、修正案をレビューに残します。
 
@@ -27,6 +29,8 @@ AIによる単体テスト（UT）の生成・実行・レビューを、同じJ
 JUnit5・Mockito・JaCoCoとPhase別のMavenプロファイルは `pom.xml` に設定済みです。初回は依存ライブラリの取得にネットワーク接続が必要になる場合があります。VSCodeなどのエディタは任意です。
 
 ## 使い方
+
+
 
 ### 1. AIに実行指示を読み込ませる
 
@@ -71,19 +75,23 @@ Phase2のUTを再利用し、失敗ケースと問題箇所を対応付けます
 - 同じチャットでPhase1→Phase2→Phase3の順に進めます。独立したAIによる比較実験ではありません。
 - 生成UTを含む状態からやり直す場合は、既存UTの扱いをAIに明示してください。実行指示では、予期しない既存UTを上書き・削除せず、扱いを確認するよう定めています。
 
+
+
 ## ファイル構成と成果物
 
-| 場所 | 内容 |
-| --- | --- |
-| `samples/phase1/`〜`samples/phase3/` | 配布用に保存した各Phaseの実行結果 |
-| `src/main/java/` | 全Phase共通の本番ソース |
-| `docs/reservation-spec.md` | Phase2・3で使用する業務仕様 |
-| `prompts/ut-instructions.md` | AIに読み込ませる実行ルール |
-| `demo-ut/coverage/java/` | Phase1で生成したUT |
-| `demo-ut/spec/java/` | Phase2で生成し、Phase3で再利用するUT |
-| `target/coverage/<実行ID>/` | Phase1の結果 |
-| `target/spec/<実行ID>/` | Phase2の結果 |
-| `target/review/<実行ID>/` | Phase3の結果とレビュー |
+
+| 場所                                  | 内容                        |
+| ----------------------------------- | ------------------------- |
+| `samples/phase1/`〜`samples/phase3/` | 配布用に保存した各Phaseの実行結果       |
+| `src/main/java/`                    | 全Phase共通の本番ソース            |
+| `docs/reservation-spec.md`          | Phase2・3で使用する業務仕様         |
+| `prompts/ut-instructions.md`        | AIに読み込ませる実行ルール            |
+| `demo-ut/coverage/java/`            | Phase1で生成したUT             |
+| `demo-ut/spec/java/`                | Phase2で生成し、Phase3で再利用するUT |
+| `target/coverage/<実行ID>/`           | Phase1の結果                 |
+| `target/spec/<実行ID>/`               | Phase2の結果                 |
+| `target/review/<実行ID>/`             | Phase3の結果とレビュー            |
+
 
 実行IDはAIが未使用のものを選びます。`ut` コマンドは実行後、配布用成果物を `samples/phase1/`〜`samples/phase3/` の該当フォルダへ保存します。既存の配布用成果物は `samples/history/phase<Phase番号>/<保存日時>/` へ退避して照合してから更新します。Mavenの作業用出力と元の結果は `target/` に保持します。各Phaseには、次の成果物を保存します。
 
@@ -122,5 +130,3 @@ PowerShellではカンマを含む引数の解釈を避けるため、上記の�
 ```
 
 テストが失敗しても、続く `jacoco:report` を別に実行してください。同じ実行IDを使うことで、その実行のカバレッジを生成できます。Maven単体では、AIが作成する `report.md` や `review.md` の生成、`samples/` の更新は行われません。
-
-
